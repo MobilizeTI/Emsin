@@ -1,0 +1,2886 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_cl_maintenance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20220107\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-21 13:38+0000\n"
+"PO-Revision-Date: 2022-02-21 08:41-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__create_type
+msgid " Create type"
+msgstr "Tipo de creación"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__maintenance_type model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_type__maintenance_type
+msgid " Maintenance type"
+msgstr " Tipo de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_report_request_task_user__delay_endings_days
+msgid "# Days to Deadline"
+msgstr "# Días hasta la fecha límite"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_report_request_task_user__working_days_open
+msgid "# Working Days to Assign"
+msgstr "# Días laborables para asignar"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_report_request_task_user__working_days_close
+msgid "# Working Days to Close"
+msgstr "# Días laborables para cerrar"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_report_request_task_user__nbr
+msgid "# of Tasks"
+msgstr "# de tareas"
+
+#. module: l10n_cl_maintenance
+#: code:addons/l10n_cl_maintenance/models/guideline_activity.py:0 code:addons/l10n_cl_maintenance/models/maintenance_guideline.py:0 code:addons/l10n_cl_maintenance/models/maintenance_system.py:0
+#: code:addons/l10n_cl_maintenance/models/system_classification.py:0
+#, python-format
+msgid "%s (copy)"
+msgstr "%s (copia)"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_master_form_view
+msgid "<b>Nota</b>: Se debe añadir el tipo de OT y fecha prevista a cada una de las líneas."
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:mail.template,body_html:l10n_cl_maintenance.email_maintenance_request_master_template
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 12px;\">\n"
+"                        Estimado ${object.user_id.partner_id.name}\n"
+"                    </p>\n"
+"                    <br/>\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 12px;\">\n"
+"                        DEMO DE ENVIO.....\n"
+"                    </p>\n"
+"                    <strong>${object.user_id.name}</strong>,\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid ""
+"<i class=\"fa fa-long-arrow-right mx-2 oe_edit_only\" aria-label=\"Arrow icon\" title=\"Arrow\"/>\n"
+"                                        <i class=\"fa fa-long-arrow-right mx-2 oe_read_only\" aria-label=\"Arrow icon\" title=\"Arrow\" attrs=\"{'invisible': [('planned_date_begin', '=', False), ('planned_date_end', '=', False)]}\"/>"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_stage_edit
+msgid ""
+"<i class=\"fa fa-warning\" title=\"Customer disabled on requests\"/><b> Customer\n"
+"                                    Ratings</b>\n"
+"                                    are disabled on the following request(s) : <br/>"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_form_inherit
+msgid "<span class=\"badge badge-warning float-right\">Canceled</span>"
+msgstr "<span class=\"badge badge-warning float-right\">Cancelado</span>"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_activity_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "<span class=\"ml8\">hours</span>"
+msgstr "<span class=\"ml8\">Horas</span>"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.hr_equipment_request_view_kanban
+msgid "<span class=\"o_label\">Hours</span>"
+msgstr "<span class=\"o_label\">Horas</span>"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_equipment_activity_view_kanban
+msgid "<strong>Equipments:</strong>"
+msgstr "<strong>Equipamiento</strong>"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_equipment_activity_view_kanban
+msgid "<strong>Maintenance:</strong>"
+msgstr "<strong>Mantenimiento</strong>"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.request_task_view_gantt
+msgid "<strong>Start Date: </strong>"
+msgstr "<strong>Fecha de Inicio: </strong>"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.request_task_view_gantt
+msgid "<strong>Stop Date: </strong>"
+msgstr "<strong>Fecha de finalización: </strong>"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.view_cron_ot_new_wizard
+msgid "A Maintenance Request (OT) will be created for equipment that meets the corresponding deadlines."
+msgstr "Se creará una solicitud de mantenimiento (OT) para los equipos que cumplan los con los parámetros correspondientes."
+
+#. module: l10n_cl_maintenance
+#: model:res.groups,name:l10n_cl_maintenance.group_analista
+msgid "ANALISTA"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_guideline__type_auto_planning__accumulated
+msgid "Accumulated Record"
+msgstr "Registro Acumulado"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__message_needaction model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__message_needaction
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__message_needaction
+msgid "Action Needed"
+msgstr "Acción necesaria"
+
+#. module: l10n_cl_maintenance
+#: model:ir.ui.menu,name:l10n_cl_maintenance.guideline_menu_root
+msgid "Actions"
+msgstr "Acciones"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__active model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_motive_stage__active
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__active model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__active
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system__active model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system_classification__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_activity_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "Activies Lines"
+msgstr "Líneas de actividad"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.guideline_activity_act_window model:ir.model.fields,field_description:l10n_cl_maintenance.field_hr_specialty_tag__equipment_ids
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__activity_ids model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__activity_ids
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__activity_ids model:ir.model.fields,field_description:l10n_cl_maintenance.field_select_all_activities__activities_multiple_ids
+#: model:ir.ui.menu,name:l10n_cl_maintenance.guideline_activity_menu model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_view_form
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_view_form
+msgid "Activities Lines"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_activity_url__activity_id model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_activity__activity_id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__activity_id model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.hr_equipment_view_search
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_equipment_activity_tracking_view_search model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_view_tree
+msgid "Activity"
+msgstr "Actividad"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_activity_form_view
+msgid "Activity Child's"
+msgstr "Actividades Hijas"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "Activity Detail"
+msgstr "Detalle de actividad"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__activity_exception_decoration
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__activity_exception_decoration
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Actividad Decoración de excepción"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_equipment_activity_view_form model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_equipment_activity_view_search
+msgid "Activity Name"
+msgstr "Nombre de la actividad"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__activity_state model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__activity_state
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__activity_state
+msgid "Activity State"
+msgstr "Estado de la actividad"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment__maintenance_actv_tracking_ids
+msgid "Activity Tracking"
+msgstr "Seguimiento de actividad"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment__maintenance_actv_tracking_count
+msgid "Activity Tracking Count"
+msgstr "Seguimientos"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_equipment_activity_tracking_view_search
+msgid "Activity Tracking by Date"
+msgstr "Seguimiento de la actividad por fecha"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__activity_type_icon model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__activity_type_icon
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_line_confirm_form_view
+msgid "Activity dependents"
+msgstr "Actividades dependientes"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_equipment_odometer_log__odometer
+msgid "Actual odometer"
+msgstr "Odómetro Actual"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.select_all_activities_form
+msgid "Add"
+msgstr "Añadir"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.select_all_activities_wizard_act_window
+msgid "Add Activities"
+msgstr "Añadir Actividades"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_stage_edit
+msgid "Add a description..."
+msgstr "Añade una descripción..."
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.hr_equipment_action_from_activity_form
+msgid "Add a new equipment"
+msgstr "Añadir un nuevo equipo"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.maintenance_equipment_activity_action
+msgid "Add a new equipment activity"
+msgstr "Añadir una nueva actividad de equipo"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.maintenance_guideline_type_action
+msgid "Add a new equipment guideline type"
+msgstr "Añadir un nuevo tipo de pauta de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.hr_equipment_request_action_link_from_activity_form
+msgid "Add a new maintenance request"
+msgstr "Añadir una nueva petición de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_select_all_activities
+msgid "Add multiple activities"
+msgstr "Añadir Multiples Actividades"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_mtm_request_task_wz
+msgid "Add multiple task employee"
+msgstr "Añadir un empleado de tareas múltiples"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__task_done_count
+msgid "Advance"
+msgstr "Avance"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__task_done_percent
+msgid "Advance percentage"
+msgstr "Porcentaje de avance"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.request_task_action_all
+msgid "All Tasks"
+msgstr "Todas las tareas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.ui.menu,name:l10n_cl_maintenance.all_tasks_categ_menu
+msgid "All tasks"
+msgstr "Todas las tareas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system__allocation_level model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system_classification__allocation_level
+msgid "Allocation level"
+msgstr "Nivel de asignación"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_account_analytic_line__account_id
+msgid "Analytic Account"
+msgstr "Cuenta analítica"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Línea Analítica"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_view_task_kanban
+msgid "Archive"
+msgstr "Archivar"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_activity_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_activity_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_stage_edit model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_stage_search
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_search
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_classification_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_classification_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_search_view
+msgid "Archived"
+msgstr "Archivado"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.rt_stage_delete_wz_view_form
+msgid "Are you sure you want to continue?"
+msgstr "¿Estás seguro de que quieres continuar?"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.server,name:l10n_cl_maintenance.action_massive_employee_update
+msgid "Asignación Masiva de Empleado"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_report_request_task_user__user_id
+msgid "Assigned To"
+msgstr "Asignado a"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.view_task_request_user_search
+msgid "Assigned to"
+msgstr "Asignado a"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__date_assign
+msgid "Assigning Date"
+msgstr "Asignación de fecha"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_report_request_task_user__date_assign
+msgid "Assignment Date"
+msgstr "Fecha de asignación"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_stage_edit
+msgid ""
+"At each stage employees can block or make task/issue ready for next stage.\n"
+"                                You can define here labels that will be displayed for the state instead\n"
+"                                of the default labels."
+msgstr "En cada etapa los empleados pueden bloquear o hacer que la tarea esté lista para la siguiente etapa. Aquí puede definir las etiquetas que se mostrarán para el estado en lugar de las etiquetas por defecto."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_guideline__measurement__fixed
+msgid "At reached value"
+msgstr "Al alcanzar el valor"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__message_attachment_count model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__message_attachment_count
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__message_attachment_count
+msgid "Attachment Count"
+msgstr "Recuento de anexos"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_request__create_type__auto
+msgid "Automatic"
+msgstr "Automático"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__flag_execute_auto
+msgid "Automatic execute planning"
+msgstr "Ejecución automática de la planificación"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__auto_validation_kanban_state
+msgid "Automatic kanban status"
+msgstr "Estado automático del kanban"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__flag_create_auto
+msgid "Automatic planning?"
+msgstr "Planificación automática"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task_stage__auto_validation_kanban_state
+msgid ""
+"Automatically modify the kanban state when the customer replies to the feedback for this stage.\n"
+" * A good feedback from the customer will update the kanban state to 'ready for the new stage' (green bullet).\n"
+" * A medium or a bad feedback will set the kanban state to 'blocked' (red bullet).\n"
+msgstr ""
+"Modificar automáticamente el estado del kanban cuando el empleado responde a la retroalimentación para esta etapa.\n"
+" * Una buena respuesta del empleado actualizará el estado del Kanban a \"listo para la nueva etapa\" (viñeta verde).\n"
+" * Una respuesta media o mala hará que el estado del kanban pase a ser \"bloqueado\" (viñeta roja).\n"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_hr_employee__availability
+msgid "Availability"
+msgstr "Disponibilidad"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__hr_employee__availability__available
+msgid "Available"
+msgstr "Disponible"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_master_form_view
+msgid "Avance"
+msgstr "Avance(%)"
+
+#. module: l10n_cl_maintenance
+#: code:addons/l10n_cl_maintenance/models/maintenance_request_task.py:0 model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_request_task__kanban_state__blocked
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__report_request_task_user__state__blocked
+#, python-format
+msgid "Blocked"
+msgstr "Bloqueado"
+
+#. module: l10n_cl_maintenance
+#: model:maintenance.request.task.stage,legend_blocked:l10n_cl_maintenance.stage_cancel model:maintenance.request.task.stage,legend_blocked:l10n_cl_maintenance.stage_done
+#: model:maintenance.request.task.stage,legend_blocked:l10n_cl_maintenance.stage_draft
+msgid "Bloqueada"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__bool_in_request
+msgid "Bool in request"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_master_form_view
+msgid "Buses"
+msgstr "Autobuses"
+
+#. module: l10n_cl_maintenance
+#: model:ir.ui.menu,name:l10n_cl_maintenance.request_task_menu_planning_by_request
+msgid "By Request"
+msgstr "Por Solicitud"
+
+#. module: l10n_cl_maintenance
+#: model:ir.ui.menu,name:l10n_cl_maintenance.request_task_menu_planning_by_user
+msgid "By User"
+msgstr "Por Usuario"
+
+#. module: l10n_cl_maintenance
+#: model:maintenance.request.task.stage,name:l10n_cl_maintenance.stage_cancel model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.mtm_request_task_wz_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.request_task_create_timesheet_view_form model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.select_all_activities_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.view_cron_ot_new_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system__child_ids
+msgid "Child System Classification"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__child_ids
+msgid "Child activities"
+msgstr "Actividades hijas"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_activity_form_view
+msgid "Child's"
+msgstr "Hijos"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_activity_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_form_view
+msgid "Children"
+msgstr "Hijos"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_hr_specialty_tag__color_test
+msgid "Choose your color"
+msgstr "Elija su color"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__is_closed model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__is_closed
+msgid "Closing Stage"
+msgstr "Etapa de cierre"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__code model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_activity__activity_code
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__code model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system_classification__code
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_activity_search_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_classification_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_search_view
+msgid "Code"
+msgstr "Código"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_hr_specialty_tag__color_test model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__color
+msgid "Color"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_hr_specialty_tag__color
+msgid "Color Index (0-15)"
+msgstr "Índice de color "
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__company_id model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity__company_id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity_tracking__company_id model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__company_id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_activity__company_id model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_type__company_id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__company_id model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__company_id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_mtm_request_task_wz__company_id model:ir.model.fields,field_description:l10n_cl_maintenance.field_report_request_task_user__company_id
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_search
+msgid "Company"
+msgstr "Compañía"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__complete_name model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system__complete_name
+msgid "Complete Name"
+msgstr "Nombre completo"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__system_class_id model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_activity__system_class_id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__activity_system_class_id model:ir.ui.menu,name:l10n_cl_maintenance.component_menu
+msgid "Component"
+msgstr "Componente"
+
+#. module: l10n_cl_maintenance
+#: model:ir.ui.menu,name:l10n_cl_maintenance.configuration_menu
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: l10n_cl_maintenance
+#: code:addons/l10n_cl_maintenance/models/maintenance_guideline.py:0 model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.mtm_request_task_wz_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.rt_stage_delete_wz_view_form
+#, python-format
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_master_form_view
+msgid "Confirm the creation of maintenance requests?"
+msgstr "¿Confirmar la creación de solicitudes de mantenimiento?"
+
+#. module: l10n_cl_maintenance
+#: code:addons/l10n_cl_maintenance/wizard/request_task_stage_delete.py:0
+#, python-format
+msgid "Confirmation"
+msgstr "Confirmación"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_equipment_activity_tracking__equipment_activity_uomctg_id model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_guideline__equipment_activity_uomctg_id
+msgid "Conversion between Units of Measure can only occur if they belong to the same category. The conversion will be made based on the ratios."
+msgstr "La conversión entre unidades de medida sólo puede producirse si pertenecen a la misma categoría. La conversión se hará en función de las relaciones."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_guideline__maintenance_type__corrective
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_request_master__maintenance_type__corrective
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_request_type__maintenance_type__corrective
+msgid "Corrective"
+msgstr "Correctivo"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_master_form_view
+msgid "Create Maintenance Requests"
+msgstr "Crear solicitudes de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_request_task_create_timesheet
+msgid "Create Timesheet from request task"
+msgstr "Crear una hoja de horas a partir de una tarea de la OT"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.open_maintenance_request_task_stage_form model_terms:ir.actions.act_window,help:l10n_cl_maintenance.open_maintenance_request_task_stage_form_domain
+msgid "Create a new stage in the task pipeline"
+msgstr "Crear una nueva etapa en la línea de tareas"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.maintenance_request_task_stage_act_window
+msgid "Create a statuses for tasks."
+msgstr "Crear un estado para las tareas."
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.request_task_user_action_report
+msgid "Create tasks to get statistics."
+msgstr "Crear tareas para obtener estadísticas."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_activity_url__create_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_equipment_odometer_log__create_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__create_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_line_confirm__create_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_url__create_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_hr_specialty_tag__create_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity__create_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity_tracking__create_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__create_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_activity__create_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_type__create_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_motive_stage__create_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__create_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__create_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__create_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_type__create_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system__create_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system_classification__create_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_mtm_request_task_wz__create_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_ot_template__create_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_request_task_create_timesheet__create_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_rt_stage_delete_wizard__create_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_scheduler_ot_new__create_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_select_all_activities__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_activity_url__create_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_equipment_odometer_log__create_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__create_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_line_confirm__create_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_url__create_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_hr_specialty_tag__create_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity__create_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity_tracking__create_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__create_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_activity__create_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_type__create_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_motive_stage__create_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__create_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__create_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__create_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_type__create_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system__create_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system_classification__create_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_mtm_request_task_wz__create_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_ot_template__create_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_request_task_create_timesheet__create_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_rt_stage_delete_wizard__create_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_scheduler_ot_new__create_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_select_all_activities__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_equipment_odometer_log__date_log
+msgid "Date"
+msgstr "Fecha"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_master__schedule_date
+msgid "Date the maintenance team plans the maintenance. It should not differ much from the Request Date. "
+msgstr "Fecha en la que el equipo de mantenimiento planifica el mantenimiento. No debe diferir mucho de la fecha de solicitud. "
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "Days Spent"
+msgstr "Días de trabajo"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__date_deadline model:ir.model.fields,field_description:l10n_cl_maintenance.field_report_request_task_user__date_deadline
+msgid "Deadline"
+msgstr "Plazo"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.open_maintenance_request_task_stage_form model_terms:ir.actions.act_window,help:l10n_cl_maintenance.open_maintenance_request_task_stage_form_domain
+msgid ""
+"Define the steps that will be used in the request from the\n"
+"                    creation of the task, up to the closing of the task or issue.\n"
+"                    You will use these stages in order to track the progress in\n"
+"                    solving a task or an issue."
+msgstr ""
+"Definir los pasos que se utilizarán en la OT desde la                   creación de la tarea, hasta el cierre de la tarea o cuestión. Estas etapas se utilizarán para hacer un seguimiento del progreso en resolver una tarea o un "
+"problema."
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.server,name:l10n_cl_maintenance.unlink_maintenance_request_task_stage_action model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_view_task_kanban
+msgid "Delete"
+msgstr "Eliminar"
+
+#. module: l10n_cl_maintenance
+#: code:addons/l10n_cl_maintenance/models/maintenance_request_task.py:0
+#, python-format
+msgid "Delete Stage"
+msgstr "Eliminar etapa"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_guideline_line_confirm
+msgid "Delete line guideline confirm"
+msgstr "Borrar línea pauta confirmar"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.request_task_create_timesheet_view_form
+msgid "Describe your activity..."
+msgstr "Describa su actividad..."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_activity_url__description model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__description
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_url__description model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__description
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_motive_stage__description model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__description
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__activity_description model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__description
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__description model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_type__description
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system__description model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system_classification__description
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_request_task_create_timesheet__description model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_activity_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_master_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_type_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_classification_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_form_view
+msgid "Description"
+msgstr "Descripción"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__activities_ids
+msgid "Detail Activities"
+msgstr "Detalle Actividades"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__disabled_rating_warning
+msgid "Disabled Rating Warning"
+msgstr "Advertencia de clasificación desactivada"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.rt_stage_delete_wz_view_form
+msgid "Discard"
+msgstr "Descartar"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_account_analytic_line__display_name model:ir.model.fields,field_description:l10n_cl_maintenance.field_activity_url__display_name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_equipment_odometer_log__display_name model:ir.model.fields,field_description:l10n_cl_maintenance.field_fleet_vehicle__display_name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__display_name model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_line_confirm__display_name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_url__display_name model:ir.model.fields,field_description:l10n_cl_maintenance.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_hr_specialty_tag__display_name model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity__display_name model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity_tracking__display_name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__display_name model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_activity__display_name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_type__display_name model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_motive_stage__display_name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__display_name model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__display_name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__display_name model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__display_name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_type__display_name model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system__display_name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system_classification__display_name model:ir.model.fields,field_description:l10n_cl_maintenance.field_mtm_request_task_wz__display_name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_ot_template__display_name model:ir.model.fields,field_description:l10n_cl_maintenance.field_report_request_task_user__display_name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_request_task_create_timesheet__display_name model:ir.model.fields,field_description:l10n_cl_maintenance.field_rt_stage_delete_wizard__display_name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_scheduler_ot_new__display_name model:ir.model.fields,field_description:l10n_cl_maintenance.field_select_all_activities__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__display_timer_pause
+msgid "Display Timer Pause"
+msgstr "Pantalla Temporizador Pausa"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__display_timer_resume
+msgid "Display Timer Resume"
+msgstr "Visualización de la reanudación del temporizador"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__display_timer_start_primary
+msgid "Display Timer Start Primary"
+msgstr "Pantalla Temporizador Inicio Primario"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__display_timer_start_secondary
+msgid "Display Timer Start Secondary"
+msgstr "Pantalla Temporizador Inicio Secundario"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__display_timer_stop
+msgid "Display Timer Stop"
+msgstr "Visualización de la parada del temporizador"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__display_timesheet_timer
+msgid "Display Timesheet Time"
+msgstr "Visualizar el tiempo de la hoja de horas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__progress
+msgid "Display progress of current task."
+msgstr "Mostrar el progreso de la tarea actual."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__att_documents model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__att_documents
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_activity__activity_att_documents
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__activity_att_documents
+msgid "Documents"
+msgstr "Documentos"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_request_master__state__done model:maintenance.request.task.stage,name:l10n_cl_maintenance.stage_done
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_master_form_view
+msgid "Done"
+msgstr "Cerrada"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_request_master__state__draft model:maintenance.request.task.stage,name:l10n_cl_maintenance.stage_draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_view_task_kanban
+msgid "Dropdown menu"
+msgstr "Menú desplegable"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__duration model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__maintenance_duration
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__activity_duration model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.request_task_create_timesheet_view_form
+msgid "Duration"
+msgstr "Duración"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__duration_compute model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__duration_compute
+msgid "Duration Compute"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_guideline_activity__duration model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__activity_duration
+msgid "Duration in hours."
+msgstr "Duración en horas."
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_view_task_kanban
+msgid "Edit"
+msgstr "Editar"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__mail_template_id
+msgid "Email Template"
+msgstr "Plantilla de correo electrónico"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_hr_employee model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__employee_id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_mtm_request_task_wz__employee_id model:ir.model.fields,field_description:l10n_cl_maintenance.field_ot_template__employee_id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_report_request_task_user__employee_id
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__employee_additional_ids model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "Employees additional"
+msgstr "Empleados adicionales"
+
+#. module: l10n_cl_maintenance
+#: model:maintenance.request.task.stage,legend_normal:l10n_cl_maintenance.stage_cancel model:maintenance.request.task.stage,legend_normal:l10n_cl_maintenance.stage_done
+#: model:maintenance.request.task.stage,legend_normal:l10n_cl_maintenance.stage_draft
+msgid "En progreso"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__encode_uom_in_days
+msgid "Encode Uom In Days"
+msgstr "Codificar Uom en días"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__planned_date_end
+msgid "End date"
+msgstr "Fecha de finalización"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_report_request_task_user__date_end
+msgid "Ending Date"
+msgstr "Fecha de finalización"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_equipment_odometer_log__equipment_id model:ir.model.fields,field_description:l10n_cl_maintenance.field_fleet_vehicle__equipment_id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity__equipment_count
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity_tracking__equipment_id model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_equipment_activity_tracking_view_search
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_equipment_activity_view_form
+msgid "Equipment"
+msgstr "Equipo"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_equipment_activity_view_tree
+msgid "Equipment Activities"
+msgstr "Actividades de equipo"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment__equipment_activity_id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity_tracking__equipment_activity_id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__equipment_activity_id model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_equipment_activity_view_form
+msgid "Equipment Activity"
+msgstr "Actividad de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity_tracking__equipment_activity_uomctg_id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__equipment_activity_uomctg_id
+msgid "Equipment Activity UoM Category"
+msgstr "UdM de la categoría de la actividad de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_type_view_form
+msgid "Equipment Guideline Type"
+msgstr "Tipo de pauta de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_type_view_tree
+msgid "Equipment Guideline Types"
+msgstr "Tipos de pautas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.action_equipment_odometer_log model:ir.model,name:l10n_cl_maintenance.model_equipment_odometer_log
+msgid "Equipment Odometer Log"
+msgstr "Historial del Odómetro x Pauta"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.maintenance_equipment_activity_tracking_action model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_equipment_activity_tracking_view_search
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_equipment_activity_tracking_view_tree
+msgid "Equipment Tracking Activities"
+msgstr "Seguimiento de actividades"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.hr_equipment_action_from_activity_form model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity__equipment_ids
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__equipment_ids model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__equipment_ids
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_view_form
+msgid "Equipments"
+msgstr "Equipos"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.view_cron_ot_new_wizard
+msgid "Execute"
+msgstr "Ejecutar"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.view_task_request_user_search
+msgid "Extended Filters"
+msgstr "Filtros ampliados"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "Extra Info"
+msgstr "Información extra"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_activity_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "Files"
+msgstr "Archivos"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.maintenance_request_task_action model_terms:ir.actions.act_window,help:l10n_cl_maintenance.maintenance_request_task_user_action
+msgid "Find here your tasks planned for the following days."
+msgstr "Encuentre aquí sus tareas previstas para los días siguientes."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__flag_ot_ok
+msgid "Flag Ot Ok"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_equipment_odometer_log__flag_process
+msgid "Flag Process"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_account_analytic_line__flag_req_account_id
+msgid "Flag Req Account"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__flag_request_completed
+msgid "Flag Request Completed"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__flag_timer
+msgid "Flag Timer"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__flag_create_task
+msgid "Flag create task from request"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__flag_from_otm
+msgid "Flag from OTM"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__flag_from_auto
+msgid "Flag from auto"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__flag_from_request
+msgid "Flag_from_request"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__fold
+msgid "Folded in Kanban"
+msgstr "Doblado en Kanban"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.hr_equipment_request_action_link_from_activity_form
+msgid "Follow the process of the request and communicate with the collaborator."
+msgstr "Siga el proceso de la OT y comuníquese con el colaborador."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__message_follower_ids model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__message_follower_ids
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__message_channel_ids model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__message_channel_ids
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__message_partner_ids model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__message_partner_ids
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_guideline__activity_type_icon model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_master__activity_type_icon
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__period model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_view_form
+msgid "Frequency"
+msgstr "Frecuencia"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_guideline__period
+msgid "Frequency between each preventive maintenance"
+msgstr "Frecuencia entre cada mantenimiento preventivo"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_guideline__measurement__frequently
+msgid "Frequently"
+msgstr "Frecuentemente"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_search
+msgid "Future"
+msgstr "Futuro"
+
+#. module: l10n_cl_maintenance
+#: model:ir.ui.menu,name:l10n_cl_maintenance.maintenance_guideline_menu
+msgid "General guidelines"
+msgstr "Pautas Generales"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__legend_done
+msgid "Green Kanban Label"
+msgstr "Etiqueta Kanban Verde"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__legend_normal
+msgid "Grey Kanban Label"
+msgstr "Etiqueta Kanban Gris"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_form_inherit
+msgid "Group"
+msgstr "Grupo"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_activity_search_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_search
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_type_search_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_classification_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_search_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.view_task_request_user_search
+msgid "Group By"
+msgstr "Grupo por"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_equipment_activity_tracking_view_search model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_equipment_activity_view_search
+msgid "Group by..."
+msgstr "Agrupar por..."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__guide_line_ids
+msgid "Guide Line"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_equipment_odometer_log__guideline_id model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_url__guideline_id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_activity__guideline_id model:ir.model.fields,field_description:l10n_cl_maintenance.field_select_all_activities__guideline_id
+msgid "Guideline"
+msgstr "Pauta"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_guideline_activity
+msgid "Guideline Activity"
+msgstr "Actividad de la pauta"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_view_form
+msgid "Guideline Of Maintenance"
+msgstr "Pautas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment__maintenance_guideline_ids model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.mblz_hr_equipment_view_form
+msgid "Guideline Of Maintenances"
+msgstr "Pautas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__guideline_type_id
+msgid "Guideline Type"
+msgstr "Tipo de Pauta de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_type_view_form model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_type_view_search
+msgid "Guideline Type Name"
+msgstr "Nombre de la pauta de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_line_confirm__line_guideline
+msgid "Guideline line"
+msgstr "Línea de pauta"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_guideline_url
+msgid "Guideline url"
+msgstr "URL pauta"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__guideline_ids
+msgid "Guidelines"
+msgstr "Pautas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__maintenance_guideline_ids
+msgid "Guidelines Of Maintenance"
+msgstr "Pautas"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_view_task_kanban
+msgid "Happy face"
+msgstr "Cara feliz"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__report_request_task_user__priority__2
+msgid "High"
+msgstr "Alto"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__effective_hours model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "Hours Spent"
+msgstr "Horas invertidas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_hr_specialty_tag
+msgid "Hr Specialty Tag"
+msgstr "Etiqueta de especialidad Hr"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_account_analytic_line__id model:ir.model.fields,field_description:l10n_cl_maintenance.field_activity_url__id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_equipment_odometer_log__id model:ir.model.fields,field_description:l10n_cl_maintenance.field_fleet_vehicle__id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__id model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_line_confirm__id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_url__id model:ir.model.fields,field_description:l10n_cl_maintenance.field_hr_employee__id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_hr_specialty_tag__id model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity__id model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity_tracking__id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__id model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_activity__id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_type__id model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_motive_stage__id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__id model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__id model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_type__id model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system__id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system_classification__id model:ir.model.fields,field_description:l10n_cl_maintenance.field_mtm_request_task_wz__id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_ot_template__id model:ir.model.fields,field_description:l10n_cl_maintenance.field_report_request_task_user__id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_request_task_create_timesheet__id model:ir.model.fields,field_description:l10n_cl_maintenance.field_rt_stage_delete_wizard__id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_scheduler_ot_new__id model:ir.model.fields,field_description:l10n_cl_maintenance.field_select_all_activities__id
+msgid "ID"
+msgstr "Identificación"
+
+#. module: l10n_cl_maintenance
+#: model:res.groups,name:l10n_cl_maintenance.group_ing_llantas_config
+msgid "ING LLANTAS Y CONFIAB"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__activity_exception_icon model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__activity_exception_icon
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_guideline__activity_exception_icon model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_master__activity_exception_icon
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_guideline__message_needaction model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_guideline__message_unread
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_master__message_needaction model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_master__message_unread
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__message_needaction model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_guideline__message_has_error model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_guideline__message_has_sms_error
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_master__message_has_error model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_master__message_has_sms_error
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__message_has_error model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task_stage__mail_template_id
+msgid "If set an email will be sent to the customer when the task or issue reaches this step."
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task_stage__rating_template_id
+msgid "If set and if the request's rating configuration is 'Rating when changing stage', then an email will be sent to the customer when the task reaches this step."
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_request_task__priority__1
+msgid "Important"
+msgstr "Importante"
+
+#. module: l10n_cl_maintenance
+#: code:addons/l10n_cl_maintenance/models/maintenance_request_task.py:0 model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_request_task__kanban_state__normal
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__report_request_task_user__state__normal
+#, python-format
+msgid "In Progress"
+msgstr "En curso"
+
+#. module: l10n_cl_maintenance
+#: code:addons/l10n_cl_maintenance/models/hr_employee.py:0 code:addons/l10n_cl_maintenance/models/maintenance_request_master.py:0
+#, python-format
+msgid "Information"
+msgstr "Información"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "Initially Planned Days"
+msgstr "Días inicialmente previstos"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__planned_hours model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "Initially Planned Hours"
+msgstr "Horas inicialmente previstas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__message_is_follower model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__message_is_follower
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__is_timer_running
+msgid "Is Timer Running"
+msgstr "El temporizador está en marcha"
+
+#. module: l10n_cl_maintenance
+#: model:res.groups,name:l10n_cl_maintenance.group_jefe_planificacion
+msgid "JEFE PLANIFICACIÓN - DIRECTOR M"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:res.groups,name:l10n_cl_maintenance.group_jefe_soporte_mtto
+msgid "JEFE SOPORTE Y MTTO"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__legend_blocked
+msgid "Kanban Blocked Explanation"
+msgstr "Explicación del bloqueo de Kanban"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__legend_normal
+msgid "Kanban Ongoing Explanation"
+msgstr "Kanban Explicación continua"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__kanban_state model:ir.model.fields,field_description:l10n_cl_maintenance.field_report_request_task_user__state
+msgid "Kanban State"
+msgstr "Estado del Kanban"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__legend_done
+msgid "Kanban Valid Explanation"
+msgstr "Explicación válida de Kanban"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_account_analytic_line____last_update model:ir.model.fields,field_description:l10n_cl_maintenance.field_activity_url____last_update
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_equipment_odometer_log____last_update model:ir.model.fields,field_description:l10n_cl_maintenance.field_fleet_vehicle____last_update
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity____last_update model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_line_confirm____last_update
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_url____last_update model:ir.model.fields,field_description:l10n_cl_maintenance.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_hr_specialty_tag____last_update model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment____last_update
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity____last_update model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity_tracking____last_update
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline____last_update model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_activity____last_update
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_type____last_update model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_motive_stage____last_update
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request____last_update model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master____last_update
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task____last_update model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage____last_update
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_type____last_update model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system____last_update
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system_classification____last_update model:ir.model.fields,field_description:l10n_cl_maintenance.field_mtm_request_task_wz____last_update
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_ot_template____last_update model:ir.model.fields,field_description:l10n_cl_maintenance.field_report_request_task_user____last_update
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_request_task_create_timesheet____last_update model:ir.model.fields,field_description:l10n_cl_maintenance.field_rt_stage_delete_wizard____last_update
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_scheduler_ot_new____last_update model:ir.model.fields,field_description:l10n_cl_maintenance.field_select_all_activities____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_guideline__type_auto_planning__latest
+msgid "Last Record"
+msgstr "Ultimo Registro"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__date_last_stage_update model:ir.model.fields,field_description:l10n_cl_maintenance.field_report_request_task_user__date_last_stage_update
+msgid "Last Stage Update"
+msgstr "Actualización de la última etapa"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_activity_url__write_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_equipment_odometer_log__write_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__write_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_line_confirm__write_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_url__write_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_hr_specialty_tag__write_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity__write_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity_tracking__write_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__write_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_activity__write_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_type__write_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_motive_stage__write_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__write_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__write_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__write_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_type__write_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system__write_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system_classification__write_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_mtm_request_task_wz__write_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_ot_template__write_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_request_task_create_timesheet__write_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_rt_stage_delete_wizard__write_uid
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_scheduler_ot_new__write_uid model:ir.model.fields,field_description:l10n_cl_maintenance.field_select_all_activities__write_uid
+msgid "Last Updated by"
+msgstr "Actualizado por"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_activity_url__write_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_equipment_odometer_log__write_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__write_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_line_confirm__write_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_url__write_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_hr_specialty_tag__write_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity__write_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity_tracking__write_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__write_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_activity__write_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_type__write_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_motive_stage__write_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__write_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__write_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__write_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_type__write_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system__write_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system_classification__write_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_mtm_request_task_wz__write_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_ot_template__write_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_request_task_create_timesheet__write_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_rt_stage_delete_wizard__write_date
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_scheduler_ot_new__write_date model:ir.model.fields,field_description:l10n_cl_maintenance.field_select_all_activities__write_date
+msgid "Last Updated on"
+msgstr "Actualizado el"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_equipment_odometer_log__last_odometer
+msgid "Last maintenance odometer"
+msgstr "Odómetro Ultimo mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_view_task_kanban
+msgid "Latest Rating: Higly Dissatisfied"
+msgstr "Última valoración: Muy insatisfecho"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_view_task_kanban
+msgid "Latest Rating: Not Satisfied"
+msgstr "Última valoración: No estoy satisfecho"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_view_task_kanban
+msgid "Latest Rating: Satisfied"
+msgstr "Última valoración: Satisfecho"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_equipment_odometer_log__type_auto_planning model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_guideline__type_auto_planning
+msgid ""
+"Latest: About the last recorded odometer in history\n"
+"Accumulated: About the accumulated vehicle odometer"
+msgstr ""
+"Último: Sobre el último odómetro registrado en la historial\n"
+"Acumulado: Sobre el odómetro acumulado del vehículo"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_equipment_odometer_log__type_odometer
+msgid ""
+"Latest: About the last recorded odometer in history\n"
+"Next: Proximate value for the creation of a TO"
+msgstr ""
+"Último: Sobre el último odómetro registrado en la historial\n"
+"Siguiente: Valor aproximado para la creación de una OT"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__parent_left model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system__parent_left
+msgid "Left Parent"
+msgstr "Padre izquierdo"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.request_task_action_planning_groupby_request model_terms:ir.actions.act_window,help:l10n_cl_maintenance.request_task_action_planning_groupby_user
+msgid "Let's start your planning by adding a new task."
+msgstr "Comencemos su planificación añadiendo una nueva tarea."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_line_confirm__lines_dependent
+msgid "Lines_dependent"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_activity_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "Links"
+msgstr "Enlaces"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__report_request_task_user__priority__0
+msgid "Low"
+msgstr "Bajo"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__message_main_attachment_id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__message_main_attachment_id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjunto principal"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity__maintenance_ids model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_equipment_activity_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.mblz_fleet_vehicle_view_form
+msgid "Maintenance"
+msgstr "Mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_fleet_vehicle__maintenance_count model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity__maintenance_count
+msgid "Maintenance Count"
+msgstr "Cuenta de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_guideline__maintenance_duration
+msgid "Maintenance Duration in hours."
+msgstr "Duración del mantenimiento en horas."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Equipo de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.maintenance_equipment_activity_action model:ir.ui.menu,name:l10n_cl_maintenance.maintenance_equipment_activity_menu_configuration
+msgid "Maintenance Equipment Activities"
+msgstr "Actividades de equipamiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_maintenance_equipment_activity
+msgid "Maintenance Equipment Activity"
+msgstr "Actividad de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_maintenance_equipment_activity_tracking
+msgid "Maintenance Equipment Activity Tracking"
+msgstr "Seguimiento de Actividad del equipo"
+
+#. module: l10n_cl_maintenance
+#: model:ir.ui.menu,name:l10n_cl_maintenance.maintenance_guideline_type_menu_configuration
+msgid "Maintenance Equipment Guideline Types"
+msgstr "Tipos de pautas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.maintenance_guideline_action
+msgid "Maintenance General Guidelines"
+msgstr "Pautas Generales"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_maintenance_guideline_activity
+msgid "Maintenance Guideline Activity"
+msgstr "Actividad de Pauta"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_maintenance_guideline
+msgid "Maintenance Guideline General"
+msgstr "Pauta de mantenimiento General"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_maintenance_guideline_type
+msgid "Maintenance Guideline Type"
+msgstr "Tipo de pauta"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.maintenance_guideline_type_action
+msgid "Maintenance Guideline Types"
+msgstr "Tipos de pautas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_maintenance_request model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_form_inherit
+msgid "Maintenance Request"
+msgstr "Solicitud de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_maintenance_request_master
+msgid "Maintenance Request Master "
+msgstr "OT Maestra"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.maintenance_request_task_action model:ir.actions.act_window,name:l10n_cl_maintenance.maintenance_request_task_user_action
+#: model:ir.model,name:l10n_cl_maintenance.model_maintenance_request_task
+msgid "Maintenance Request Task"
+msgstr "Tarea de OT de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.hr_equipment_request_action_link_from_activity_form
+msgid "Maintenance Requests"
+msgstr "Peticiones de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_maintenance_system
+msgid "Maintenance System"
+msgstr "Sistema de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_maintenance_system_classification
+msgid "Maintenance System Classification"
+msgstr "Clasificación del sistema de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.ui.menu,name:l10n_cl_maintenance.maintenance_tasks_menu_root
+msgid "Maintenance Tasks"
+msgstr "Tareas de Mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__maintenance_type
+msgid "Maintenance Type"
+msgstr "Naturaleza"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_maintenance_motive_stage
+msgid "Maintenance motive stage"
+msgstr "Motivo del estado de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_maintenance_request_type
+msgid "Maintenance request type"
+msgstr "Tipo de solicitud de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_request__create_type__manual
+msgid "Manual"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_request__create_type__master
+msgid "Master"
+msgstr "Maestra"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__measurement
+msgid "Measurement"
+msgstr "Medición"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_line_confirm_form_view
+msgid "Message"
+msgstr "Mensaje"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__message_has_error model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__message_has_error
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__message_has_error
+msgid "Message Delivery error"
+msgstr "Error en la entrega del mensaje"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__message_ids model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__message_ids
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.maintenance_motive_stage_act_window model:ir.ui.menu,name:l10n_cl_maintenance.maintenance_motive_stage_menu
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_motive_stage_search_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_motive_stage_tree_view
+msgid "Motives"
+msgstr "Motivos"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__my_activity_date_deadline
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__my_activity_date_deadline
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.ui.menu,name:l10n_cl_maintenance.my_tasks_menu model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_search
+msgid "My Tasks"
+msgstr "Mis Tareas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_activity_url__name model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_url__name model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity__name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity_tracking__name model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_type__name model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_motive_stage__name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__stage_name model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_type__name model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system__name
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system_classification__name model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_activity_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_master_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_master_tree_view
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_admin_view_tree model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_classification_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_search_view
+msgid "Name"
+msgstr "Nombre"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_ot_template__name_header model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.ot_template_form_view
+msgid "Name header"
+msgstr "Encabezado"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_activity_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_classification_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_form_view
+msgid "Name..."
+msgstr "Nombre..."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__name_seq
+msgid "Name_seq"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__maintenance_type model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_view_tree model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_form_inherit
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_master_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_type_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_type_tree_view
+msgid "Nature"
+msgstr "Naturaleza"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_view_task_kanban
+msgid "Neutral face"
+msgstr "Cara neutra"
+
+#. module: l10n_cl_maintenance
+#: code:addons/l10n_cl_maintenance/models/maintenance_request.py:0 code:addons/l10n_cl_maintenance/models/maintenance_request_master.py:0 code:addons/l10n_cl_maintenance/models/maintenance_request_task.py:0
+#, python-format
+msgid "New"
+msgstr "Nuevo"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__equipment_odometer_log__type_odometer__next
+msgid "Next"
+msgstr "Siguiente"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__activity_date_deadline model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__activity_date_deadline
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Plazo de la próxima actividad"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__activity_summary model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__activity_summary
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la siguiente actividad"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__activity_type_id model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__activity_type_id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_line_confirm_form_view
+msgid "No"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__hr_employee__availability__no_available
+msgid "No available"
+msgstr "No disponible"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.request_task_user_action_report
+msgid "No data yet!"
+msgstr "Todavía no hay datos."
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.product_action_request
+msgid "No products found. Let's create one!"
+msgstr "No se han encontrado productos. ¡Vamos a crear uno!"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.request_task_action_planning_groupby_request model_terms:ir.actions.act_window,help:l10n_cl_maintenance.request_task_action_planning_groupby_user
+msgid "No tasks found"
+msgstr "No se han encontrado tareas"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.maintenance_request_task_action model_terms:ir.actions.act_window,help:l10n_cl_maintenance.maintenance_request_task_user_action
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.request_task_action_all model_terms:ir.actions.act_window,help:l10n_cl_maintenance.request_task_action_to_schedule
+msgid "No tasks found. Let's create one!"
+msgstr "No se ha encontrado ninguna tarea. ¡Vamos a crear una!"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.mblz_hr_equipment_request_view_tree
+msgid "Nombre OT"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_request_task__priority__0 model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__report_request_task_user__priority__1
+msgid "Normal"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_type__nro_type model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_type_search_view
+msgid "Nro"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__message_needaction_counter
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__message_needaction_counter
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_report_request_task_user__working_days_open
+msgid "Number of Working Days to Open the task"
+msgstr "Número de días laborables para abrir la tarea"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_report_request_task_user__working_days_close
+msgid "Number of Working Days to close the task"
+msgstr "Número de días laborables para cerrar la tarea"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__child_count model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system__child_count
+msgid "Number of child equipments"
+msgstr "Número de equipos hijos"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request__task_done_count
+msgid "Number of completed tasks"
+msgstr "Número de tareas completadas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__message_has_error_counter
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__message_has_error_counter
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_guideline__message_needaction_counter model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_master__message_needaction_counter
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_guideline__message_has_error_counter model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_master__message_has_error_counter
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de entrega"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_rt_stage_delete_wizard__tasks_count
+msgid "Number of tasks"
+msgstr "Número de tareas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_guideline__message_unread_counter model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_master__message_unread_counter
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leídos"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__ot_master_id
+msgid "OT Master"
+msgstr "OT Maestra"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.maintenance_request_master_act_window model:ir.ui.menu,name:l10n_cl_maintenance.maintenance_request_master_menu
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_master_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_master_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_master_tree_view
+msgid "OT Masters"
+msgstr "Peticiones de mantenimiento (Maestras)"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__name_seq model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__name
+msgid "OT Reference"
+msgstr "Referencia OT"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.ot_template_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.ot_template_tree_view
+msgid "OT Template"
+msgstr "Plantilla OT"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.ot_template_act_window
+msgid "OT Templates"
+msgstr "Plantillas OT x pautas"
+
+#. module: l10n_cl_maintenance
+#: model:mail.template,subject:l10n_cl_maintenance.email_maintenance_request_master_template
+msgid "OT maestra: ${object.name}"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__ot_template_id
+msgid "OT template"
+msgstr "Plantilla"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_ot_template
+msgid "OT template for scheduler"
+msgstr "Plantilla de OT para el planificador"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_master_form_view
+msgid "OT's"
+msgstr "Ordenes de Trabajo"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment__odometer model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment__odometer_count
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.mblz_hr_equipment_view_form
+msgid "Odometer"
+msgstr "Odómetro"
+
+#. module: l10n_cl_maintenance
+#: model:ir.ui.menu,name:l10n_cl_maintenance.equipment_odometer_log_menu
+msgid "Odometer Logs"
+msgstr "Historial del odómetro por pauta"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_equipment_odometer_log__odometer_unit model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment__odometer_unit
+msgid "Odometer Unit"
+msgstr "Unidad de odómetro"
+
+#. module: l10n_cl_maintenance
+#: model:res.groups,name:l10n_cl_maintenance.group_admin_log_guideline_odometer
+msgid "Odometer history manager by guideline"
+msgstr "Administrador del historial de odómetro x pautas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_equipment_odometer_log__odometer model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_equipment__odometer
+msgid "Odometer measure of the vehicle at the moment of this log"
+msgstr "Medida del odómetro del vehículo en el momento de este registro"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_equipment_odometer_log__next_odometer
+msgid "Odometer next maintenance"
+msgstr "Odómetro Próximo mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__legend_blocked model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task_stage__legend_blocked
+msgid "Override the default value displayed for the blocked state for kanban selection, when the task or issue is in that stage."
+msgstr "Anular el valor por defecto que se muestra para el estado bloqueado para la selección de kanban, cuando la tarea o cuestión está en esa etapa."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__legend_done model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task_stage__legend_done
+msgid "Override the default value displayed for the done state for kanban selection, when the task or issue is in that stage."
+msgstr "Anular el valor por defecto que se muestra para el estado hecho para la selección de kanban, cuando la tarea o cuestión está en esa etapa."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__legend_normal model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task_stage__legend_normal
+msgid "Override the default value displayed for the normal state for kanban selection, when the task or issue is in that stage."
+msgstr "Anula el valor por defecto que se muestra para el estado normal para la selección de kanban, cuando la tarea o la cuestión está en esa etapa."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__overtime
+msgid "Overtime"
+msgstr "Horas extras"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.view_cron_ot_new_wizard
+msgid "Parameters"
+msgstr "Parámetros"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__parent_id
+msgid "Parent Activity"
+msgstr "Actividad Padre"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__parent_path_ids model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system__parent_path_ids
+msgid "Parent Path"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system__parent_id
+msgid "Parent system"
+msgstr "Sistema Padre"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system_classification__parent_ids
+msgid "Parents"
+msgstr "Sistemas"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "Pause"
+msgstr "Pausa"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__percentage_def
+msgid "Percentage"
+msgstr "Porcentaje"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request__task_done_percent
+msgid "Percentage of completed tasks"
+msgstr "Porcentaje de tareas completadas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_guideline__percentage_def
+msgid "Percentage that must be met in order to execute the guideline automatically "
+msgstr "Porcentaje que debe cumplirse para ejecutar la pauta automáticamente "
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__percentage_value
+msgid "Percentage value"
+msgstr "Valor porcentual"
+
+#. module: l10n_cl_maintenance
+#: model:ir.module.category,name:l10n_cl_maintenance.category_group_perfil_mueve
+msgid "Perfiles"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "Planned Date"
+msgstr "Fecha planificada"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_search
+msgid "Planned for Today"
+msgstr "Planificado para hoy"
+
+#. module: l10n_cl_maintenance
+#: model:ir.ui.menu,name:l10n_cl_maintenance.menu_planning_categ_menu model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.request_task_view_gantt
+msgid "Planning"
+msgstr "Planificación"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.request_task_action_planning_groupby_request
+msgid "Planning by Request"
+msgstr "Por Solicitud"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.request_task_action_planning_groupby_user
+msgid "Planning by User"
+msgstr "Por usuario"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_equipment_odometer_log__type_auto_planning model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__type_auto_planning
+msgid "Planning type"
+msgstr "Tipo de planificación"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_type__prefix
+msgid "Prefix"
+msgstr "Prefijo"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_guideline_type__prefix
+msgid "Prefix value of the record for Maintenance Guideline"
+msgstr "Valor del prefijo del registro para la Pauta de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:maintenance.request.task.stage,legend_done:l10n_cl_maintenance.stage_cancel model:maintenance.request.task.stage,legend_done:l10n_cl_maintenance.stage_done
+#: model:maintenance.request.task.stage,legend_done:l10n_cl_maintenance.stage_draft
+msgid "Preparado"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_guideline__maintenance_type__preventive
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_request_master__maintenance_type__preventive
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_request_type__maintenance_type__preventive
+msgid "Preventive"
+msgstr "Preventivo"
+
+#. module: l10n_cl_maintenance
+#: code:addons/l10n_cl_maintenance/models/maintenance_equipment.py:0
+#, python-format
+msgid "Preventive Maintenance - %s"
+msgstr "Mantenimiento preventivo - %s"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_type__preview
+msgid "Preview"
+msgstr "Previsualización"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_type_view_form
+msgid "Preview (for prefix, suffix)"
+msgstr "Previsualización (para prefijo, sufijo)"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__priority model:ir.model.fields,field_description:l10n_cl_maintenance.field_report_request_task_user__priority
+msgid "Priority"
+msgstr "Prioridad"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.product_action_request model:ir.ui.menu,name:l10n_cl_maintenance.product_menu
+msgid "Products"
+msgstr "Productos"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__progress model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_request_master__state__progress
+msgid "Progress"
+msgstr "Progreso"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__task_count
+msgid "Quantity activities"
+msgstr "Cantidad de actividades"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_mtm_request_task_wz__count_task_ids
+msgid "Quantity of tasks"
+msgstr "Cantidad de tareas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__rating_ids
+msgid "Rating"
+msgstr "Valoración"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__rating_avg
+msgid "Rating Average"
+msgstr "Valoración Media"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__rating_template_id
+msgid "Rating Email Template"
+msgstr "Plantilla de correo electrónico de calificación"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__rating_last_feedback
+msgid "Rating Last Feedback"
+msgstr "Valoración Último comentario"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__rating_last_image
+msgid "Rating Last Image"
+msgstr "Calificación de la última imagen"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__rating_last_value
+msgid "Rating Last Value"
+msgstr "Calificación Último valor"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__rating_count
+msgid "Rating count"
+msgstr "Recuento de la clasificación"
+
+#. module: l10n_cl_maintenance
+#: code:addons/l10n_cl_maintenance/models/maintenance_request_task.py:0 model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__maintenance_request_task__kanban_state__done
+#, python-format
+msgid "Ready"
+msgstr "Listo"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__report_request_task_user__state__done
+msgid "Ready for next stage"
+msgstr "Preparado para la siguiente etapa"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__rating_last_feedback
+msgid "Reason of the rating"
+msgstr "Motivo de la calificación"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__legend_blocked
+msgid "Red Kanban Label"
+msgstr "Etiqueta roja de Kanban"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__user_id
+msgid "Related user name for the resource to manage its access."
+msgstr "Nombre de usuario relacionado con el recurso para gestionar su acceso."
+
+#. module: l10n_cl_maintenance
+#: model:ir.ui.menu,name:l10n_cl_maintenance.request_task_menu_reporting
+msgid "Reporting"
+msgstr "Informes"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__request_id model:ir.model.fields,field_description:l10n_cl_maintenance.field_report_request_task_user__request_id
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_search model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.view_task_request_user_search
+msgid "Request"
+msgstr "OT"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_master_form_view
+msgid "Request Lines"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_rt_stage_delete_wizard
+msgid "Request Stage Delete Wizard"
+msgstr "Asistente para solicitar la eliminación de etapas"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.request_task_view_activity model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.view_request_task_graph model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.view_request_task_pivot
+msgid "Request Tasks"
+msgstr "OT de tareas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__request_ids model:ir.model.fields,field_description:l10n_cl_maintenance.field_rt_stage_delete_wizard__request_ids
+msgid "Requests"
+msgstr "OT's"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__require_valid_picking
+msgid "Require Validate Pickings"
+msgstr "Requiere de Validación de Pickings"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__user_id model:ir.model.fields,field_description:l10n_cl_maintenance.field_ot_template__user_id
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_search
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__activity_user_id model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__activity_user_id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_view_task_kanban
+msgid "Restore"
+msgstr "Restaurar"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "Resume"
+msgstr "Reaunadar"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__parent_right model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system__parent_right
+msgid "Right Parent"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.action_ot_new model:ir.ui.menu,name:l10n_cl_maintenance.menu_ot_new
+msgid "Run New OT Scheduler"
+msgstr "Ejecutar el planificador de OT"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.server,name:l10n_cl_maintenance.maintenance_request_cron_ir_actions_server model:ir.cron,cron_name:l10n_cl_maintenance.maintenance_request_cron model:ir.cron,name:l10n_cl_maintenance.maintenance_request_cron
+msgid "Run Scheduler OT"
+msgstr "Ejecutar el planificador OT"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_scheduler_ot_new
+msgid "Run Scheduler OT Manually"
+msgstr "Ejecutar manualmente el Planificador OT"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__message_has_sms_error model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__message_has_sms_error
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_view_task_kanban
+msgid "Sad face"
+msgstr "Cara triste"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.request_task_create_timesheet_view_form
+msgid "Save"
+msgstr "Guardar"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.request_task_create_timesheet_view_form
+msgid "Save time"
+msgstr "Ahorrar tiempo"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.request_task_action_to_schedule
+msgid "Schedule tasks and assign them to your workers."
+msgstr "Programe tareas y asígnelas a sus trabajadores."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__schedule_date
+msgid "Scheduled Date"
+msgstr "Fecha prevista"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_equipment_activity_view_search model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_type_view_search
+msgid "Search"
+msgstr "Búsqueda"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_search
+msgid "Search planning"
+msgstr "Planificación de la búsqueda"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.mblz_hr_equipment_request_view_tree
+msgid "Secuencia"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.select_all_activities_form
+msgid "Select Multiple Activities"
+msgstr "Seleccionar varias actividades"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__sequence model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_activity__sequence
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_motive_stage__sequence model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__sequence
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__sequence model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_type__sequence
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system__sequence model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system_classification__sequence
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_master_form_view
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.hr_specialty_tag_act_window model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__specialty_tag_ids
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_hr_employee__speciality_ids model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_activity__activity_speciality_ids
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__guideline_speciality_ids model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__activity_speciality_ids
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_mtm_request_task_wz__specialty_tag_ids model:ir.ui.menu,name:l10n_cl_maintenance.hr_specialty_tag_menu
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_activity_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_form_inherit
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "Specialities"
+msgstr "Especialidades"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_hr_specialty_tag__name
+msgid "Speciality"
+msgstr "Especialidad"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__stage_id model:ir.model.fields,field_description:l10n_cl_maintenance.field_report_request_task_user__stage_id
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_search model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.view_task_request_user_search
+msgid "Stage"
+msgstr "Estado"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_stage_edit
+msgid "Stage Description and Tooltips"
+msgstr "Descripción de la etapa y herramientas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__name
+msgid "Stage Name"
+msgstr "Nombre de la etapa"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.open_maintenance_request_task_stage_form model:ir.actions.act_window,name:l10n_cl_maintenance.open_maintenance_request_task_stage_form_domain
+msgid "Stages"
+msgstr "Etapas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_rt_stage_delete_wizard__stages_active
+msgid "Stages Active"
+msgstr "Etapas Activas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_rt_stage_delete_wizard__stage_ids
+msgid "Stages To Delete"
+msgstr "Etapas para eliminar"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__equipment_odometer_log__type_odometer__latest model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "Start"
+msgstr "Iniciar"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_search model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_view_task_kanban
+msgid "Start Date"
+msgstr "Fecha de inicio"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__planned_date_begin
+msgid "Start date"
+msgstr "Fecha de inicio"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__state
+msgid "State"
+msgstr "Estado"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_guideline__activity_state model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_master__activity_state
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en las actividades\n"
+"Atrasado: La fecha de vencimiento ya ha pasado\n"
+"Hoy: La fecha de la actividad es hoy\n"
+"Planificada: Actividades futuras."
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "Stop"
+msgstr "Parar"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_type__suffix
+msgid "Suffix"
+msgstr "Sufijo"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_guideline_type__suffix
+msgid "Suffix value of the record for Maintenance Guideline"
+msgstr "Valor del sufijo del registro para la directriz de mantenimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.maintenance_system_classification_act_window
+msgid "System and Classification"
+msgstr "Sistema y clasificación"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.maintenance_system_act_window model:ir.ui.menu,name:l10n_cl_maintenance.system__menu model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_classification_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_tree_view
+msgid "Systems"
+msgstr "Sistemas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_request_task_create_timesheet__task_request_id
+msgid "Task"
+msgstr "Tarea"
+
+#. module: l10n_cl_maintenance
+#: model:res.groups,name:l10n_cl_maintenance.group_admin_request_task
+msgid "Task Manager"
+msgstr "Administrador de tareas (MTO)"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_account_analytic_line__task_request_id
+msgid "Task Request"
+msgstr "OT de tareas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.maintenance_request_task_stage_act_window model:ir.model,name:l10n_cl_maintenance.model_maintenance_request_task_stage
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_stage_edit model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_stage_tree
+msgid "Task Stage"
+msgstr "Etapa de tareas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.ui.menu,name:l10n_cl_maintenance.all_tasks_menu model:ir.ui.menu,name:l10n_cl_maintenance.task_stages_menu
+msgid "Task Stages"
+msgstr "Etapas de tarea"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_report_request_task_user__name
+msgid "Task Title"
+msgstr "Título de la tarea"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "Task Title..."
+msgstr "Título de la tarea..."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_request_task_create_timesheet__task_request_id
+msgid "Task for which we are creating a request maintenance"
+msgstr "Tarea para la que estamos creando una actualización de la OT"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_stage_edit
+msgid "Task in progress. Click to block or set as done."
+msgstr "Tarea en curso. Haga clic para bloquear o establecer como realizada."
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_stage_edit
+msgid "Task is blocked. Click to unblock or set as done."
+msgstr "La tarea está bloqueada. Haga clic para desbloquearla o establecerla como realizada."
+
+#. module: l10n_cl_maintenance
+#: model:res.groups,name:l10n_cl_maintenance.group_user_request_task
+msgid "Task user"
+msgstr "Usuario de tareas (MTO)"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.maintenance_request_task_admin_action model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__task_ids
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_mtm_request_task_wz__task_ids model:ir.ui.menu,name:l10n_cl_maintenance.tasks_menu model:ir.ui.menu,name:l10n_cl_maintenance.tasks_user_menu
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_form_inherit model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_search
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.request_task_view_calendar
+msgid "Tasks"
+msgstr "Tareas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.request_task_user_action_report model:ir.model,name:l10n_cl_maintenance.model_report_request_task_user
+#: model:ir.ui.menu,name:l10n_cl_maintenance.request_menu_reporting_task_analysis model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.request_task_user_view_graph
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.request_task_user_view_pivot model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.view_task_request_user_search
+msgid "Tasks Analysis"
+msgstr "Análisis de tareas"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_stage_search
+msgid "Tasks Stages"
+msgstr "Tareas Etapas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__is_closed model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task_stage__is_closed
+msgid "Tasks in this stage are considered as closed."
+msgstr "Las tareas en esta etapa se consideran cerradas."
+
+#. module: l10n_cl_maintenance
+#: model:ir.ui.menu,name:l10n_cl_maintenance.ot_template_menu
+msgid "Templates OT"
+msgstr "Plantillas OT para pautas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_line_confirm__text_message
+msgid "Text message"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.constraint,message:l10n_cl_maintenance.constraint_guideline_activity_unique_code
+msgid "The activity code must be unique!"
+msgstr "El código de actividad debe ser único."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.constraint,message:l10n_cl_maintenance.constraint_guideline_activity_unique_name
+msgid "The activity name must be unique!"
+msgstr "El nombre de la actividad debe ser único."
+
+#. module: l10n_cl_maintenance
+#: code:addons/l10n_cl_maintenance/models/maintenance_equipment.py:0
+#, python-format
+msgid "The following %s %s does not have the correct unit of measurement category"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: code:addons/l10n_cl_maintenance/models/maintenance_guideline.py:0
+#, python-format
+msgid "The following %s %s don't have the correct unit of measurement category"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: code:addons/l10n_cl_maintenance/models/maintenance_guideline.py:0
+#, python-format
+msgid "The following %s %s don't have value either for frequently or fixed measurement"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.constraint,message:l10n_cl_maintenance.constraint_maintenance_motive_stage_unique_name
+msgid "The motive name must be unique!"
+msgstr "El nombre del motivo debe ser único."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.constraint,message:l10n_cl_maintenance.constraint_hr_specialty_tag_unique_name
+msgid "The specialty name must be unique!"
+msgstr "El nombre de la especialidad debe ser único!"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.constraint,message:l10n_cl_maintenance.constraint_maintenance_system_classification_unique_code
+msgid "The system classification code must be unique!"
+msgstr "El código de clasificación del sistema debe ser único."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.constraint,message:l10n_cl_maintenance.constraint_maintenance_system_classification_unique_name model:ir.model.constraint,message:l10n_cl_maintenance.constraint_maintenance_system_unique_name
+msgid "The system classification name must be unique!"
+msgstr "El nombre de la clasificación del sistema debe ser único."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.constraint,message:l10n_cl_maintenance.constraint_maintenance_request_task_stage_unique_name
+msgid "The task stage name must be unique!"
+msgstr "El nombre de la etapa de la tarea debe ser único."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.constraint,message:l10n_cl_maintenance.constraint_request_task_create_timesheet_time_positive
+msgid "The timesheet's time must be positive"
+msgstr "El tiempo de la hoja de tiempos debe ser positivo"
+
+#. module: l10n_cl_maintenance
+#: model:res.groups,comment:l10n_cl_maintenance.group_equipment_user
+msgid "The user will be able to user equipments."
+msgstr "El usuario podrá utilizar los equipos."
+
+#. module: l10n_cl_maintenance
+#: code:addons/l10n_cl_maintenance/models/maintenance_request_master.py:0
+#, python-format
+msgid "There are TOs that have not been completed"
+msgstr "Exíste órdenes de trabajo que aún no se han cerrado"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.guideline_activity_act_window
+msgid "There is no activities click here to add new activity."
+msgstr "No hay actividades haga clic aquí para añadir una nueva actividad."
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.maintenance_system_act_window
+msgid "There is no activities click here to add new system."
+msgstr "No hay actividades haga clic aquí para añadir un nuevo sistema."
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.maintenance_motive_stage_act_window
+msgid "There is no examples click here to add new Motives."
+msgstr "No hay ejemplos haga clic aquí para añadir nuevos Motivos."
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.maintenance_request_master_act_window
+msgid "There is no examples click here to add new OT Masters."
+msgstr "No hay ejemplos haga clic aquí para añadir nuevas  OT Maestras."
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.ot_template_act_window
+msgid "There is no examples click here to add new OT Template."
+msgstr "No hay ejemplos haga clic aquí para añadir una nueva plantilla de OT."
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.maintenance_request_type_act_window
+msgid "There is no examples click here to add new Type OT."
+msgstr "No hay ejemplos haga clic aquí para añadir nuevo Tipo OT."
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.maintenance_system_classification_act_window
+msgid "There is no system classification click here to add new."
+msgstr "No existe un sistema de clasificación haga clic aquí para añadir nuevos."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task_stage__fold
+msgid "This stage is folded in the kanban view when there are no records in that stage to display."
+msgstr "Esta etapa se pliega en la vista de kanban cuando no hay registros en esa etapa para mostrar."
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_stage_edit
+msgid "This step is done. Click to block or set in progress."
+msgstr "Este paso está hecho. Haga clic para bloquear o poner en marcha."
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.rt_stage_delete_wz_view_form
+msgid ""
+"This will archive the stages and all the tasks they contain from the following\n"
+"                                requests:"
+msgstr "Esto archivará las etapas y todas las tareas que contienen de las siguientes solicitudes:"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_request_task_create_timesheet__time_spent
+msgid "Time"
+msgstr "Tiempo"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__planned_hours
+msgid "Time planned to achieve this task (including its sub-tasks)."
+msgstr "Tiempo previsto para realizar esta tarea (incluidas sus subtareas)."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__effective_hours
+msgid "Time spent on this task, excluding its sub-tasks."
+msgstr "Tiempo dedicado a esta tarea, excluyendo sus subtareas."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__total_hours_spent
+msgid "Time spent on this task, including its sub-tasks."
+msgstr "Tiempo dedicado a esta tarea, incluidas sus subtareas."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__timer_pause
+msgid "Timer Last Pause"
+msgstr "Temporizador Última pausa"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__timer_start
+msgid "Timer Start"
+msgstr "Inicio del temporizador"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "Timesheet Activities"
+msgstr "Actividades de la hoja de tiempos"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__timesheet_total_hours
+msgid "Timesheet Total Hours"
+msgstr "Hoja de horas Total de horas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__timesheet_ids model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "Timesheets"
+msgstr "Parte de horas"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_form_inherit
+msgid "Title"
+msgstr "Título"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_search
+msgid "To Do"
+msgstr "Para hacer"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.request_task_action_to_schedule model:ir.ui.menu,name:l10n_cl_maintenance.menu_all_tasks_schedule
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_search
+msgid "To Schedule"
+msgstr "Para programar"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.request_task_action_all
+msgid ""
+"To get things done, use activities and status on tasks.\n"
+"                    <br>\n"
+"                    Chat in real time or by email to collaborate efficiently."
+msgstr ""
+"Para hacer las cosas, utilice las actividades y el estado de las tareas.\n"
+"                <br>\n"
+"                Chatea en tiempo real o por correo electrónico para colaborar eficazmente."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__total_hours_spent
+msgid "Total Hours"
+msgstr "Total de horas"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.product_action_request
+msgid "Track and reinvoice the material used to complete an intervention."
+msgstr "Seguir y refacturar el material utilizado para completar una intervención."
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.actions.act_window,help:l10n_cl_maintenance.hr_equipment_action_from_activity_form
+msgid ""
+"Track equipments and link it to an employee or department.\n"
+"                You will be able to manage allocations, issues and maintenance of your equipment."
+msgstr ""
+"Rastree equipos y vincúlelo a un empleado o departamento.\n"
+"Podrá administrar asignaciones, problemas y mantenimiento de su equipo."
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.mblz_hr_equipment_view_form
+msgid "Tracking"
+msgstr "Seguimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity_tracking__tracking_date model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_equipment_activity_tracking_view_search
+msgid "Tracking Date"
+msgstr "Fecha de seguimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity_tracking__tracking_value
+msgid "Tracking Value"
+msgstr "Valor de seguimiento"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity_tracking__tracking_eauom_value
+msgid "Tracking Value on Equipment Actv UoM"
+msgstr "Seguimiento del valor del equipo Actv UoM"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_equipment_odometer_log__type_odometer
+msgid "Type"
+msgstr "Ayuda"
+
+#. module: l10n_cl_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_maintenance.maintenance_request_type_act_window model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__type_ot
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__type_ot model:ir.model.fields,field_description:l10n_cl_maintenance.field_ot_template__type_ot
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_type_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_type_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_type_tree_view
+msgid "Type OT"
+msgstr "Tipo OT"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_view_tree
+msgid "Type P"
+msgstr "Tipo de pauta"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_guideline__activity_exception_decoration model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_master__activity_exception_decoration
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de la actividad de excepción registrada."
+
+#. module: l10n_cl_maintenance
+#: model:ir.ui.menu,name:l10n_cl_maintenance.maintenance_request_type_menu
+msgid "Types of OT"
+msgstr "Tipos de OT"
+
+#. module: l10n_cl_maintenance
+#: model:res.groups,name:l10n_cl_maintenance.group_tecnicos
+msgid "TÉCNICOS"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.view_task_request_user_search
+msgid "Unassigned"
+msgstr "No asignado"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity__uom_id model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment_activity_tracking__uom_id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__uom_id model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_equipment_activity_view_search
+msgid "Unit of Measure"
+msgstr "Unidad de medida"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_equipment_odometer_log__odometer_unit model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_equipment__odometer_unit
+msgid "Unit of the odometer "
+msgstr "Unidad del odómetro"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__message_unread model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__message_unread
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__message_unread
+msgid "Unread Messages"
+msgstr "Mensajes no leídos"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__message_unread_counter model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__message_unread_counter
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes no leídos"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.equipment_odometer_log_view_tree
+msgid "UoM"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.mtm_request_task_wz_form_view
+msgid "Update massive employee"
+msgstr "Actualizar un empleado en varias tareas"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__url_video model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline_activity__activity_url_video
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__activity_url_video
+msgid "Url video"
+msgstr "Url de vídeo"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__url_ids model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__url_ids
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__activity_url_ids
+msgid "Urls"
+msgstr "Enlaces"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__user_id
+msgid "User"
+msgstr "Usuario"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__user_timer_id
+msgid "User Timer"
+msgstr "Temporizador de usuario"
+
+#. module: l10n_cl_maintenance
+#: model:res.groups,name:l10n_cl_maintenance.group_equipment_user
+msgid "Usuario de equipos"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request__flag_validate_auto
+msgid "Validate automatically"
+msgstr "Validar automáticamente"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__value
+msgid "Value"
+msgstr "Valor"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_view_form
+msgid "Value for preventive maintenance"
+msgstr "Valor para el mantenimiento preventivo"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_fleet_vehicle model:ir.model.fields,field_description:l10n_cl_maintenance.field_equipment_odometer_log__vehicle_id
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment__vehicle_id
+msgid "Vehicle"
+msgstr "Vehículo"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_equipment__vehicle_type
+msgid "Vehicle Type"
+msgstr "Tipo de vehículo"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__allowed_user_ids
+msgid "Visible to"
+msgstr "Visible para"
+
+#. module: l10n_cl_maintenance
+#: code:addons/l10n_cl_maintenance/models/hr_employee.py:0 model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_line_confirm_form_view
+#, python-format
+msgid "Warning"
+msgstr "Advertencia"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_guideline__website_message_ids model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_master__website_message_ids
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_guideline__website_message_ids model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_master__website_message_ids
+#: model:ir.model.fields,help:l10n_cl_maintenance.field_maintenance_request_task__website_message_ids
+msgid "Website communication history"
+msgstr "Historia de la comunicación en la web"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_line_confirm_form_view
+msgid "Yes"
+msgstr "Si"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_stage_edit
+msgid ""
+"You can also add a description to help your coworkers understand the meaning and purpose\n"
+"                                of\n"
+"                                the stage."
+msgstr "También puede añadir una descripción para ayudar a sus colaboradores a entender el significado y el propósito de  el escenario."
+
+#. module: l10n_cl_maintenance
+#: code:addons/l10n_cl_maintenance/models/maintenance_system.py:0
+#, python-format
+msgid "You cannot create recursive System."
+msgstr "No se puede crear un Sistema recursivo."
+
+#. module: l10n_cl_maintenance
+#: code:addons/l10n_cl_maintenance/models/guideline_activity.py:0
+#, python-format
+msgid "You cannot create recursive activities."
+msgstr "No se pueden crear actividades recursivas."
+
+#. module: l10n_cl_maintenance
+#: model:ir.model,name:l10n_cl_maintenance.model_activity_url
+msgid "activity urls"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_view_form
+msgid "add multiple activities"
+msgstr "Añadir varias actividades"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_activity_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_form_inherit
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "e.g. Mechanic"
+msgstr "Ejem. Mécanico"
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_activity_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_activity_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_activity_tree_view
+msgid "guideline activity"
+msgstr "Actividad de la pauta"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__equipment_odometer_log__odometer_unit__kilometers
+msgid "km"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_guideline_view_tree
+msgid "maintenance_guideline_tree"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_form
+msgid "maintenance_request_task_form"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_request_task_view_tree
+msgid "maintenance_request_task_tree"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_classification_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_classification_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.maintenance_system_classification_tree_view
+msgid "maintenance_system_classification"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_maintenance.selection__equipment_odometer_log__odometer_unit__miles
+msgid "mi"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.guideline_line_confirm_form_view model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.mtm_request_task_wz_form_view
+msgid "or"
+msgstr "o"
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_guideline_activity__parent_path model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_system__parent_path
+msgid "parent_path"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task__request_speciality_ids
+msgid "request_speciality_ids"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_maintenance.field_maintenance_request_task_stage__request_ids
+msgid "requests"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.rt_stage_delete_wz_view_form
+msgid "rq_stage_delete_wz_form"
+msgstr ""
+
+#. module: l10n_cl_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_maintenance.mblz_hr_equipment_view_form
+msgid "show the odometer logs for this vehicle"
+msgstr "mostrar los registros del odómetro de este vehículo"
+
+#. module: l10n_cl_maintenance
+#: code:addons/l10n_cl_maintenance/models/maintenance_guideline.py:0
+#, python-format
+msgid "the activity does not have an assigned video"
+msgstr "La actividad no tiene un vídeo asignado"
+
+#. module: l10n_cl_maintenance
+#: code:addons/l10n_cl_maintenance/models/guideline_activity.py:0
+#, python-format
+msgid "the activity does not have an link assigned video"
+msgstr "La actividad no tiene un enlace de vídeo asignado"

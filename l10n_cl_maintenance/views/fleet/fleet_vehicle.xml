@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="mblz_fleet_vehicle_view_form" model="ir.ui.view">
+            <field name="name">mblz.fleet.vehicle.form</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+            <field name="arch" type="xml">
+
+                <div name="button_box" position="inside">
+
+                    <button name="return_action_to_open"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-wrench"
+                            context="{'xml_id':'hr_equipment_request_action_from_equipment',
+                                      'opc_maintenance': True}"
+                            attrs="{'invisible': [('maintenance_count', '=', 0)]}">
+                        <field name="maintenance_count" widget="statinfo" string="Maintenance"/>
+                    </button>
+                </div>
+
+
+                <xpath expr="//field[@name='tag_ids']" position="after">
+                    <!-- Add your fields or attributes here -->
+                    <div attrs="{'invisible': [('equipment_id', '=', False)]}">
+                        <field name="assigned_equipment_id" invisible="1"/>
+                        <label for="equipment_id" class="oe_edit_only text-bf"/>
+                        <field name="equipment_id"
+                               class="text-primary"
+                               readonly="1"
+                               options="{'no_open': False, 'no_create': True}"/>
+                    </div>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="mblz_fleet_vehicle_view_tree" model="ir.ui.view">
+            <field name="name">mblz.fleet.vehicle.tree</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_view_tree"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='tag_ids']" position="after">
+                    <!-- Add new fields here -->
+                    <field name="equipment_id" class="text-primary" readonly="1"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <!-- Inherit Form View to Modify it -->
+
+        <record id="mblz_fleet_vehicle_view_search" model="ir.ui.view">
+            <field name="name">mblz_fleet.vehicle.search</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_view_search"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='name']" position="before">
+                    <!-- Add your fields or attributes here -->
+                    <field name="equipment_id"/>
+                </xpath>
+
+            </field>
+        </record>
+
+
+        <!-- Inherit Form View to Modify it -->
+
+        <record id='mblz_fleet_vehicle_view_kanban' model='ir.ui.view'>
+            <field name="name">mblz:fleet.vehicle.kanban</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_view_kanban"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='activity_state']" position="after">
+                    <!-- Add your fields or attributes here -->
+                    <field name="equipment_id"/>
+                </xpath>
+
+                <xpath expr="//t[@t-if='record.location.raw_value']" position="after">
+                    <t t-if="record.equipment_id.raw_value"><b>Equipo: </b> <field name="equipment_id"
+                                                                                   class="text-primary"/></t>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

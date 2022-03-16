@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="maintenance_request_master_form_view" model="ir.ui.view">
+            <field name="name">maintenance_request_master.form</field>
+            <field name="model">maintenance.request.master</field>
+            <field name="arch" type="xml">
+                <form string="OT Masters">
+                    <header>
+                        <button name="action_done" type="object"
+                                class="oe_highlight"
+                                string="Marcar como cerrado"
+                                states="progress"
+                                groups="l10n_cl_maintenance.group_jefe_planificacion"/>
+
+                        <!--                        <button name="action_dev" type="object" string="action_dev"-->
+                        <!--                                groups="base.group_no_one"/>-->
+                        <field name="state" widget="statusbar" statusbar_visible="draft,progress,done"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="maintenance_type" widget="radio" options="{'horizontal': true}"/>
+                            <field name="type_ot"
+                                   widget="selection"
+                                   domain="[('maintenance_type','=',maintenance_type)]"/>
+                            <field name="schedule_date" required="1"/>
+                            <field name="flag_request_completed" invisible="1"/>
+
+                            <field name="equipment_ids"
+                                   string="Buses"
+                                   options="{'no_create': True}"
+                                   domain="[('vehicle_id', '!=', False)]"
+                                   attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                   widget="many2many_tags"/>
+
+                            <field name="guideline_ids"
+                                   domain="[('maintenance_type', '=', maintenance_type)]"
+                                   options="{'no_create': True}"
+                                   attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                   widget="many2many_tags"/>
+                            <field name="user_id" widget="many2one_avatar_user" readonly="1"/>
+                            <field name="flag_ot_ok" invisible="1"/>
+                            <field name="flag_request_completed" invisible="1"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <div class="text-center">
+                            <button name="action_create_requests"
+                                    type="object"
+                                    string="Create Maintenance Requests"
+                                    icon="fa-hand-o-right"
+                                    class="oe_highlight"
+                                    style="margin-bottom : 16px;"
+                                    confirm="Confirm the creation of maintenance requests?"
+                                    attrs="{'invisible': ['|','|','|','|',('request_ids', '!=', []),
+                                                               ('type_ot', '=', False),
+                                                               ('schedule_date', '=', False),
+                                                               ('equipment_ids', '=', []),
+                                                               ('guideline_ids', '=', []),
+                                    ]}"/>
+
+                        </div>
+
+                        <div class="alert alert-danger" role="alert"
+                             attrs="{'invisible': ['|', ('state', '=', 'draft'), ('flag_ot_ok', '=', True)]}">
+                            <p><b>Nota</b>: Se debe añadir el tipo de OT y fecha prevista a cada una de las líneas.</p>
+                        </div>
+
+                        <notebook>
+
+                            <page name="page_requests"
+                                  attrs="{'invisible': [('state', '=', 'draft')]}"
+                                  string="OT's">
+                                <field
+                                        name="request_ids"
+                                        widget="one2many"
+                                        mode="tree,form">
+                                    <tree string="Request Lines"
+                                          create="0" delete="0"
+                                          context="{'default_ot_master_id' : id}"
+                                          edit="1"
+                                          default_order="name_seq"
+                                    >
+                                        <field name="ot_master_id" invisible="1"/>
+                                        <field name="name_seq" string="Sequence"/>
+                                        <field name="name" string="Name"/>
+                                        <field name="type_ot"
+                                               widget="selection"
+                                               domain="[('maintenance_type', '=', 'preventive')]"
+                                        />
+                                        <!--                                                                                 options='{"bg_color": "gray: type_ot == False"}'-->
+                                        <field name="maintenance_type"
+                                               optional="hide"
+                                               readonly="1"
+                                               string="Nature"
+                                               widget="badge" decoration-danger="maintenance_type == 'corrective'"
+                                               decoration-primary="maintenance_type == 'preventive'"/>
+                                        <field name="equipment_id"
+                                               optional="show"
+                                               readonly="1"/>
+                                        <field name="maintenance_guideline_ids"
+                                               optional="show"
+                                               readonly="1"
+                                               widget="many2many_tags"/>
+                                        <field name="schedule_date"
+                                               widget="datetime"/>
+
+                                        <field name="stage_id"/>
+                                        <field name="task_done_percent"
+                                               string="Avance"
+                                               widget="progressbar"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                            <page name="description_page" string="Description">
+                                <field name="description" type="html"/>
+                                <div class="d-none oe_clear"/>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"
+                               options="{'post_refresh':True}" groups="base.group_user"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="maintenance_request_master_tree_view" model="ir.ui.view">
+            <field name="name">maintenance_request_master.tree</field>
+            <field name="model">maintenance.request.master</field>
+            <field name="arch" type="xml">
+                <tree string="OT Masters" default_order="name desc">
+                    <field name="name" string="Name"/>
+                    <field name="user_id" widget="many2one_avatar_user" readonly="1"/>
+                    <field name="activity_ids" widget="list_activity" optional="show"/>
+                    <field name="state" widget="badge" decoration-info="state == 'draft'"
+                           decoration-primary="state == 'progress'"
+                           decoration-success="state == 'done'"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="maintenance_request_master_search_view" model="ir.ui.view">
+            <field name="name">maintenance_request_master.search</field>
+            <field name="model">maintenance.request.master</field>
+            <field name="arch" type="xml">
+                <search string="OT Masters">
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="maintenance_request_master_act_window" model="ir.actions.act_window">
+            <field name="name">OT Masters</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">maintenance.request.master</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    There is no examples click here to add new OT Masters.
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="OT Masters"
+                  id="maintenance_request_master_menu"
+                  parent="maintenance.menu_m_request"
+                  action="maintenance_request_master_act_window"
+                  sequence="100"
+                  groups="maintenance.group_equipment_manager,base.group_user"
+        />
+
+    </data>
+</odoo>

@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_fuel_tank,mblz_fleet.fuel_tank,model_fuel_tank,base.group_user,1,1,1,1
+access_fuel_filling_history,mblz_fleet.fuel_filling_history,model_fuel_filling_history,base.group_user,1,1,1,1
+
+access_add_liters_wizard,mblz_fleet.add_liters_wizard,model_add_liters_wizard,base.group_user,1,1,1,1
+
+access_vehicle_fuel_log,mblz_fleet.vehicle_fuel_log,model_vehicle_fuel_log,base.group_user,1,1,1,1
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="rt_stage_delete_wz_view_form" model="ir.ui.view">
+            <field name="name">rt_stage_delete_wz_view_form</field>
+            <field name="model">rt.stage.delete.wizard</field>
+            <field name="arch" type="xml">
+                <form string="rq_stage_delete_wz_form">
+                    <sheet>
+                        <group>
+                            <p>This will archive the stages and all the tasks they contain from the following
+                                requests:</p>
+                            <field name="request_ids" readonly="1">
+                                <tree>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                            <p>Are you sure you want to continue?</p>
+                        </group>
+                        <footer>
+                            <button string="Confirm" stage="object" name="action_confirm" class="btn btn-primary"/>
+                            <button string="Discard" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

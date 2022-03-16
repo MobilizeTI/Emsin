@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="hr_equipment_request_view_form">
+        <field name="name">maintenance.request.tree (in maintenance_request_flow)</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form"/>
+        <field name="arch" type="xml">
+
+            <!--            <xpath expr="//button[@name='reset_equipment_request']" position="after">-->
+            <!--                <button name="open_motive_wizard"-->
+            <!--                        type="object"-->
+            <!--                        string="to deferred"-->
+            <!--                        attrs="{'invisible': [('flag_stage_request_motive', '=', True)]}"-->
+            <!--                        class="oe_highlight"/>-->
+
+            <!--            </xpath>-->
+
+
+            <!--            <field name="stage_id" position="attributes">-->
+            <!--                <attribute name="clickable"/>-->
+            <!--            </field>-->
+
+            <xpath expr="//field[@name='stage_id']" position="attributes">
+                <attribute name="clickable">0</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='description']" position="after">
+                <field name="is_deferred" invisible="1"/>
+                <field name="is_waiting" invisible="1"/>
+                <field name="flag_stage_request_motive" invisible="1"/>
+                <field name="last_motive" invisible="1"/>
+                <field name="last_comment" invisible="1"/>
+                <field name="flag_with_motive" invisible="1"/>
+
+                <notebook>
+                    <page name="page_motive_log" string="Motives"
+                          attrs="{'invisible': [('motive_log_ids', '=', [])]}">
+                        <field
+
+                                name="motive_log_ids"
+                                readonly="1"
+                                widget="section_and_note_one2many"
+                                context="{'default_request_id' : id}"
+                                mode="tree, form">
+
+                            <tree string="list motives" default_order="date desc">
+                                <field name="date" widget="datetime"/>
+                                <field name="motive_id"/>
+                                <field name="comment"/>
+                                <field name="stage_name" options='{"bg_color": "#f1f2f6"}'/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <group>
+                                        <field name="date" widget="datetime"/>
+                                        <field name="motive_id"/>
+                                    </group>
+                                    <group>
+                                        <field name="comment"/>
+                                        <field name="stage_name"/>
+                                    </group>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </notebook>
+            </xpath>
+
+
+        </field>
+    </record>
+
+
+    <record id="mblz_stage_motive_hr_equipment_request_view_search" model="ir.ui.view">
+        <field name="name">mblz_stage_motive.equipment.request.search</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="l10n_cl_maintenance.mblz_hr_equipment_request_view_search"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='create_type']" position="after">
+                <field name="is_deferred"/>
+                <field name="is_waiting"/>
+            </xpath>
+
+            <xpath expr="//filter[@name='from_otm']" position="before">
+                <filter string="Diferidos o En espera" name="is_deferred_waiting"
+                        domain="['|',('is_deferred', '=', True),('is_waiting', '=', True) ]"/>
+            </xpath>
+
+            <xpath expr="//filter[@name='group_ot_master']" position="after">
+                <filter string='Diferidos'
+                        name="group_is_deferred"
+                        domain="[]" context="{'group_by': 'is_deferred'}"/>
+
+                <filter string='En espera'
+                        name="group_is_waiting"
+                        domain="[]" context="{'group_by': 'is_waiting'}"/>
+            </xpath>
+
+        </field>
+    </record>
+
+
+    <record id="mtto_request_motives_view_tree" model="ir.ui.view">
+        <field name="name">mtto_request_motives_view_tree</field>
+        <field name="model">maintenance.request</field>
+        <field name="arch" type="xml">
+            <tree string="mtto_request_motives_tree">
+                <field name="name_seq" string="Sequence"/>
+                <field name="name" string="Name OT"/>
+                <field name="last_motive"/>
+                <field name="last_comment"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!--    MENU DE MOTIVOS Y COMENTARIOS-->
+    <!-- equiment.request : actions -->
+    <record id="mblz_motives_hr_equipment_request_action" model="ir.actions.act_window">
+        <field name="name">Motives</field>
+        <field name="res_model">maintenance.request</field>
+        <field name="view_mode">tree,kanban,form,pivot,graph,calendar</field>
+        <field name="view_id" ref="mtto_request_motives_view_tree"/>
+        <field name="context">{'default_user_id': uid}</field>
+        <field name="domain">[('flag_with_motive', '=', True)]</field>
+    </record>
+
+    <menuitem
+            id="menu_m_request_motives"
+            name="Motives"
+            parent="maintenance.menu_m_request"
+            action="mblz_motives_hr_equipment_request_action"
+            groups="maintenance.group_equipment_manager,base.group_user"
+            sequence="100"/>
+
+
+</odoo>

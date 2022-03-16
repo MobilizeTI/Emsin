@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="layout_body_ot" t-name="layout_body_ot">
+            <style>
+                .text_body{
+                font-size: 12px;
+                }
+
+                .border_bottom_div {
+                border-bottom: 1px solid #000;
+                }
+
+                .table_border {border:1px solid black;border-collapse:collapse;}
+                .table_td_border {border:1px solid black;}
+                .ct_bold{font-weight: 900;}
+
+
+                table { page-break-after:auto }
+                tr { page-break-inside:avoid; page-break-after:auto }
+                td { page-break-inside:avoid; page-break-after:auto }
+                thead { display: table-row-group; }
+
+            </style>
+            <div class="container text-uppercase">
+                <div class="row border_div">
+                    <div class="col-6">
+                        <table class="text_body">
+                            <tr>
+                                <th class="pt-1 pb-1 ct_bold">Tipo Orden: </th>
+                                <td class="text-uppercase text-bf pl-3 ct_bold"><span t-field="o.type_ot.name"/></td>
+                            </tr>
+                            <tr>
+                                <th class="pt-1 pb-1 ct_bold">Estado: </th>
+                                <td class="text-uppercase text-bf pl-3 ct_bold"><span t-field="o.stage_id.name"/></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-6 text_body">
+                        <p class="pt-1 pb-1 ct_bold"><b>Tipo de mantenimiento:</b> <span t-field="o.maintenance_type"
+                                                                                         class="pl-3 text-uppercase ct_bold"/></p>
+                    </div>
+                </div>
+                <br/>
+
+                <div class="row border_bottom_div text_body ct_bold">
+                    <div class="col-4">
+                        <p class="pt-1 pb-1"><b>Número OT:</b> <span t-esc="o.name_seq" class="ml-2 text-bf"/></p>
+                    </div>
+                    <div class="col-4">
+                        <p class="pt-1 pb-1"><b>Fecha de creación:</b> <span
+                                t-esc="o.datetime_create_ot.strftime('%d-%m-%y')"
+                                class="pl-2"/></p>
+                    </div>
+                    <div class="col-4">
+                        <p class="pt-1 pb-1"><b>Hora creación:</b> <span
+                                t-esc="o.datetime_create_ot.strftime('%H:%M:%S')"
+                                class="pl-2"/></p>
+                    </div>
+                </div>
+                <br/>
+
+                <div class="row text_body">
+                    <div class="col-3">
+                        <table>
+                            <tr>
+                                <th class="pt-1 pb-1 ct_bold">PLACA: </th>
+                                <td class="text-uppercase text-bf pl-3"><span
+                                        t-field="o.equipment_id.vehicle_id.license_plate"/></td>
+                            </tr>
+                            <tr>
+                                <th class="pt-1 pb-1 ct_bold">Fecha Solicitud: </th>
+                                <td class="text-uppercase text-bf pl-3"><span t-field="o.request_date"/></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-3">
+                        <p class="pt-1 pb-1 ct_bold"><b>MODELO: </b> <span
+                                t-esc="o.equipment_id.vehicle_id.model_id.name"
+                                class="pl-3 text-uppercase"/></p>
+                    </div>
+
+                    <div class="col-3">
+                        <p class="pt-1 pb-1 ct_bold"><b>MÓVIL: </b> <span t-esc="o.equipment_id.name"
+                                                                          class="pl-3 text-uppercase"/></p>
+                    </div>
+                    <div class="col-3">
+                        <p class="pt-1 pb-1 ct_bold"><b>KILOMETRAJE: </b> <span
+                                t-esc="o.equipment_id.vehicle_id.odometer"
+                                class="pl-3 text-uppercase"/></p>
+                    </div>
+                </div>
+
+
+                <br/>
+                <div class="row text_body">
+                    <div class="col-12">
+                        <table class="col-12 text_body">
+                            <tbody>
+                                <tr>
+                                    <th class="pt-1 pb-1 ct_bold">Descripción: </th>
+                                    <td class="text-uppercase text-bf" colspan="4"><span
+                                            t-field="o.name"/></td>
+                                </tr>
+                                <tr>
+                                    <th class="pt-1 pb-1 ct_bold">Emisor: </th>
+                                    <td class="text-uppercase text-bf" colspan="4"><span
+                                            t-field="o.employee_id.name"/></td>
+                                </tr>
+                                <tr>
+                                    <th class="pt-1 pb-1 ct_bold">Supervisor mtto asignado: </th>
+                                    <td class="text-uppercase text-bf" colspan="4"><span t-field="o.user_id.name"/></td>
+                                </tr>
+                                <tr>
+                                    <th class="pt-1 pb-1 ct_bold">Empresa Externa: </th>
+                                    <td class="text-uppercase text-bf" colspan="4"></td>
+                                </tr>
+
+                                <tr>
+                                    <th class="pt-1 pb-1 ct_bold">DIAGNÓSTICO: </th>
+                                    <td class="border_div p-1" colspan="4"><span t-esc="o.description"/></td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+                <br/>
+                <p class="text_body ct_bold">.............................................. Detalle de actividades a
+                    ejecutar..............................................
+                </p>
+                <!--Tareas relacionadas a la ot-->
+                <t t-foreach="o.task_ids" t-as="task">
+                    <!--lineas-->
+                    <div class="row">
+                        <table class="col-12 text_body table_border">
+
+                            <thead>
+                                <tr>
+                                    <th colspan="2" class="p-1 text-left table_td_border ct_bold bg-light">Código
+                                        Especialidad</th>
+                                    <td colspan="7" class="p-1 text-left table_td_border"><span
+                                            t-esc="', '.join(map(str,task.activity_speciality_ids.mapped('name')))"/></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" class="p-1 text-left table_td_border ct_bold bg-light">Código
+                                        descripción de la actividad</th>
+                                    <td colspan="7" class="p-1 text-left table_td_border"><span
+                                            t-field="task.activity_id.name"/></td>
+                                </tr>
+
+                                <tr>
+                                    <th colspan="2" class="p-1 text-left table_td_border ct_bold bg-light">Código
+                                        descripción</th>
+                                    <td colspan="7" class="p-1 text-left table_td_border"><span
+                                            t-field="task.description"/></td>
+                                </tr>
+
+                                <tr>
+                                    <th class="text-center p-1 pb-2 table_td_border ct_bold bg-light">Correlativo</th>
+                                    <th class="text-center p-1 pb-2 table_td_border ct_bold bg-light">CC</th>
+                                    <th class="text-center p-1 table_td_border ct_bold bg-light">NOMBRE</th>
+                                    <th class="text-center p-1 pb-2 table_td_border ct_bold bg-light">Sistema</th>
+                                    <th class="text-center p-1 pb-2 table_td_border ct_bold bg-light">Subsistema</th>
+                                    <th class="text-center p-1 table_td_border ct_bold bg-light">Componente</th>
+
+                                    <th class="text-center p-1 table_td_border ct_bold bg-light">F Inicio</th>
+                                    <th class="text-center p-1 pb-2 table_td_border ct_bold bg-light">F terminación</th>
+                                    <th class="text-left p-1 table_td_border ct_bold bg-light">Actividades
+                                        Ejecutadas</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- parte de horas-->
+
+                                <tr>
+                                    <td class="text-center table_td_border"><span
+                                            t-field="task.name_seq" class="pl-1"/></td>
+                                    <td class="text-center table_td_border"><span
+                                            t-field="task.employee_id.identification_id"/></td>
+                                    <td class="text-left table_td_border text-uppercase">
+                                        <span t-field="task.employee_id.name" class="pl-1"/>
+                                    </td>
+
+                                    <!-- sistema-->
+
+                                    <td class="text-left table_td_border">
+                                        <ul class="list-unstyled">
+                                            <t t-foreach="task.activity_id.system_class_id.parent_ids" t-as="sis">
+                                                <li class="pl-1">
+                                                    <span t-field="sis.parent_id.name"/>
+                                                </li>
+                                            </t>
+                                        </ul>
+                                    </td>
+
+                                    <!--  sub sistema-->
+                                    <td class="text-left table_td_border">
+                                        <ul class="list-unstyled">
+                                            <t t-foreach="task.activity_id.system_class_id.parent_ids" t-as="sis">
+                                                <li class="pl-1">
+                                                    <span t-field="sis.name"/>
+                                                </li>
+                                            </t>
+                                        </ul>
+                                    </td>
+                                    <!-- componente-->
+                                    <td class="text-center table_td_border"><span
+                                            t-field="task.activity_id.system_class_id.name"/></td>
+
+
+                                    <td class="text-center table_td_border">
+                                        <ul class="list-unstyled">
+                                            <t t-foreach="task.timesheet_ids" t-as="ts_line">
+                                                <li class="pl-1">
+                                                    <span t-esc="ts_line.datetime_start.strftime('%d-%m-%y')"/>
+                                                </li>
+                                            </t>
+                                        </ul>
+                                    </td>
+
+                                    <td class="text-center table_td_border">
+                                        <ul class="list-unstyled">
+                                            <t t-foreach="task.timesheet_ids" t-as="ts_line">
+                                                <li class="pl-1">
+                                                    <span t-esc="ts_line.datetime_create_line.strftime('%d-%m-%y')"/>
+                                                </li>
+                                            </t>
+                                        </ul>
+                                    </td>
+
+                                    <td class="text-left table_td_border">
+                                        <ul class="list-unstyled">
+                                            <t t-foreach="task.timesheet_ids" t-as="ts_line">
+                                                <li class="pl-1">
+                                                    <span t-field="ts_line.name"/>
+                                                </li>
+                                            </t>
+                                        </ul>
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr/>
+                </t>
+
+            </div>
+        </template>
+
+    </data>
+</odoo>

@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_helpdesk_failure_level_admin,helpdesk.failure.level-admin,model_helpdesk_failure_level,helpdesk.group_helpdesk_manager,1,1,1,1
+access_helpdesk_failure_level_user,helpdesk.failure.level-user,model_helpdesk_failure_level,helpdesk.group_helpdesk_user,1,1,1,1
+access_helpdesk_failure_level,helpdesk.failure.level,model_helpdesk_failure_level,,1,0,0,0
+
+access_helpdesk_support_level_admin,helpdesk.support.level-admin,model_helpdesk_support_level,helpdesk.group_helpdesk_manager,1,1,1,1
+access_helpdesk_support_level_user,helpdesk.support.level-user,model_helpdesk_support_level,helpdesk.group_helpdesk_user,1,1,1,1
+access_helpdesk_support_level,helpdesk.support.level,model_helpdesk_support_level,,1,0,0,0
+
+access_helpdesk_support_activity_admin,helpdesk.support.level-admin,model_helpdesk_support_activity,helpdesk.group_helpdesk_manager,1,1,1,1
+access_helpdesk_support_activity_user,helpdesk.support.level-user,model_helpdesk_support_activity,helpdesk.group_helpdesk_user,1,1,1,1
+access_helpdesk_support_activity,helpdesk.support.level,model_helpdesk_support_activity,,1,0,0,0
+
+

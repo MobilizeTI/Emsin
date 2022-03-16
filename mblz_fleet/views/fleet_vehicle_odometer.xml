@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id='mblz_fleet_vehicle_odometer_view_tree' model='ir.ui.view'>
+            <field name="name">mblz_fleet.vehicle.odometer.tree</field>
+            <field name="model">fleet.vehicle.odometer</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_odometer_view_tree"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='vehicle_id']" position="after">
+                    <!-- Add new fields here -->
+                    <field name="odometer_actual" widget="float" class="text-muted"/>
+                </xpath>
+
+                <xpath expr="//field[@name='value']" position="after">
+                    <field name="value_dif" optional="hide" readonly="1"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

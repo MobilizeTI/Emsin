@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stage_motive_wizard,maintenance_request_stage_transition_stage.motive.wizard,model_stage_motive_wizard,,1,1,1,1
+access_maintenance_motive_log,maintenance_request_stage_transition_stage.maintenance.motive.log,model_maintenance_motive_log,,1,1,1,1

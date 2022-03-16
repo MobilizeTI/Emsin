@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="maintenance_request_type_form_view" model="ir.ui.view">
+            <field name="name">maintenance.request.type.form</field>
+            <field name="model">maintenance.request.type</field>
+            <field name="arch" type="xml">
+                <form string="Type OT">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="nro_type"/>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="maintenance_type" string="Nature"
+                                       widget="selection"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="description_page" string="Description">
+                                <field name="description" type="html"/>
+                                <div class="d-none oe_clear"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="maintenance_request_type_tree_view" model="ir.ui.view">
+            <field name="name">maintenance.request.type.tree</field>
+            <field name="model">maintenance.request.type</field>
+            <field name="arch" type="xml">
+                <tree string="Type OT">
+                    <field name="nro_type"/>
+                    <field name="name"/>
+                    <field name="maintenance_type" string="Nature"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="maintenance_request_type_search_view" model="ir.ui.view">
+            <field name="name">maintenance.request.type.search</field>
+            <field name="model">maintenance.request.type</field>
+            <field name="arch" type="xml">
+                <search string="Type OT">
+                    <field name="nro_type"/>
+                    <field name="name"/>
+                    <group expand="1" string="Group By">
+                        <filter string="Nro" name="nro_type" domain="[]"
+                                context="{'group_by':'nro_type'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="maintenance_request_type_act_window" model="ir.actions.act_window">
+            <field name="name">Type OT</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">maintenance.request.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    There is no examples click here to add new Type OT.
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Types of OT"
+                  id="maintenance_request_type_menu"
+                  sequence="5"
+                  parent="maintenance.menu_maintenance_configuration"
+                  action="maintenance_request_type_act_window"/>
+
+    </data>
+</odoo>

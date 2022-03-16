@@ -1,0 +1,534 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mblz_purchase_multi_level_approval
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20220107\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-09 21:32+0000\n"
+"PO-Revision-Date: 2022-03-09 16:34-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__active
+msgid "Active"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model_terms:ir.ui.view,arch_db:mblz_purchase_multi_level_approval.mblz_purchase_order_kpis_tree
+msgid "App-admin"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model_terms:ir.ui.view,arch_db:mblz_purchase_multi_level_approval.mblz_purchase_order_kpis_tree
+msgid "App-user"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_order__approval_user_ids
+#: model_terms:ir.ui.view,arch_db:mblz_purchase_multi_level_approval.mblz_purchase_order_form
+msgid "Approvals"
+msgstr "Aprobaciones"
+
+#. module: mblz_purchase_multi_level_approval
+#: model_terms:ir.ui.view,arch_db:mblz_purchase_multi_level_approval.mblz_purchase_order_form
+msgid "Approvals Lines"
+msgstr "Líneas de aprobación"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_approval_line__approve_admin
+msgid "Approve Admin"
+msgstr "Aprobado (Admin)"
+
+#. module: mblz_purchase_multi_level_approval
+#: model_terms:ir.ui.view,arch_db:mblz_purchase_multi_level_approval.mblz_purchase_order_form
+msgid "Approve RFQ"
+msgstr "Aprobar el RFQ"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_order__flag_approve_admin
+msgid "Approve for user admin"
+msgstr "Aprovado x Admin"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_order__user_approve_percent
+msgid "Approve percentage"
+msgstr "% Aprobación"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_approval_line__approve
+msgid "Approve user"
+msgstr "Aprobado (Usuario)"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_approval_line__user_id
+msgid "Approver"
+msgstr "Aprobador"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval_line__user_ids
+msgid "Approvers"
+msgstr "Aprobadores"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model_terms:ir.ui.view,arch_db:mblz_purchase_multi_level_approval.wz_approve_view_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: mblz_purchase_multi_level_approval
+#: code:addons/mblz_purchase_multi_level_approval/models/purchase_order.py:0
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_wz_approve__comment
+#, python-format
+msgid "Comment"
+msgstr "Comentario"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_approval_line__comment
+msgid "Comment user"
+msgstr "Comentario (Usuario)"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_order__is_complete_approve
+msgid "Complete approval"
+msgstr "Aprobación completa"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model,name:mblz_purchase_multi_level_approval.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de configuración"
+
+#. module: mblz_purchase_multi_level_approval
+#: model_terms:ir.ui.view,arch_db:mblz_purchase_multi_level_approval.wz_approve_view_form
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__create_uid
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval_line__create_uid
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_approval_line__create_uid
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_wz_approve__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__create_date
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval_line__create_date
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_approval_line__create_date
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_wz_approve__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__display_name
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval_line__display_name
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_approval_line__display_name
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_wz_approve__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model,name:mblz_purchase_multi_level_approval.model_document_approval
+msgid "Document Approval -multi level"
+msgstr "Aprobación de documentos -múltiples niveles"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model,name:mblz_purchase_multi_level_approval.model_document_approval_line
+msgid "Document Approval Line"
+msgstr "Línea de aprobación de documentos"
+
+#. module: mblz_purchase_multi_level_approval
+#: model_terms:ir.ui.view,arch_db:mblz_purchase_multi_level_approval.document_approval_view_form
+msgid "Document Approval Lines"
+msgstr "Líneas de aprobación de documentos"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.actions.act_window,name:mblz_purchase_multi_level_approval.document_approval_action
+#: model:ir.ui.menu,name:mblz_purchase_multi_level_approval.menu_document_approval
+msgid "Document approval"
+msgstr "Aprobación de documentos"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_order__document_approval_id
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_res_config_settings__document_approval_id
+msgid "Document approval default"
+msgstr "Documento de approbación"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval_line__doc_approval_id
+msgid "Document reference"
+msgstr "Referencia del documento"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__email_cc
+msgid "Email cc"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,help:mblz_purchase_multi_level_approval.field_document_approval__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__id
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval_line__id
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_approval_line__id
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_order__id
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_res_config_settings__id
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_wz_approve__id
+msgid "ID"
+msgstr "Identificación"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,help:mblz_purchase_multi_level_approval.field_document_approval__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,help:mblz_purchase_multi_level_approval.field_document_approval__message_needaction
+#: model:ir.model.fields,help:mblz_purchase_multi_level_approval.field_document_approval__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,help:mblz_purchase_multi_level_approval.field_document_approval__message_has_error
+#: model:ir.model.fields,help:mblz_purchase_multi_level_approval.field_document_approval__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_order__flag_approval_multi
+msgid "Is approval multi level"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval____last_update
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval_line____last_update
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_approval_line____last_update
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_order____last_update
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_wz_approve____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__write_uid
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval_line__write_uid
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_approval_line__write_uid
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_wz_approve__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__write_date
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval_line__write_date
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_approval_line__write_date
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_wz_approve__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__doc_approval_ids
+#: model_terms:ir.ui.view,arch_db:mblz_purchase_multi_level_approval.document_approval_view_form
+msgid "Lines"
+msgstr "Líneas"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,help:mblz_purchase_multi_level_approval.field_document_approval__email_cc
+msgid "List of cc from incoming emails."
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_order__flag_user_approval
+#: model_terms:ir.ui.view,arch_db:mblz_purchase_multi_level_approval.mblz_view_purchase_order_filter
+msgid "My orders to approve"
+msgstr "Mis órdenes para aprobar"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__name
+msgid "Name document"
+msgstr "Nombre del documento"
+
+#. module: mblz_purchase_multi_level_approval
+#: model_terms:ir.ui.view,arch_db:mblz_purchase_multi_level_approval.document_approval_view_form
+msgid "Name document......"
+msgstr "Nombre ........"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model_terms:ir.ui.view,arch_db:mblz_purchase_multi_level_approval.mblz_purchase_order_form
+msgid "No Approve RFQ"
+msgstr "No Aprobar el RFQ"
+
+#. module: mblz_purchase_multi_level_approval
+#: model_terms:ir.actions.act_window,help:mblz_purchase_multi_level_approval.purchase_to_approve_action
+msgid "No purchase order for approval!"
+msgstr "No hay ordenes de compra para aprobar."
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,help:mblz_purchase_multi_level_approval.field_document_approval__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,help:mblz_purchase_multi_level_approval.field_document_approval__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,help:mblz_purchase_multi_level_approval.field_document_approval__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model_terms:ir.ui.view,arch_db:mblz_purchase_multi_level_approval.mblz_purchase_order_form
+msgid "Order pending multiple approval"
+msgstr "Orden compra pendiente de aprobación múlti-nivel"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_approval_line__order_id
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_wz_approve__order_id
+msgid "Order reference"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,help:mblz_purchase_multi_level_approval.field_purchase_order__user_approve_percent
+msgid "Percentage of users approve"
+msgstr "Porcentaje de usuarios que aprueban"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model,name:mblz_purchase_multi_level_approval.model_purchase_approval_line
+msgid "Purchase Approval Line"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model,name:mblz_purchase_multi_level_approval.model_purchase_order
+msgid "Purchase Order"
+msgstr "Orden de Compra"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_res_config_settings__po_multi_level_approval
+msgid "Purchase Order Approval Multi Level"
+msgstr "Aprobación multi-nivel de órdenes de compra"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.actions.act_window,name:mblz_purchase_multi_level_approval.purchase_to_approve_action
+#: model:ir.ui.menu,name:mblz_purchase_multi_level_approval.menu_purchase_to_approve_form_action
+msgid "RFQ to approve"
+msgstr "Mis RFQ por aprobar"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model_terms:ir.ui.view,arch_db:mblz_purchase_multi_level_approval.mblz_res_config_settings_view_form_purchase
+msgid "Select a multi-level approval configuration document"
+msgstr "Seleccione un documento de configuración de aprobación de multi-niveles"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval_line__sequence
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_approval_line__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,help:mblz_purchase_multi_level_approval.field_document_approval__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: code:addons/mblz_purchase_multi_level_approval/models/purchase_order.py:0
+#, python-format
+msgid "The purchase order is pending validation!"
+msgstr "La orden de compra está pendiente de aprobación multi-nivel."
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval_line__amount
+#: model:ir.model.fields,help:mblz_purchase_multi_level_approval.field_document_approval_line__amount
+msgid "Total greater than or equal"
+msgstr "Total mayor o igual que"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,help:mblz_purchase_multi_level_approval.field_document_approval__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__user_admin_ids
+msgid "Users admin"
+msgstr "Usuarios admin."
+
+#. module: mblz_purchase_multi_level_approval
+#: code:addons/mblz_purchase_multi_level_approval/models/purchase_order.py:0
+#, python-format
+msgid "Warning"
+msgstr "Advertencia"
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_document_approval__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,help:mblz_purchase_multi_level_approval.field_document_approval__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model,name:mblz_purchase_multi_level_approval.model_wz_approve
+msgid "Wizard Approve"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model_terms:ir.ui.view,arch_db:mblz_purchase_multi_level_approval.document_approval_view_form
+msgid "document_approval_form"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model_terms:ir.ui.view,arch_db:mblz_purchase_multi_level_approval.document_approval_view_tree
+msgid "document_approval_tree"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_order__flag_user_approved
+msgid "flag_user_approved"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model:ir.model.fields,field_description:mblz_purchase_multi_level_approval.field_purchase_order__users_approvals
+msgid "users_approvals"
+msgstr ""
+
+#. module: mblz_purchase_multi_level_approval
+#: model_terms:ir.ui.view,arch_db:mblz_purchase_multi_level_approval.mblz_purchase_order_form
+msgid "⇒ Notify users"
+msgstr "⇒ Notificar a los usuarios"

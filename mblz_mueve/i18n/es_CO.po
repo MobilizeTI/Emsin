@@ -1,0 +1,644 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mblz_mueve
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20220107\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-23 23:58+0000\n"
+"PO-Revision-Date: 2022-02-23 18:59-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_maintenance_request__create_type
+msgid " Create type"
+msgstr "Tipo de creación"
+
+#. module: mblz_mueve
+#: model:res.groups,comment:mblz_mueve.group_support_levels_tkt
+msgid " Grupo dirigido a profesionales de ITS"
+msgstr ""
+
+#. module: mblz_mueve
+#: code:addons/mblz_mueve/models/helpdesk_failure_level.py:0
+#: code:addons/mblz_mueve/models/helpdesk_support_level.py:0
+#, python-format
+msgid "%s (copy)"
+msgstr "%s (copia)"
+
+#. module: mblz_mueve
+#: model:ir.actions.report,print_report_name:mblz_mueve.action_report_maintenance_request_xlsx
+#: model:ir.actions.report,print_report_name:mblz_mueve.report_maintenance_request
+msgid "'%s' % (object.name_seq.replace('/','_'))"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.actions.report,print_report_name:mblz_mueve.report_helpdesk_ticket
+msgid "'Ticket - %s' % (object.name_seq.replace('/','_'))"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid ""
+".............................................. Detalle de actividades a\n"
+"                    ejecutar.............................................."
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "<b>Fecha de creación:</b>"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "<b>Hora creación:</b>"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "<b>KILOMETRAJE: </b>"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "<b>MODELO: </b>"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "<b>MÓVIL: </b>"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "<b>Número OT:</b>"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "<b>Tipo de mantenimiento:</b>"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.report_maintenance_request_view
+msgid ""
+"<small><span>Página </span><span class=\"page\"/> de <span class=\"topage"
+"\"/></small>"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_header_ot
+msgid "<span class=\"ct_bold align-middle\">ORDEN DE TRABAJO</span>"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_failure_level__active
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_level__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid ""
+"Actividades\n"
+"                                        Ejecutadas"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_level__support_activity_ids
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_ticket__support_activity_ids
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.helpdesk_support_level_form_view
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.mblz_helpdesk_ticket_view_form_inherit_helpdesk_timesheet
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.helpdesk_support_level_form_view
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.mblz_helpdesk_ticket_view_form_inherit_helpdesk_timesheet
+msgid "Activities Lines"
+msgstr "Líneas de actividad"
+
+#. module: mblz_mueve
+#: model:ir.ui.menu,name:mblz_mueve.menu_hospital_settings
+msgid "Ajustes"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.report_helpdesk_ticket_view
+msgid "Asignado a"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model.fields,help:mblz_mueve.field_helpdesk_ticket__place_of_care
+msgid "Barrio"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "CC"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.report_helpdesk_ticket_view
+msgid "Categorías"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.report_helpdesk_ticket_view
+msgid "Cliente"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_level__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "Componente"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model,name:mblz_mueve.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de configuración"
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "Correlativo"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.report_helpdesk_ticket_view
+msgid "Correo electrónico"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.report_helpdesk_ticket_view
+msgid "Correo electrónico cc"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.report_header_custom
+msgid "Crear"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.mblz_helpdesk_ticket_view_form
+msgid "Create OT"
+msgstr "Crear OT"
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_res_users__flag_crete_tkt_portal
+msgid "Create tkt portal"
+msgstr "Crear tkt desde el portal"
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_failure_level__create_uid
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_activity__create_uid
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_level__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_failure_level__create_date
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_activity__create_date
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_level__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid ""
+"Código\n"
+"                                        Especialidad"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid ""
+"Código\n"
+"                                        descripción"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid ""
+"Código\n"
+"                                        descripción de la actividad"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "DIAGNÓSTICO:"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_res_config_settings__email_portal
+msgid "Default email portal"
+msgstr "Email por defacto en el portal"
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "Descripción:"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_activity__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_failure_level__display_name
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_activity__display_name
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_level__display_name
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_ticket__display_name
+#: model:ir.model.fields,field_description:mblz_mueve.field_maintenance_guideline_activity__display_name
+#: model:ir.model.fields,field_description:mblz_mueve.field_maintenance_request__display_name
+#: model:ir.model.fields,field_description:mblz_mueve.field_report_mblz_mueve_report_maintenance_request_xlsx__display_name
+#: model:ir.model.fields,field_description:mblz_mueve.field_report_mblz_mueve_report_monthly_tickets_pdf__display_name
+#: model:ir.model.fields,field_description:mblz_mueve.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:mblz_mueve.field_res_users__display_name
+#: model:ir.model.fields,field_description:mblz_mueve.field_website_menu__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "Emisor:"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "Empresa Externa:"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_ticket__equipment_id
+msgid "Equipment"
+msgstr "Equipo"
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_ticket__equipment_category_id
+msgid "Equipment Category"
+msgstr "Tipo de bus"
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.report_helpdesk_ticket_view
+msgid "Equipo"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "Estado:"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "F Inicio"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "F terminación"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.actions.act_window,name:mblz_mueve.helpdesk_failure_level_act_window
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_ticket__failure_level_id
+#: model:ir.ui.menu,name:mblz_mueve.helpdesk_failure_level_menu
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.helpdesk_failure_level_search_view
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.helpdesk_failure_level_tree_view
+msgid "Failure Level"
+msgstr "Nivel de fallo"
+
+#. module: mblz_mueve
+#: model:ir.model,name:mblz_mueve.model_helpdesk_failure_level
+msgid "Failure level"
+msgstr "Nivel de fallo"
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "Fecha Solicitud:"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.report_helpdesk_ticket_view
+msgid "Fecha y hora"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.res_config_settings_view_form
+msgid "Gestión Helpdesk"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.res_config_settings_view_form
+msgid "Helpdesk"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.heldesk_error
+msgid "Helpdesk Error"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.actions.act_window,name:mblz_mueve.action_helpdesk_config_settings
+msgid "Helpdesk Settings"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model,name:mblz_mueve.model_helpdesk_ticket
+msgid "Helpdesk Ticket"
+msgstr "Ticket de servicio de asistencia"
+
+#. module: mblz_mueve
+#: model:ir.model,name:mblz_mueve.model_helpdesk_support_level
+msgid "Helpdesk support level"
+msgstr "Nivel de apoyo del servicio de asistencia técnica"
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_failure_level__id
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_activity__id
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_level__id
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_ticket__id
+#: model:ir.model.fields,field_description:mblz_mueve.field_maintenance_guideline_activity__id
+#: model:ir.model.fields,field_description:mblz_mueve.field_maintenance_request__id
+#: model:ir.model.fields,field_description:mblz_mueve.field_report_mblz_mueve_report_maintenance_request_xlsx__id
+#: model:ir.model.fields,field_description:mblz_mueve.field_report_mblz_mueve_report_monthly_tickets_pdf__id
+#: model:ir.model.fields,field_description:mblz_mueve.field_res_config_settings__id
+#: model:ir.model.fields,field_description:mblz_mueve.field_res_users__id
+#: model:ir.model.fields,field_description:mblz_mueve.field_website_menu__id
+msgid "ID"
+msgstr "Identificación"
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_failure_level____last_update
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_activity____last_update
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_level____last_update
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_ticket____last_update
+#: model:ir.model.fields,field_description:mblz_mueve.field_maintenance_guideline_activity____last_update
+#: model:ir.model.fields,field_description:mblz_mueve.field_maintenance_request____last_update
+#: model:ir.model.fields,field_description:mblz_mueve.field_report_mblz_mueve_report_maintenance_request_xlsx____last_update
+#: model:ir.model.fields,field_description:mblz_mueve.field_report_mblz_mueve_report_monthly_tickets_pdf____last_update
+#: model:ir.model.fields,field_description:mblz_mueve.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:mblz_mueve.field_res_users____last_update
+#: model:ir.model.fields,field_description:mblz_mueve.field_website_menu____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_failure_level__write_uid
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_activity__write_uid
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_level__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_failure_level__write_date
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_activity__write_date
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_level__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_level__name
+msgid "Level"
+msgstr "Nivel"
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_header_ot
+msgid "Logo"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model,name:mblz_mueve.model_maintenance_guideline_activity
+msgid "Maintenance Guideline Activity"
+msgstr "Actividad de Pauta"
+
+#. module: mblz_mueve
+#: model:ir.model,name:mblz_mueve.model_maintenance_request
+msgid "Maintenance Request"
+msgstr "Solicitud de mantenimiento"
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_ticket__mtm_request_id
+msgid "Mtm_request_id"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "NOMBRE"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_failure_level__name
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_activity__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: mblz_mueve
+#: code:addons/mblz_mueve/models/helpdesk_ticket.py:0
+#, python-format
+msgid "New"
+msgstr "Nuevo"
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.report_helpdesk_ticket_view
+msgid "Nivel de fallo"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.report_helpdesk_ticket_view
+msgid "Niveles de soporte"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:res.groups,name:mblz_mueve.group_support_levels_tkt
+msgid "Niveles de soporte (TKT)"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.mblz_helpdesk_ticket_view_form
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.report_helpdesk_ticket_view
+msgid "OT"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_ticket__name_seq
+msgid "OT Reference"
+msgstr "Referencia OT"
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "PLACA:"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_ticket__place_of_care
+msgid "Place of care"
+msgstr "Lugar de atención"
+
+#. module: mblz_mueve
+#: model:ir.actions.report,name:mblz_mueve.report_maintenance_request
+msgid "Print OT (pdf)"
+msgstr "Imprimir OT (pdf)"
+
+#. module: mblz_mueve
+#: model:ir.actions.report,name:mblz_mueve.action_report_maintenance_request_xlsx
+msgid "Print OT (xlsx)"
+msgstr "Imprimir OT (xlsx)"
+
+#. module: mblz_mueve
+#: model:ir.actions.report,name:mblz_mueve.report_helpdesk_ticket
+msgid "Print Support Ticket"
+msgstr "Imprimir ticket de Soporte"
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_failure_level__time_response
+msgid "Response time (minutes)"
+msgstr "Tiempo de respuesta (minutos)"
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_failure_level__sequence
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_activity__sequence
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_support_level__sequence
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.mblz_helpdesk_ticket_view_form
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.mblz_helpdesk_tickets_view_tree
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "Sistema"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_failure_level__time_solution
+msgid "Solution Time (hours)"
+msgstr "Tiempo de solución (horas)"
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "Subsistema"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "Supervisor mtto asignado:"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.actions.act_window,name:mblz_mueve.helpdesk_support_level_act_window
+#: model:ir.ui.menu,name:mblz_mueve.helpdesk_support_level_menu
+msgid "Support Level"
+msgstr "Nivel de soporte"
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_ticket__support_level_ids
+msgid "Support Levels"
+msgstr "Niveles de soporte"
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_maintenance_guideline_activity__support_level_id
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.helpdesk_support_level_form_view
+msgid "Support level"
+msgstr "Nivel de soporte"
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.report_helpdesk_ticket_view
+msgid "TICKET DE SOPORTE #"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.actions.act_window,help:mblz_mueve.helpdesk_failure_level_act_window
+msgid "There is no examples click here to add new Failure Level."
+msgstr "No hay ejemplos haga clic aquí para añadir un nuevo nivel de fallo"
+
+#. module: mblz_mueve
+#: model_terms:ir.actions.act_window,help:mblz_mueve.helpdesk_support_level_act_window
+msgid "There is no examples click here to add new support Level."
+msgstr "No hay ejemplos haga clic aquí para añadir un nuevo nivel de soporte"
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_maintenance_request__ticket_id
+#: model:ir.model.fields.selection,name:mblz_mueve.selection__maintenance_request__create_type__ticket
+msgid "Ticket"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.layout_body_ot
+msgid "Tipo Orden:"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.report_helpdesk_ticket_view
+msgid "Tipo de ticket"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model,name:mblz_mueve.model_res_users
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.heldesk_error
+msgid ""
+"Usted no tiene permisos para ingreso de tickets, para solicitar acceso al "
+"portal escribanos al\n"
+"                        siguiente correo"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_helpdesk_ticket__vehicle_id
+msgid "Vehicle"
+msgstr "Vehículo"
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.report_helpdesk_ticket_view
+msgid "Vehículo"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model,name:mblz_mueve.model_website_menu
+msgid "Website Menu"
+msgstr "Menú del sitio web"
+
+#. module: mblz_mueve
+#: model:ir.model.fields,field_description:mblz_mueve.field_maintenance_request__datetime_create_ot
+msgid "datetime_create_ot"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model,name:mblz_mueve.model_helpdesk_support_activity
+msgid "helpdesk.support.activity"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.helpdesk_failure_level_view_form
+msgid "helpdesk_failure_level_form"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model,name:mblz_mueve.model_report_mblz_mueve_report_maintenance_request_xlsx
+msgid "report.mblz_mueve.report_maintenance_request_xlsx"
+msgstr ""
+
+#. module: mblz_mueve
+#: model:ir.model,name:mblz_mueve.model_report_mblz_mueve_report_monthly_tickets_pdf
+msgid "report_monthly_tickets_pdf"
+msgstr ""
+
+#. module: mblz_mueve
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.helpdesk_support_level_search_view
+#: model_terms:ir.ui.view,arch_db:mblz_mueve.helpdesk_support_level_tree_view
+msgid "support Level"
+msgstr "nivel de soporte"

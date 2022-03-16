@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Task types -->
+        <record id="maintenance_request_task_stage_search" model="ir.ui.view">
+            <field name="name">maintenance.request.task.stage.search</field>
+            <field name="model">maintenance.request.task.stage</field>
+            <field name="arch" type="xml">
+                <search string="Tasks Stages">
+                    <field name="name" string="Tasks Stages"/>
+                    <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="maintenance_request_task_stage_edit" model="ir.ui.view">
+            <field name="name">maintenance.request.task.stage.form</field>
+            <field name="model">maintenance.request.task.stage</field>
+            <field name="arch" type="xml">
+                <form string="Task Stage" delete="0">
+                    <field name="active" invisible="1"/>
+                    <sheet>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger"
+                                attrs="{'invisible': [('active', '=', True)]}"/>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="code" groups="base.group_no_one"/>
+                                <field name="mail_template_id"/>
+                                <field name="rating_template_id"/>
+                                <div class="alert alert-warning" role="alert" colspan='2'
+                                     attrs="{'invisible': ['|', ('rating_template_id','=', False), ('disabled_rating_warning', '=', False)]}">
+                                    <i class="fa fa-warning" title="Customer disabled on requests"/><b> Customer
+                                    Ratings</b>
+                                    are disabled on the following request(s) : <br/>
+                                    <field name="disabled_rating_warning" class="mb-0"/>
+                                </div>
+                                <field name="auto_validation_kanban_state"
+                                       attrs="{'invisible': [('rating_template_id','=', False)]}"
+                                />
+                            </group>
+                            <group>
+                                <field name="fold"/>
+                                <field name="require_valid_picking"/>
+                                <field name="is_closed" groups="base.group_no_one"/>
+                                <field name="request_ids" widget="many2many_tags" groups="base.group_no_one"/>
+                                <field name="sequence" groups="base.group_no_one"/>
+                            </group>
+                        </group>
+                        <group string="Stage Description and Tooltips">
+                            <p class="text-muted" colspan="2">
+                                At each stage employees can block or make task/issue ready for next stage.
+                                You can define here labels that will be displayed for the state instead
+                                of the default labels.
+                            </p>
+                            <label for="legend_normal" string=" " class="o_status oe_project_kanban_legend"
+                                   title="Task in progress. Click to block or set as done."
+                                   aria-label="Task in progress. Click to block or set as done." role="img"/>
+                            <field name="legend_normal" nolabel="1"/>
+                            <label for="legend_blocked" string=" "
+                                   class="o_status o_status_red oe_project_kanban_legend"
+                                   title="Task is blocked. Click to unblock or set as done."
+                                   aria-label="Task is blocked. Click to unblock or set as done." role="img"/>
+                            <field name="legend_blocked" nolabel="1"/>
+                            <label for="legend_done" string=" " class="o_status o_status_green oe_project_kanban_legend"
+                                   title="This step is done. Click to block or set in progress."
+                                   aria-label="This step is done. Click to block or set in progress." role="img"/>
+                            <field name="legend_done" nolabel="1"/>
+
+                            <p class="text-muted" colspan="2">
+                                You can also add a description to help your coworkers understand the meaning and purpose
+                                of
+                                the stage.
+                            </p>
+                            <field name="description" placeholder="Add a description..." nolabel="1" colspan="2"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="maintenance_request_task_stage_tree" model="ir.ui.view">
+            <field name="name">maintenance.request.task.stage.tree</field>
+            <field name="model">maintenance.request.task.stage</field>
+            <field name="arch" type="xml">
+                <tree string="Task Stage" delete="0" sample="1">
+                    <field name="sequence" widget="handle" optional="show"/>
+                    <field name="name"/>
+                    <field name="code" groups="base.group_no_one"/>
+                    <field name="fold" optional="show"/>
+                    <field name="require_valid_picking" optional="show"/>
+                    <field name="is_closed" optional="show"/>
+                    <field name="mail_template_id" optional="hide"/>
+                    <field name="rating_template_id" optional="hide"/>
+                    <field name="auto_validation_kanban_state" optional="hide"/>
+                    <field name="description" optional="hide"/>
+                    <field name="request_ids" optional="hide" widget="many2many_tags"
+                           options="{'color_field': 'color'}"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_project_maintenance_request_task_stage_kanban" model="ir.ui.view">
+            <field name="name">maintenance.request.task.stage.kanban</field>
+            <field name="model">maintenance.request.task.stage</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_mobile" sample="1">
+                    <field name="name"/>
+                    <field name="fold"/>
+                    <field name="description"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <strong><t t-esc="record.name.value"/></strong>
+                                    </div>
+                                </div>
+                                <t t-if="record.description.value">
+                                    <hr class="mt8 mb8"/>
+                                    <t t-esc="record.description.value"/>
+                                </t>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="open_maintenance_request_task_stage_form" model="ir.actions.act_window">
+            <field name="name">Stages</field>
+            <field name="res_model">maintenance.request.task.stage</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="view_id" ref="maintenance_request_task_stage_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new stage in the task pipeline
+                </p>
+                <p>
+                    Define the steps that will be used in the request from the
+                    creation of the task, up to the closing of the task or issue.
+                    You will use these stages in order to track the progress in
+                    solving a task or an issue.
+                </p>
+            </field>
+        </record>
+
+        <record id="open_maintenance_request_task_stage_form_domain" model="ir.actions.act_window">
+            <field name="name">Stages</field>
+            <field name="res_model">maintenance.request.task.stage</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="domain">[('request_ids', '=', request_id)]</field>
+            <field name="view_id" ref="maintenance_request_task_stage_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new stage in the task pipeline
+                </p>
+                <p>
+                    Define the steps that will be used in the request from the
+                    creation of the task, up to the closing of the task or issue.
+                    You will use these stages in order to track the progress in
+                    solving a task or an issue.
+                </p>
+            </field>
+        </record>
+
+        <record id="unlink_maintenance_request_task_stage_action" model="ir.actions.server">
+            <field name="name">Delete</field>
+            <field name="model_id" ref="model_maintenance_request_task_stage"/>
+            <field name="binding_model_id" ref="model_maintenance_request_task_stage"/>
+            <field name="binding_view_types">form,list</field>
+            <field name="state">code</field>
+            <field name="code">action = records.unlink_wizard(stage_view=True)</field>
+        </record>
+
+        <!--        <record id="maintenance_request_task_stage_tree_view" model="ir.ui.view">-->
+        <!--            <field name="name">l10n_cl_maintenance.maintenance_request_task_stage.tree</field>-->
+        <!--            <field name="model">maintenance.request.task.stage</field>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <tree string="Request task stage" editable="bottom">-->
+        <!--                    <field name="sequence" widget="handle"/>-->
+        <!--                    <field name="name" required="1"/>-->
+        <!--                    <field name="request_state"/>-->
+        <!--                    <field name="description"/>-->
+        <!--                </tree>-->
+        <!--            </field>-->
+        <!--        </record>-->
+
+
+        <record id="maintenance_request_task_stage_act_window" model="ir.actions.act_window">
+            <field name="name">Task Stage</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">maintenance.request.task.stage</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create a statuses for tasks.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

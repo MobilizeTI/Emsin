@@ -1,0 +1,134 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_brand_inventory
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20220107\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-12 15:02+0000\n"
+"PO-Revision-Date: 2022-01-12 10:05-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: product_brand_inventory
+#: model_terms:ir.ui.view,arch_db:product_brand_inventory.product_brand_view
+msgid "Avatar"
+msgstr "Avatar"
+
+#. module: product_brand_inventory
+#: model:ir.model.fields,field_description:product_brand_inventory.field_product_product__brand_id
+#: model:ir.model.fields,field_description:product_brand_inventory.field_product_template__brand_id
+#: model:ir.model.fields,field_description:product_brand_inventory.field_stock_quant__brand_id
+#: model_terms:ir.ui.view,arch_db:product_brand_inventory.brand_group_by
+msgid "Brand"
+msgstr "Marca"
+
+#. module: product_brand_inventory
+#: model:ir.model.fields,field_description:product_brand_inventory.field_product_brand__brand_image
+msgid "Brand Image"
+msgstr "Imagen de marca"
+
+#. module: product_brand_inventory
+#: model_terms:ir.ui.view,arch_db:product_brand_inventory.product_brand_view
+msgid "Brand Name"
+msgstr "Nombre de la marca"
+
+#. module: product_brand_inventory
+#: model:ir.model.fields,field_description:product_brand_inventory.field_product_brand__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: product_brand_inventory
+#: model:ir.model.fields,field_description:product_brand_inventory.field_product_brand__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: product_brand_inventory
+#: model:ir.model.fields,field_description:product_brand_inventory.field_product_brand__display_name
+#: model:ir.model.fields,field_description:product_brand_inventory.field_product_template__display_name
+#: model:ir.model.fields,field_description:product_brand_inventory.field_stock_quant__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: product_brand_inventory
+#: model:ir.model.fields,field_description:product_brand_inventory.field_product_brand__id
+#: model:ir.model.fields,field_description:product_brand_inventory.field_product_template__id
+#: model:ir.model.fields,field_description:product_brand_inventory.field_stock_quant__id
+msgid "ID"
+msgstr ""
+
+#. module: product_brand_inventory
+#: model:ir.model.fields,field_description:product_brand_inventory.field_product_brand____last_update
+#: model:ir.model.fields,field_description:product_brand_inventory.field_product_template____last_update
+#: model:ir.model.fields,field_description:product_brand_inventory.field_stock_quant____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: product_brand_inventory
+#: model:ir.model.fields,field_description:product_brand_inventory.field_product_brand__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: product_brand_inventory
+#: model:ir.model.fields,field_description:product_brand_inventory.field_product_brand__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: product_brand_inventory
+#: model:ir.model.fields,field_description:product_brand_inventory.field_product_brand__member_ids
+msgid "Member"
+msgstr "Miembro"
+
+#. module: product_brand_inventory
+#: model:ir.model.fields,field_description:product_brand_inventory.field_product_product__model_prod
+#: model:ir.model.fields,field_description:product_brand_inventory.field_product_template__model_prod
+#: model_terms:ir.ui.view,arch_db:product_brand_inventory.brand_group_by
+msgid "Model"
+msgstr "Modelo"
+
+#. module: product_brand_inventory
+#: model:ir.model.fields,field_description:product_brand_inventory.field_product_brand__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: product_brand_inventory
+#: model:ir.actions.act_window,name:product_brand_inventory.product_brand_action
+msgid "Product Brand"
+msgstr "Marca del producto"
+
+#. module: product_brand_inventory
+#: model:ir.ui.menu,name:product_brand_inventory.product_brand_inventory
+msgid "Product Brands"
+msgstr "Marcas de productos"
+
+#. module: product_brand_inventory
+#: model:ir.model.fields,field_description:product_brand_inventory.field_product_brand__product_count
+msgid "Product Count"
+msgstr "Recuento de productos"
+
+#. module: product_brand_inventory
+#: model:ir.model,name:product_brand_inventory.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: product_brand_inventory
+#: model_terms:ir.ui.view,arch_db:product_brand_inventory.product_brand_view
+msgid "Products"
+msgstr "Productos"
+
+#. module: product_brand_inventory
+#: model:ir.model,name:product_brand_inventory.model_stock_quant
+msgid "Quants"
+msgstr "Cuantos"
+
+#. module: product_brand_inventory
+#: model:ir.model,name:product_brand_inventory.model_product_brand
+msgid "product.brand"
+msgstr ""

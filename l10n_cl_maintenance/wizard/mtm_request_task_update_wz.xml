@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="mtm_request_task_wz_form_view" model="ir.ui.view">
+            <field name="name">mtm_request_task_wz_form_view Message</field>
+            <field name="model">mtm.request.task.wz</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Update massive employee">
+
+                    <group>
+                        <field name="task_ids" widget="many2many_tags" invisible="1"/>
+                        <field name="count_task_ids"/>
+                        <field name="specialty_tag_ids"
+                               widget="many2many_tags"
+                               options="{'color_field': 'color'}"
+                        />
+                        <field name="employee_id"
+                               domain="[('speciality_ids', 'in', specialty_tag_ids),
+                                    '|', ('company_id', '=', False), ('company_id', '=', company_id)
+                                   ]"
+                               options="{'no_create': True, 'no_create_edit': True, 'no_open': False}"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                    </group>
+
+                    <footer>
+                        <div class="text-left">
+                            <button name="btn_confirm" type="object" string="Confirm"
+                                    icon="fa-check-square-o"
+                                    class="oe_highlight"/>
+                            or
+                            <button string="Cancel" special="cancel"/>
+                        </div>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

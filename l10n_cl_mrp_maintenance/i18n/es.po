@@ -1,0 +1,628 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_cl_mrp_maintenance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20220107\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-21 13:43+0000\n"
+"PO-Revision-Date: 2022-02-21 08:43-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.mblz_maintenance_hr_equipment_view_kanban
+msgid "<b>Model Number:</b>"
+msgstr "<b> Número de modelo: </b>"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.mblz_maintenance_hr_equipment_view_kanban
+msgid "<b>Serial Number:</b>"
+msgstr "<b> Número de serie: </b>"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.maintenance_equipment_view_form_inherit_mrp
+msgid ""
+"<span attrs=\"{'invisible': [('mbfm_custom', '=', 'hours')]}\">\n"
+"                            days\n"
+"                        </span>\n"
+"                        <span attrs=\"{'invisible': [('mbfm_custom', '=', 'days')]}\">hours</span>"
+msgstr ""
+"<span attrs=\"{'invisible': [('mbfm_custom', '=', 'hours')]}\">\n"
+"                            días\n"
+"                        </span>\n"
+"                        <span attrs=\"{'invisible': [('mbfm_custom', '=', 'days')]}\">horas</span>"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.maintenance_equipment_view_form_inherit_mrp
+msgid ""
+"<span attrs=\"{'invisible': [('mbfm_custom', '=', 'hours')]}\">days\n"
+"                        </span>\n"
+"                        <span attrs=\"{'invisible': [('mbfm_custom', '=', 'days')]}\">hours\n"
+"                        </span>"
+msgstr ""
+"<span attrs=\"{'invisible': [('mbfm_custom', '=', 'hours')]}\">días\n"
+"                        </span>\n"
+"                        <span attrs=\"{'invisible': [('mbfm_custom', '=', 'days')]}\">horas\n"
+"                        </span>"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.select_multiple_product_form
+msgid "Add"
+msgstr "Añadir"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.actions.act_window,name:l10n_cl_mrp_maintenance.request_materials_additional_wizard_act_window
+#: model:ir.actions.act_window,name:l10n_cl_mrp_maintenance.select_multiple_product_wizard_act_window
+msgid "Add Components"
+msgstr "Agregar componentes"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model,name:l10n_cl_mrp_maintenance.model_select_multiple_product
+msgid "Add multiple products"
+msgstr "Agregar varios productos"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.mblz_approval_request_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.mrp_maintenance_request_task_view_form
+msgid "Additional Materials"
+msgstr "Materiales adicionales"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.mrp_maintenance_request_task_view_form
+msgid "Approval"
+msgstr "Aprobaciones"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_request_task__approval_count
+msgid "Approval Count"
+msgstr "Recuento de aprobaciones"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model,name:l10n_cl_mrp_maintenance.model_approval_request
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_task_line_materials__approval_request_id
+msgid "Approval Request"
+msgstr "Solicitud de aprobación"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.mrp_maintenance_request_task_view_form
+msgid "Approval Requests"
+msgstr "Solicitudes de aprobación"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_request_materials_additional__approval_reason
+msgid "Approval reason"
+msgstr "Motivo de la solicitud de aprobación"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_request_task__approval_ids
+msgid "Approvals"
+msgstr "Aprobaciones"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_guideline__bom_id
+msgid "Bill of Material"
+msgstr "Lista de materiales"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model,name:l10n_cl_mrp_maintenance.model_mrp_bom_line
+msgid "Bill of Material Line"
+msgstr "Línea de Lista de Materiales"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,help:l10n_cl_mrp_maintenance.field_maintenance_guideline__bom_id
+msgid "Bill of Materials allow you to define the list of required components to make a maintenance."
+msgstr ""
+"La lista de materiales le permite definir la lista de componentes necesarios para hacer un "
+"mantenimiento."
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.hr_equipment_request_view_form
+msgid "Bills of Materials"
+msgstr "Listas de materiales"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.hr_equipment_request_view_form
+msgid "BoM Delivery"
+msgstr "Entrega de LdM"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_request__picking_count
+msgid "BoM Transfers"
+msgstr "Transferencias BoM"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_request__bom_ids
+msgid "Bom"
+msgstr "BoM"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.request_materials_additional_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.select_multiple_product_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_equipment_image__company_id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_request_materials_additional__company_id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_select_multiple_product__company_id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_task_line_materials__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_stock_move__system_class_id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_task_line_materials__system_class_id
+msgid "Component"
+msgstr "Componente"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_mrp_bom_line__system_class_id
+msgid "Component system"
+msgstr "Sistema de componentes"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.request_materials_additional_form
+msgid "Create"
+msgstr "Crear"
+
+#. module: l10n_cl_mrp_maintenance
+#: code:addons/l10n_cl_mrp_maintenance/models/maintenance_request_task.py:0
+#, python-format
+msgid "Create Request Materials Additional"
+msgstr "Crear materiales de solicitud adicionales"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_equipment_image__create_uid
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_request_materials_additional__create_uid
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_select_multiple_product__create_uid
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_task_line_materials__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_equipment_image__create_date
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_request_materials_additional__create_date
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_select_multiple_product__create_date
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_task_line_materials__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_mrp_maintenance.selection__maintenance_equipment__mbfm_custom__days
+msgid "Days"
+msgstr "Dias"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.mblz_maintenance_hr_equipment_view_kanban
+msgid "Delete"
+msgstr "Eliminar"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.mrp_maintenance_request_task_view_form
+msgid "Delivery"
+msgstr "Entregas"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.request_materials_additional_form
+msgid "Description of the request for additional materials ..."
+msgstr "Descripción de la solicitud de materiales adicionales ..."
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_approval_request__display_name
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_equipment_image__display_name
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_guideline__display_name
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_request__display_name
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_request_task__display_name
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_stage__display_name
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_team__display_name
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_mrp_bom_line__display_name
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_procurement_group__display_name
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_request_materials_additional__display_name
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_select_multiple_product__display_name
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_stock_move__display_name
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_stock_rule__display_name
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_stock_warehouse__display_name
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_task_line_materials__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.hr_equipment_request_view_search
+msgid "Done"
+msgstr "Hecho"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.mblz_maintenance_hr_equipment_view_kanban
+msgid "Dropdown menu"
+msgstr "Menú desplegable"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.mblz_maintenance_hr_equipment_view_kanban
+msgid "Edit..."
+msgstr "Editar..."
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_equipment_image__equipment_id
+msgid "Equipment"
+msgstr "Equipo"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.mblz_maintenance_hr_equipment_view_kanban
+msgid "Equipo"
+msgstr ""
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.maintenance_guideline_view_form
+msgid "Execution status"
+msgstr "Estado de ejecución"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_task_line_materials__flag_approval
+msgid "Flag Approval"
+msgstr ""
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields.selection,name:l10n_cl_mrp_maintenance.selection__maintenance_equipment__mbfm_custom__hours
+msgid "Hours"
+msgstr "Horas"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_approval_request__id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_equipment_image__id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_guideline__id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_request__id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_request_task__id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_stage__id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_team__id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_mrp_bom_line__id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_procurement_group__id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_request_materials_additional__id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_select_multiple_product__id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_stock_move__id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_stock_picking__id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_stock_rule__id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_stock_warehouse__id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_task_line_materials__id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_equipment__image
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_equipment_image__image
+msgid "Image"
+msgstr "Imagen"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_approval_request____last_update
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_equipment____last_update
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_equipment_image____last_update
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_guideline____last_update
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_request____last_update
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_request_task____last_update
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_stage____last_update
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_team____last_update
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_mrp_bom_line____last_update
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_procurement_group____last_update
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_request_materials_additional____last_update
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_select_multiple_product____last_update
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_stock_move____last_update
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_stock_picking____last_update
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_stock_rule____last_update
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_stock_warehouse____last_update
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_task_line_materials____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_equipment_image__write_uid
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_request_materials_additional__write_uid
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_select_multiple_product__write_uid
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_task_line_materials__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_equipment_image__write_date
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_request_materials_additional__write_date
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_select_multiple_product__write_date
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_task_line_materials__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_equipment__mbfm_custom
+msgid "MTBF Metric"
+msgstr "Métrica MTBF"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model,name:l10n_cl_mrp_maintenance.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Equipo de mantenimiento"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model,name:l10n_cl_mrp_maintenance.model_maintenance_guideline
+msgid "Maintenance Guideline General"
+msgstr "Pauta de mantenimiento General"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_request__maintenance_location_id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_request_task__request_maintenance_location_id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_team__maintenance_location_id
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.hr_equipment_request_view_search
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.maintenance_team_view_search
+msgid "Maintenance Location"
+msgstr "Ubicación de Mantenimiento"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model,name:l10n_cl_mrp_maintenance.model_maintenance_request
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_procurement_group__maintenance_id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_stock_move__maintenance_id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_stock_picking__maintenance_id
+msgid "Maintenance Request"
+msgstr "Solicitud de mantenimiento"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model,name:l10n_cl_mrp_maintenance.model_maintenance_request_task
+msgid "Maintenance Request Task"
+msgstr "Tarea de solicitud de mantenimiento"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model,name:l10n_cl_mrp_maintenance.model_maintenance_stage
+msgid "Maintenance Stage"
+msgstr "Etapa de mantenimiento"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model,name:l10n_cl_mrp_maintenance.model_maintenance_team
+msgid "Maintenance Teams"
+msgstr "Equipos de mantenimiento"
+
+#. module: l10n_cl_mrp_maintenance
+#: code:addons/l10n_cl_mrp_maintenance/wizard/request_materials_additional.py:0
+#, python-format
+msgid "Material requested list empty!"
+msgstr "La lista de material solicitado está vacía."
+
+#. module: l10n_cl_mrp_maintenance
+#: model:approval.category,name:l10n_cl_mrp_maintenance.approval_request_task
+msgid "Materiales Adicionales (MTM)"
+msgstr ""
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.mblz_approval_request_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.mrp_maintenance_request_task_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.request_materials_additional_form
+msgid "Materials"
+msgstr "Materiales"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,help:l10n_cl_mrp_maintenance.field_maintenance_equipment__mbfm_custom
+msgid "Mean Time Between Failure Measure"
+msgstr "Medida de tiempo medio entre fallos"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.maintenance_equipment_view_form_inherit_mrp
+msgid "Mean Time Between Failure Metric"
+msgstr "Métrica del Tiempo medio entre fallos"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_stock_warehouse__pick_bom_pull_id
+msgid "Picking Bill of Material Rule"
+msgstr "Regla de selección de la lista de materiales"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_request_task__picking_count
+msgid "Picking Count"
+msgstr "Recuento de picking"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_request_task__picking_ids
+msgid "Pickings"
+msgstr "Movimientos"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model,name:l10n_cl_mrp_maintenance.model_procurement_group
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_request__procurement_group_id
+msgid "Procurement Group"
+msgstr "Grupo de Compras"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_task_line_materials__product_id
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.request_materials_additional_form
+msgid "Product"
+msgstr "Producto"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_approval_request__product_line_task_ids
+msgid "Product Line Task"
+msgstr "Lineas de productos"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_request_task__product_line_ids
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_request_materials_additional__product_line_ids
+msgid "Product Lines"
+msgstr "Líneas de productos"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model,name:l10n_cl_mrp_maintenance.model_task_line_materials
+msgid "Product of Material Line"
+msgstr "Producto de la línea de materiales"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_select_multiple_product__products_multiple_ids
+msgid "Products"
+msgstr "Productos"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_task_line_materials__product_qty
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.mblz_maintenance_hr_equipment_view_kanban
+msgid "Record Colour"
+msgstr "Color de registro"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.mblz_maintenance_hr_equipment_view_kanban
+msgid "Request"
+msgstr "Solicitud"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_stage__request_bom
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.hr_equipment_stage_view_search
+msgid "Request Bill of Material"
+msgstr "Soliciar Lista de materiales"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.mrp_maintenance_request_task_view_form
+msgid "Request Materials"
+msgstr "Solicitar Materiales"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model,name:l10n_cl_mrp_maintenance.model_request_materials_additional
+msgid "Request Materials Additional"
+msgstr "Solicitar materiales adicionales"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_task_line_materials__request_status
+msgid "Request Status"
+msgstr "Estado de la solicitud"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_stage__require_bom
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.hr_equipment_stage_view_search
+msgid "Require Bill of Material"
+msgstr "Req. Lista de materiales"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_stage__require_notify
+msgid "Require Notify"
+msgstr "Requerir notificación"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_stage__require_employees
+msgid "Require Validate Employees"
+msgstr "Req. validación de empleados"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_stage__require_valid_picking
+msgid "Require Validate Pickings"
+msgstr "Req. validación de pickings"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_stage__require_valid_tasks
+msgid "Require Validate Tasks"
+msgstr "Req. validación de tareas"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.actions.server,name:l10n_cl_mrp_maintenance.maintenance_request_notify_cron_ir_actions_server
+#: model:ir.cron,cron_name:l10n_cl_mrp_maintenance.maintenance_request_notify_cron
+#: model:ir.cron,name:l10n_cl_mrp_maintenance.maintenance_request_notify_cron
+msgid "Run show notify OT"
+msgstr "Ejecutar notificación de stock OT"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.select_multiple_product_form
+msgid "Select Multiple Products"
+msgstr "Seleccionar varios productos"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_task_line_materials__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model,name:l10n_cl_mrp_maintenance.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de existencias"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model,name:l10n_cl_mrp_maintenance.model_stock_rule
+msgid "Stock Rule"
+msgstr "Regla de Inventario"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_request_materials_additional__task_id
+msgid "Task"
+msgstr "Tarea"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_approval_request__request_task_id
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_task_line_materials__task_id
+msgid "Task request"
+msgstr "Solicitud de tarea"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:maintenance.stage,name:l10n_cl_mrp_maintenance.stage_5
+msgid "To Repair"
+msgstr "Confirmada"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model,name:l10n_cl_mrp_maintenance.model_stock_picking
+msgid "Transfer"
+msgstr "Albarán"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_request__picking_ids
+msgid "Transfers"
+msgstr "Traslados"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_task_line_materials__product_uom_id
+msgid "Unit of Measure"
+msgstr "Unidad de medida"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model,name:l10n_cl_mrp_maintenance.model_stock_warehouse
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_maintenance_request__warehouse_id
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.hr_equipment_request_view_search
+msgid "Warehouse"
+msgstr "Almacén"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_approval_request__wz_material_add_id
+msgid "Wz Materials Additional"
+msgstr "Wz Materiales adicionales"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model.fields,field_description:l10n_cl_mrp_maintenance.field_task_line_materials__wz_material_add_id
+msgid "Wz materials additional"
+msgstr "Wz Materiales adicionales"
+
+#. module: l10n_cl_mrp_maintenance
+#: code:addons/l10n_cl_mrp_maintenance/models/maintenance_request_task.py:0
+#, python-format
+msgid "You have pickings that have not yet been processed related to the request {}"
+msgstr "Tiene pickings que aún no han sido procesadas relacionadas con la solicitud {}"
+
+#. module: l10n_cl_mrp_maintenance
+#: code:addons/l10n_cl_mrp_maintenance/models/maintenance_request_task.py:0
+#, python-format
+msgid "You have pickings that have not yet been processed related to the task"
+msgstr "Tiene pickings que aún no han sido procesados relacionados con la tarea"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.mblz_mrp_bom_form_view
+msgid "add multiple components"
+msgstr "Agregar varios componentes"
+
+#. module: l10n_cl_mrp_maintenance
+#: model:ir.model,name:l10n_cl_mrp_maintenance.model_maintenance_equipment_image
+msgid "maintenance equipment image"
+msgstr "Imágen del equipo"
+
+#. module: l10n_cl_mrp_maintenance
+#: model_terms:ir.ui.view,arch_db:l10n_cl_mrp_maintenance.mrp_maintenance_request_task_view_form
+msgid "request for additional materials"
+msgstr "solicitud de materiales adicionales"

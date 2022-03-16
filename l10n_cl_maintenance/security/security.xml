@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="hr.group_hr_user" model="res.groups">
+            <field name="implied_ids" eval="[(3, ref('maintenance.group_equipment_manager'))]"/>
+        </record>
+
+
+        <record id="group_equipment_user" model="res.groups">
+            <field name="name">Usuario de equipos</field>
+            <field name="category_id" ref="base.module_category_manufacturing_maintenance"/>
+            <field name="comment">The user will be able to user equipments.</field>
+        </record>
+
+        <record id="maintenance.group_equipment_manager" model="res.groups">
+            <field name="implied_ids" eval="[(4, ref('base.group_user')),
+                                            (4, ref('group_equipment_user'))]"/>
+        </record>
+
+        <!-- Se añade un grupo mas al menu de MTTO > Configuración-->
+        <record model="ir.ui.menu" id="maintenance.menu_maintenance_configuration">
+            <field name="groups_id" eval="[(4,ref('group_equipment_user'))]"/>
+        </record>
+
+        <record model="ir.ui.menu" id="maintenance.menu_maintenance_teams">
+            <field name="groups_id" eval="[(4,ref('group_equipment_user'))]"/>
+        </record>
+
+        <record model="ir.ui.menu" id="maintenance.menu_maintenance_stage_configuration">
+            <field name="groups_id" eval="[(4,ref('group_equipment_user'))]"/>
+        </record>
+
+        <record model="ir.ui.menu" id="maintenance.maintenance_menu_config_activity_type">
+            <field name="groups_id" eval="[(4,ref('group_equipment_user'))]"/>
+        </record>
+
+
+        <!--        CONFIG GENERALES-->
+        <record model="res.groups" id="group_user_request_task">
+            <field name="name">Task user</field>
+        </record>
+
+        <record model="res.groups" id="group_admin_request_task">
+            <field name="name">Task Manager</field>
+        </record>
+
+        <record model="res.groups" id="group_admin_log_guideline_odometer">
+            <field name="name">Odometer history manager by guideline</field>
+        </record>
+
+    </data>
+</odoo>

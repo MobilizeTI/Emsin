@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <record id="maintenance.stage_1" model="maintenance.stage">
+            <field name="sequence" eval="3"/>
+            <field name="require_bom" eval="True"/>
+            <field name="require_employees" eval="True"/>
+        </record>
+
+        <record id="maintenance.stage_3" model="maintenance.stage">
+            <field name="sequence" eval="4"/>
+            <field name="require_bom" eval="True"/>
+            <field name="require_employees" eval="True"/>
+            <field name="require_valid_picking" eval="True"/>
+            <field name="require_valid_tasks" eval="True"/>
+        </record>
+
+        <record id="maintenance.stage_4" model="maintenance.stage">
+            <field name="sequence" eval="5"/>
+        </record>
+
+        <!-- Standard stages for Maintenance Request -->
+        <record id="stage_5" model="maintenance.stage">
+            <field name="name">To Repair</field>
+            <field name="sequence" eval="2"/>
+            <field name="fold" eval="False"/>
+            <field name="request_bom" eval="True"/>
+            <field name="require_employees" eval="True"/>
+        </record>
+    </data>
+
+    <data>
+
+        <!-- Stock rules and routes -->
+        <function model="stock.warehouse" name="create_missing_global_routes_rules"/>
+
+    </data>
+</odoo>

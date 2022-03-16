@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="mblz_fleet_fuel_tank_form_view" model="ir.ui.view">
+            <field name="name">fuel.tank.form</field>
+            <field name="model">fuel.tank</field>
+            <field name="arch" type="xml">
+                <form string="Fuel Tank">
+                    <sheet>
+                        <group>
+                            <group name="tank_details" string="Tank Details">
+                                <field name="name"/>
+                                <field name="location"/>
+                                <field name="last_clean_date" widget="datetime"/>
+                            </group>
+                            <group name="fuel_details" string="Fuel Details">
+                                <field name="capacity" widget="float"/>
+                                <label for="liters"/>
+                                <div>
+                                    <field name="liters" widget="float" class="oe_inline"/> Liter
+                                </div>
+                                <field name="average_price" widget="float"/>
+
+                                <button name="button_create_history"
+                                        type="object"
+                                        icon="fa-plus-circle"
+                                        class="oe_highlight"
+                                        string="Add fuel"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group name="last_filling_details" string="Last Filling Details">
+                                <field name="last_filing_date" readonly="1"/>
+                                <field name="last_filing_amount" widget="float" readonly="1"/>
+
+                                <label for="last_filing_price"/>
+                                <div>
+                                    <field name="last_filing_price"
+                                           readonly="1"
+                                           widget="float" class="oe_inline"/> Per Liter
+                                </div>
+                            </group>
+
+                            <group name="consumption_details" string="Consumption Details">
+                                <field name="total_filling_fuel" widget="percentage" readonly="1"/>
+                                <field name="last_added_fuel_date" widget="datetime" readonly="1"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page name="history" string="Fuel Filling History">
+                                <group>
+                                    <field name='fuel_filling_history_ids'
+                                           nolabel="1"
+                                           mode="tree"
+                                           readonly="0"
+                                           widget="one2many"
+                                           context="{'default_fuel_tank_id': id}">
+                                        <tree>
+                                            <field name="fuel_tank_id" invisible="1"/>
+                                            <field name="date" widget="datetime"/>
+                                            <field name="price_x_liter" widget="float"/>
+                                            <field name="liters" widget="float" sum="liters"/>
+                                        </tree>
+                                        <form>
+                                            <group>
+                                                <field name="fuel_tank_id" invisible="1"/>
+                                                <field name="date" widget="datetime"/>
+                                                <field name="price_x_liter" widget="float"/>
+                                                <field name="liters" widget="float" sum="liters"/>
+                                            </group>
+                                        </form>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mblz_fleet_fuel_tank_tree_view" model="ir.ui.view">
+            <field name="name">fuel.tank.tree</field>
+            <field name="model">fuel.tank</field>
+            <field name="arch" type="xml">
+                <tree string="Fuel Tank">
+                    <field name="name"/>
+                    <field name="location"/>
+                    <field name="capacity"/>
+                    <field name="liters"/>
+                    <field name="total_filling_fuel" widget="percentage"/>
+                    <field name="last_added_fuel_date"/>
+                    <field name="last_filing_amount"/>
+                    <field name="last_filing_price"/>
+                    <field name="average_price"/>
+                    <field name="last_clean_date"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <!--        <record id="mblz_fleet_fuel_tank_search_view" model="ir.ui.view">-->
+        <!--            <field name="name">fuel.tank.search</field>-->
+        <!--            <field name="model">fuel.tank</field>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <search string="Fuel Tank">-->
+        <!--                    <group expand="1" string="Group By">-->
+        <!--                        <filter string="Example Field" name="example_field" domain="[]"-->
+        <!--                                context="{'group_by':'example_field'}"/>-->
+        <!--                    </group>-->
+        <!--                </search>-->
+        <!--            </field>-->
+        <!--        </record>-->
+
+
+        <record id="mblz_fleet_fuel_tank_act_window" model="ir.actions.act_window">
+            <field name="name">Fuel Tank</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">fuel.tank</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    There is no examples click here to add new Fuel Tank.
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Fuel Tank"
+                  id="mblz_fleet_fuel_tank_menu"
+                  parent="fleet.fleet_configuration"
+                  action="mblz_fleet_fuel_tank_act_window"
+                  sequence="20"/>
+
+    </data>
+</odoo>

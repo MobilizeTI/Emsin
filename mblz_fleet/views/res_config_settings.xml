@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="mblz_res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">mblz_res.config.settings.view.form.inherit.hr.fleet</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="fleet.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//div[@id='end_contract_setting']" position="after">
+                    <!-- Add your fields or attributes here -->
+                    <div class="row mt16 o_settings_container" id="limit_odometer_setting">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label text-primary">Limit odometer register</span>
+                                <div class="text-muted content-group mt16">
+                                    <span>Maximum limit </span>
+                                    <field name="limit_odometer" class="text-center oe_inline"/>
+                                    <span> that can be registered in the odometer of a bus per day.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

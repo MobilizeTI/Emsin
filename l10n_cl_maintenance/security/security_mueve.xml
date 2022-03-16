@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="category_group_perfil_mueve" model="ir.module.category">
+            <field name="name">Perfiles</field>
+        </record>
+
+        <!-- ANALISTA -->
+        <record model="res.groups" id="group_analista">
+            <field name="name">ANALISTA</field>
+            <field name="category_id" ref="category_group_perfil_mueve"/>
+        </record>
+
+        <!-- JEFE SOPORTE Y MTTO-->
+        <record model="res.groups" id="group_jefe_soporte_mtto">
+            <field name="name">JEFE SOPORTE Y MTTO</field>
+            <field name="category_id" ref="category_group_perfil_mueve"/>
+        </record>
+
+        <!-- ING LLANTAS Y CONFIAB-->
+        <record model="res.groups" id="group_ing_llantas_config">
+            <field name="name">ING LLANTAS Y CONFIAB</field>
+            <field name="category_id" ref="category_group_perfil_mueve"/>
+        </record>
+
+
+        <!-- TÉCNICOS-->
+        <record model="res.groups" id="group_tecnicos">
+            <field name="name">TÉCNICOS</field>
+            <field name="category_id" ref="category_group_perfil_mueve"/>
+        </record>
+
+
+        <!-- JEFE PLANIFICACIÓN - DIRECTOR M-->
+        <record model="res.groups" id="group_jefe_planificacion">
+            <field name="name">JEFE PLANIFICACIÓN - DIRECTOR M</field>
+            <field name="category_id" ref="category_group_perfil_mueve"/>
+        </record>
+
+
+        <!-- .........................MOD: PARA ANALISTA ......................... -->
+        <record id="maintenance.equipment_request_rule_user" model="ir.rule">
+            <field name="groups" eval="[(4, ref('l10n_cl_maintenance.group_analista'))]"/>
+        </record>
+
+        <!-- .........................MOD: PARA EFE SOPORTE Y MTTO ......................... -->
+
+        <!--        <record id="maintenance.equipment_rule_user" model="ir.rule">-->
+        <!--            <field name="groups" eval="[(4, ref('l10n_cl_maintenance.group_jefe_planificacion'))]"/>-->
+        <!--        </record>-->
+
+        <!-- Manejo de estados de tareas -->
+        <!--         <record id="maintenance_request_task_stage_rule_tecnicos" model="ir.rule">-->
+        <!--            <field name="name">l10n_cl_maintenance.model_maintenance_request_task_stage</field>-->
+        <!--            <field name="model_id" ref="l10n_cl_maintenance.model_maintenance_request_task_stage"/>-->
+        <!--            <field name="groups" eval="[-->
+        <!--                (4, ref('group_tecnicos')),-->
+        <!--            ]"/>-->
+        <!--            <field name="domain_force" eval="[('code','in',('ST001', 'ST003'))]"/>-->
+        <!--            <field name="perm_read" eval="True"/>-->
+        <!--            <field name="perm_write" eval="False"/>-->
+        <!--            <field name="perm_create" eval="False"/>-->
+        <!--            <field name="perm_unlink" eval="False"/>-->
+        <!--        </record>-->
+    </data>
+</odoo>

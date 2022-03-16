@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_cron_ot_new_wizard" model="ir.ui.view">
+        <field name="name">Run Scheduler OT Manually</field>
+        <field name="model">scheduler.ot.new</field>
+        <field name="arch" type="xml">
+            <form string="Parameters">
+
+                <div class="alert alert-primary" role="alert">
+                    <p>
+                        A Maintenance Request (OT) will be created for equipment that meets the corresponding deadlines.
+                    </p>
+                </div>
+                <footer>
+                    <button name="button_run_cron"
+                            string="Execute" type="object" class="btn-primary"/>
+                    <button string="Cancel"
+                            class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_ot_new" model="ir.actions.act_window">
+        <field name="name">Run New OT Scheduler</field>
+        <field name="res_model">scheduler.ot.new</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_ot_new"
+              action="action_ot_new"
+              parent="maintenance.menu_equipment_form"
+              groups="l10n_cl_maintenance.group_jefe_planificacion"
+              sequence="140"/>
+
+
+</odoo>

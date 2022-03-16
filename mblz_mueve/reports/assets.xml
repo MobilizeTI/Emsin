@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="mblz_mueve_assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <!-- import css -->
+                <link href="/mblz_mueve/static/src/css/report_ot.css"
+                      rel="stylesheet" type="text/scss"/>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

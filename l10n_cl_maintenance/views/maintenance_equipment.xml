@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- equipment activity tracking : views -->
+    <record id="maintenance_equipment_activity_tracking_view_tree" model="ir.ui.view">
+        <field name="name">maintenance.equipment.activity.tracking.tree</field>
+        <field name="model">maintenance.equipment.activity.tracking</field>
+        <field name="arch" type="xml">
+            <tree editable="top" string="Equipment Tracking Activities">
+                <field name="tracking_date"/>
+                <field name="name"/>
+                <field name="equipment_id" required="1"/>
+                <field name="equipment_activity_id" context="{'default_company_id': company_id}"
+                       domain="[('company_id', '=', company_id)]"/>
+                <field name="tracking_value"/>
+                <field name="uom_id"/>
+                <field name="company_id" invisible="1"/>
+                <field name="equipment_activity_uomctg_id" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="maintenance_equipment_activity_tracking_view_search" model="ir.ui.view">
+        <field name="name">maintenance.equipment.activity.tracking.search</field>
+        <field name="model">maintenance.equipment.activity.tracking</field>
+        <field name="arch" type="xml">
+            <search string="Equipment Tracking Activities">
+                <field name="tracking_date"/>
+                <field name="equipment_id"/>
+                <field name="equipment_activity_id"/>
+                <field name="name"/>
+                <separator/>
+                <filter name="month" string="Tracking Date" date="tracking_date"/>
+                <group expand="0" string="Group by...">
+                    <filter string="Equipment" name="groupby_equipment" domain="[]"
+                            context="{'group_by': 'equipment_id'}"/>
+                    <filter string="Activity" name="groupby_activity" domain="[]"
+                            context="{'group_by': 'equipment_activity_id'}"/>
+                    <filter string="Tracking Date" name="groupby_trackingdate" domain="[]"
+                            context="{'group_by': 'tracking_date'}" help="Activity Tracking by Date"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- equipment activity tracking : actions -->
+    <record id="maintenance_equipment_activity_tracking_action" model="ir.actions.act_window">
+        <field name="name">Equipment Tracking Activities</field>
+        <field name="res_model">maintenance.equipment.activity.tracking</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="maintenance_equipment_activity_tracking_view_search"/>
+        <field name="context">{'search_default_week': 1, }</field>
+    </record>
+
+
+    <record id="maintenance_equipment_activity_view_tree" model="ir.ui.view">
+        <field name="name">maintenance.equipment.activity.tree</field>
+        <field name="model">maintenance.equipment.activity</field>
+        <field name="arch" type="xml">
+            <tree string="Equipment Activities">
+                <field name="name"/>
+                <field name="uom_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="maintenance_equipment_activity_view_search" model="ir.ui.view">
+        <field name="name">maintenance.equipment.activity.search</field>
+        <field name="model">maintenance.equipment.activity</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <field name="name" string="Activity Name" filter_domain="[('name','ilike', self)]"/>
+                <group expand='0' string='Group by...'>
+                    <filter string='Unit of Measure' name="uom" domain="[]" context="{'group_by' : 'uom_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="maintenance_equipment_activity_view_kanban" model="ir.ui.view">
+        <field name="name">maintenance.equipment.activity.kanban</field>
+        <field name="model">maintenance.equipment.activity</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name"/>
+                <field name="uom_id"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="mb4">
+                                <strong><field name="name"/></strong>
+                            </div>
+                            <div class="row mt4">
+                                <div class="col-6">
+                                    <span class="badge badge-pill">
+                                        <strong>Equipments:</strong> <field name="equipment_count"/>
+                                    </span>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <span class="badge badge-pill">
+                                        <strong>Maintenance:</strong> <field name="maintenance_count"/>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- equipment activity : actions -->
+    <record id="maintenance_equipment_activity_action" model="ir.actions.act_window">
+        <field name="name">Maintenance Equipment Activities</field>
+        <field name="res_model">maintenance.equipment.activity</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="view_id" ref="maintenance_equipment_activity_view_tree"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new equipment activity
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+            id="maintenance_equipment_activity_menu_configuration"
+            name="Maintenance Equipment Activities"
+            parent="maintenance.menu_maintenance_configuration"
+            action="maintenance_equipment_activity_action"
+            groups="base.group_no_one"
+            sequence="4"/>
+
+
+    <record id="hr_equipment_action_from_activity_form" model="ir.actions.act_window">
+        <field name="name">Equipments</field>
+        <field name="res_model">maintenance.equipment</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="search_view_id" ref="maintenance.hr_equipment_view_search"/>
+        <field name="view_id" ref="maintenance.hr_equipment_view_kanban"/>
+        <field name="context">{
+            'search_default_equipment_activity_id': [active_id],
+        }</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new equipment
+            </p>
+            <p>
+                Track equipments and link it to an employee or department.
+                You will be able to manage allocations, issues and maintenance of your equipment.
+            </p>
+        </field>
+    </record>
+
+    <record id="hr_equipment_request_action_link_from_activity_form" model="ir.actions.act_window">
+        <field name="name">Maintenance Requests</field>
+        <field name="res_model">maintenance.request</field>
+        <field name="view_mode">kanban,tree,form,pivot,graph,calendar</field>
+        <field name="search_view_id" ref="maintenance.hr_equipment_request_view_search"/>
+        <field name="view_id" ref="maintenance.hr_equipment_request_view_kanban"/>
+        <field name="context">{
+            'search_default_equipment_activity_id': [active_id]}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new maintenance request
+            </p>
+            <p>
+                Follow the process of the request and communicate with the collaborator.
+            </p>
+        </field>
+    </record>
+
+
+    <!-- equipment.request : views -->
+    <!--    <record id="hr_equipment_request_view_search" model="ir.ui.view">-->
+    <!--        <field name="name">equipment.request.search</field>-->
+    <!--        <field name="model">maintenance.request</field>-->
+    <!--        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search"/>-->
+    <!--        <field name="arch" type="xml">-->
+    <!--            <field name="category_id" position="after">-->
+    <!--                <field string="Activity" name="equipment_activity_id"/>-->
+    <!--            </field>-->
+    <!--        </field>-->
+    <!--    </record>-->
+
+
+    <!-- equipment : views -->
+    <record id="hr_equipment_view_search" model="ir.ui.view">
+        <field name="name">equipment.search</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_search"/>
+        <field name="arch" type="xml">
+            <field name="category_id" position="after">
+                <field string="Activity" name="equipment_activity_id"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="mblz_hr_equipment_view_form" model="ir.ui.view">
+        <field name="name">equipment.form</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='maintenance_count']" position="before">
+                <field name="flag_reload_maintenance_count" invisible="1"/>
+            </xpath>
+
+            <label for="period" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </label>
+            <xpath expr="//field[@name='period']/.." position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <label for="maintenance_duration" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </label>
+            <xpath expr="//field[@name='maintenance_duration']/.." position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//form/sheet/notebook" position="inside">
+                <page name="guideline_maintenances" string="Guideline Of Maintenances">
+                    <group>
+                        <field name="maintenance_guideline_ids" widget="many2many_tags" nolabel="1"/>
+                    </group>
+                </page>
+            </xpath>
+
+
+            <xpath expr="//field[@name='employee_id']" position="after">
+                <field name="vehicle_id"
+                       class="text-primary"
+                       options="{'no_open': False, 'no_create': True}"/>
+
+                <field name="vehicle_type" invisible="1"/>
+                <label for="odometer" attrs="{'invisible': [('vehicle_type', '!=', 'car')]}"/>
+                <div class="o_row" attrs="{'invisible': [('vehicle_type', '!=', 'car')]}">
+                    <field name="odometer"/>
+                    <field name="odometer_unit"/>
+                </div>
+                <field name="odometer_count" invisible="1"/>
+            </xpath>
+
+            <div name="button_box" position="inside">
+                <button class="oe_stat_button"
+                        type="action"
+                        name="%(maintenance_equipment_activity_tracking_action)d"
+                        context="{'search_default_equipment_id': active_id, 'default_equipment_id': active_id}"
+                        icon="fa-clock-o">
+                    <field string="Tracking"
+                           name="maintenance_actv_tracking_count" widget="statinfo"/>
+                </button>
+
+                <button name="return_action_to_open"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-tachometer"
+                        string="Odometer"
+                        help="show the odometer logs for this vehicle"
+                        attrs="{'invisible': [('vehicle_type', '!=', 'car')]}">
+                    <field string="Odometer" name="odometer_count" widget="statinfo"/>
+                </button>
+            </div>
+
+        </field>
+    </record>
+
+
+    <!-- equipment activity : views -->
+    <record id="maintenance_equipment_activity_view_form" model="ir.ui.view">
+        <field name="name">maintenance.equipment.activity.form</field>
+        <field name="model">maintenance.equipment.activity</field>
+        <field name="arch" type="xml">
+            <form string="Equipment Activity">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="%(hr_equipment_action_from_activity_form)d"
+                                class="oe_stat_button"
+                                icon="fa-cubes"
+                                type="action">
+                            <field string="Equipment" name="equipment_count" widget="statinfo"/>
+                        </button>
+                        <button name="%(hr_equipment_request_action_link_from_activity_form)d"
+                                type="action"
+                                class="oe_stat_button"
+                                icon="fa-wrench">
+                            <field string="Maintenance" name="maintenance_count" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only" string="Activity Name"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="uom_id" class="oe_inline"/>
+                        <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"
+                               class="oe_inline"/>
+                    </group>
+                </sheet>
+                <!--                <div class="oe_chatter">-->
+                <!--                    <field name="message_follower_ids" widget="mail_followers"/>-->
+                <!--                    <field name="message_ids" widget="mail_thread"/>-->
+                <!--                </div>-->
+            </form>
+        </field>
+    </record>
+
+
+</odoo>

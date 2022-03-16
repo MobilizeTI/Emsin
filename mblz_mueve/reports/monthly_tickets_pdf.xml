@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+
+        <template id="report_monthly_tickets_pdf">
+            <t t-call="web.html_container">
+
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <style>
+                            .page {
+                            font-size: 12px;
+                            font-family: sans-serif;
+                            }
+
+                            .box-title{
+                            border: 2px solid #3e423f;
+                            }
+
+                            .report-logo{
+                            max-height:70px;
+                            max-width:100px;
+                            }
+
+                            .custom-items {
+                            list-style-type: none;
+                            padding-left: 0px;
+                            }
+
+                            .custom-items .title {
+                            font-size: 15px;
+                            color: red;
+                            }
+
+                            .box-invoice {
+                            border: 1px solid black;
+                            background: #dedede;
+                            font-size: 11px;
+                            font-weight: bold;
+                            display: block;
+                            }
+
+                            .box-invoice .custom-items {
+                            font-size: 14px;
+                            display: block;
+                            }
+
+                            .invoice-type {
+                            font-weight: bolder;
+                            border: 2px solid black;
+                            border-radius: 7px;
+                            }
+
+                            .company-label {
+                            font-size: 12px;
+                            }
+
+                            .invoice-type {
+                            font-size: 18px;
+                            }
+
+                            .company-label .address {
+                            font-size: 9px;
+                            color: black;
+                            }
+
+                            .header-invoice {
+                            border: 1px solid black;
+                            border-radius: 7px;
+                            }
+
+
+                            .footer-divider {
+                            border-top: 1px solid black;
+                            }
+
+                            .footer-invoice td {
+                            font-size: 12px;
+                            border-collapse: collapse;
+                            }
+
+                            .detail-invoice th {
+                            border: 1px solid black;
+                            }
+
+                            .detail-invoice td {
+                            font-size: 11px;
+                            border: 1px solid black;
+                            border-collapse: collapse;
+                            }
+
+                            .detail-invoice-aux td {
+                            font-size: 10px;
+                            border: 1px solid black;
+                            border-bottom: 1px solid black;
+                            border-collapse: collapse;
+                            }
+
+
+                            table { page-break-after:auto }
+                            tr { page-break-inside:avoid; page-break-after:auto }
+                            td { page-break-inside:avoid; page-break-after:auto }
+                            thead { display: table-row-group; }
+                        </style>
+                        <h2 class="text-center text-bf"><span t-esc="name_report"/></h2>
+                        <br/>
+
+                        <table class="table table-condensed table-sm">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:left;color:black!important;">Fecha y Hora</th>
+                                    <th style="text-align:left;color:black!important;">Tempo de Atención</th>
+<!--                                    <th style="text-align:left;color:black!important;">Relación de Incidentes</th>-->
+                                    <th style="text-align:left;color:black!important;">Tipo de Solución</th>
+                                    <th style="text-align:left;color:black!important;">Tiempo de Solución</th>
+                                    <th style="text-align:left;color:black!important;">Lugar de Atención</th>
+                                    <th style="text-align:left;color:black!important;">Acción Realizada</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="docs" t-as="doc">
+                                    <tr class="text-small">
+                                        <td>
+                                            <span t-att-style="style" t-esc="doc['create_date']"/>
+                                        </td>
+                                        <td>
+                                            <span t-att-style="style" t-esc="doc['attention_time']"/>
+                                        </td>
+                                        <td>
+                                            <span t-att-style="style" t-esc="doc['solution_type']"/>
+                                        </td>
+                                        <td>
+                                            <span t-att-style="style" t-esc="doc['solution_time']"/>
+                                        </td>
+                                        <td>
+                                            <span t-att-style="style" t-esc="doc['solution_type']"/>
+                                        </td>
+                                        <td>
+                                            <span t-att-style="style" t-esc="doc['place_attention']"/>
+                                        </td>
+<!--                                        <td>-->
+<!--                                            <span t-att-style="style" t-esc="doc['action_performed']"/>-->
+<!--                                        </td>-->
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </t>
+            </t>
+
+        </template>
+
+        <record id="action_report_monthly_tickets_pdf_by_month" model="ir.actions.report">
+            <field name="name">Reporte de Tickets Mensual (PDF)</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">mblz_mueve.report_monthly_tickets_pdf</field>
+            <field name="report_file">mblz_mueve.report_monthly_tickets_pdf</field>
+            <field name="binding_model_id" eval="False"/>
+            <field name="attachment_use">False</field>
+        </record>
+
+
+        <record id="report_monthly_tickets_pdf_by_monthly" model="ir.actions.server">
+            <field name="name">Reporte de Tickets Mensual (PDF)</field>
+            <field name="model_id" ref="model_helpdesk_ticket"/>
+            <field name="state">code</field>
+            <field name="code">action = model.action_create_by_monthly_pdf()</field>
+        </record>
+
+        <menuitem id="menu_monthly_tickets_pdf_by_monthly"
+                  name="Reporte de Tickets Mensual (PDF)"
+                  parent="helpdesk.helpdesk_ticket_report_menu_main"
+                  action="mblz_mueve.report_monthly_tickets_pdf_by_monthly"
+                  groups="mblz_mueve.group_support_levels_tkt"
+                  sequence="100"/>
+    </data>
+</odoo>

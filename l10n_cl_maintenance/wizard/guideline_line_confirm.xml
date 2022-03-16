@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="guideline_line_confirm_form_view" model="ir.ui.view">
+            <field name="name">guideline_line_confirm_form_view Message</field>
+            <field name="model">guideline.line.confirm</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Message">
+                    <div class="text-center">
+                        <separator string="Warning" colspan="6"/>
+                        <field name="text_message" colspan="4" nolabel="1" readonly="1"/>
+                        <field name="line_guideline" invisible="1"/>
+                        <br/><br/>
+                    </div>
+                    <div attrs="{'invisible': [('lines_dependent', '=', [])]}">
+                        <field name="lines_dependent" widget="one2many" readonly="1">
+                             <tree edit="0" delete="0">
+                                 <field name="activity_id" string="Activity dependents"/>
+<!--                                 <field name="activity_code"/>-->
+                             </tree>
+                        </field>
+                        <newline/>
+                        <separator colspan="6"/>
+                    </div>
+                    <footer>
+                        <div class="text-center">
+                            <button name="btn_confirm" type="object" string="Yes"
+                                    icon="fa-check-square-o"
+                                    class="oe_highlight"/>
+                            or
+                            <button string="No" class="oe_highlight btn btn-danger" icon="fa-times" special="cancel"/>
+                        </div>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!--        <record id="guideline_line_confirm__act_window" model="ir.actions.act_window">-->
+        <!--            <field name="name">Confirm Message</field>-->
+        <!--            <field name="type">ir.actions.act_window</field>-->
+        <!--            <field name="res_model">guideline.line.confirm</field>-->
+        <!--            <field name="view_mode">form</field>-->
+        <!--            <field name="target">new</field>-->
+        <!--        </record>-->
+
+    </data>
+</odoo>

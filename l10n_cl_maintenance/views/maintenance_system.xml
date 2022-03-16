@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="maintenance_system_form_view" model="ir.ui.view">
+            <field name="name">l10n_cl_maintenance.maintenance_system.form</field>
+            <field name="model">maintenance.system</field>
+            <field name="arch" type="xml">
+                <form string="Systems">
+                    <sheet>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger"
+                                attrs="{'invisible': [('active', '=', True)]}"/>
+
+                        <div class="oe_button_box" name="button_box">
+                            <button
+                                    name="preview_child_list"
+                                    type="object"
+                                    class="oe_stat_button"
+                                    icon="fa-sitemap"
+                            >
+                                <field string="Children" name="child_count" widget="statinfo"/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Name..."/>
+                            </h1>
+                        </div>
+                        <group name="first" col="2">
+                            <field name="active" invisible="1"/>
+                            <field
+                                    name="parent_id"
+                                    readonly="not context.get('parent_id_editable', True)"
+                            />
+                        </group>
+                        <group>
+                            <group>
+                                <field name="complete_name" invisible="1"/>
+<!--                                <field name="parent_path_ids" invisible="1"/>-->
+                            </group>
+                        </group>
+
+
+                        <notebook>
+                            <page name="description_page" string="Description">
+                                <field name="description" type="html"/>
+                                <div class="d-none oe_clear"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="maintenance_system_tree_view" model="ir.ui.view">
+            <field name="name">l10n_cl_maintenance.maintenance_system.tree</field>
+            <field name="model">maintenance.system</field>
+            <field name="arch" type="xml">
+                <tree string="Systems">
+                    <field name="sequence" widget="handle"/>
+                    <field name="complete_name"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="maintenance_system_search_view" model="ir.ui.view">
+            <field name="name">l10n_cl_maintenance.maintenance_system.search</field>
+            <field name="model">maintenance.system</field>
+            <field name="arch" type="xml">
+                <search string="Systems">
+                    <field name="name"/>
+                    <field name="active"/>
+                    <group expand="1" string="Group By">
+                        <filter string="Code" name="code" domain="[]"/>
+                        <filter string="Name" name="name"/>
+                        <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+      
+
+        <record id="maintenance_system_act_window" model="ir.actions.act_window">
+            <field name="name">Systems</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">maintenance.system</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    There is no activities click here to add new system.
+                </p>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

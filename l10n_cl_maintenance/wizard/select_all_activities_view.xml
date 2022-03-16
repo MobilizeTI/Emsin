@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+
+        <record id="select_all_activities_form" model="ir.ui.view">
+            <field name="name">Add Activities</field>
+            <field name="model">select.all.activities</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+
+                        <field name="activities_multiple_ids"
+                               required="1"
+                               domain="[('specialty_tag_ids', '!=', False)]"
+                               widget="many2many_tags" string="Select Multiple Activities"
+                               options='{"no_open": True, "no_create":True,"no_create_edit": True}'
+                               context="{'tree_view_ref':'l10n_cl_maintenance.guideline_activity_tree_view'}"/>
+
+                    </group>
+                    <footer>
+                        <button name="action_add" string="Add"
+                                type="object" class="oe_highlight" icon="fa-plus-circle"/>
+                        o
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="select_all_activities_wizard_act_window" model="ir.actions.act_window">
+            <field name="name">Add Activities</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">select.all.activities</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

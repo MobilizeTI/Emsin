@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sh_message_wizard" model="ir.ui.view">
+            <field name="name">sh.message.wizard</field>
+            <field name="model">sh.message.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Message">
+                    <field name="name"/>
+
+                    <label for="file" class="oe_edit_only" attrs="{'invisible': [('result_ok', '=', False)]}"/>
+                    <field name="has_file" invisible="1"/>
+                    <field name="name_file" invisible="1"/>
+                    <field name="result_ok" invisible="1"/>
+                    <field name="file" readonly="1" widget="binary" filename="name_file"
+                           attrs="{'invisible': [('result_ok', '=', False)]}"/>
+
+
+                    <footer>
+                        <button string="OK" class="btn-primary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

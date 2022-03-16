@@ -1,0 +1,28 @@
+[submodule "l10n_cl_edi_mblz"]
+	path = l10n_cl_edi_mblz
+	url = git@github.com:MobilizeDevTeam/l10n_cl_edi_mblz.git
+	branch = 14.0
+[submodule "account_parent"]
+	path = account_parent
+	url = git@github.com:MobilizeDevTeam/account_parent.git
+	branch = 14.0
+[submodule "account_report_invoice_mblz"]
+	path = account_report_invoice_mblz
+	url = git@github.com:MobilizeDevTeam/account_report_invoice_mblz.git
+	branch = 14.0
+[submodule "clean_data"]
+	path = clean_data
+	url = git@github.com:MobilizeDevTeam/clean_data.git
+	branch = 14.0
+[submodule "ks_dashboard_ninja"]
+	path = ks_dashboard_ninja
+	url = git@github.com:MobilizeDevTeam/ks_dashboard_ninja.git
+	branch = 14.0
+[submodule "report_excel"]
+	path = report_excel
+	url = git@github.com:MobilizeDevTeam/report_excel.git
+	branch = 14.0
+[submodule "third_trial_balance_mblz"]
+	path = third_trial_balance_mblz
+	url = git@github.com:MobilizeDevTeam/third_trial_balance_mblz.git
+	branch = 14.0

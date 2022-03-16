@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--Tires requests-->
+        <menuitem id="tire_management_menu_root"
+                  name="Llantas"
+                  sequence="1" web_icon="mblz_tire_management,static/img/logo.png"/>
+
+    </data>
+
+</odoo>

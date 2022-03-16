@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+         <record id="report_helpdesk_ticket" model="ir.actions.report">
+            <field name="name">Print Support Ticket</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">mblz_mueve.report_helpdesk_ticket_view</field>
+            <field name="report_file">mblz_mueve.report_helpdesk_ticket</field>
+            <field name="attachment_use" eval="False"/>
+            <field name="print_report_name">'Ticket - %s' % (object.name_seq.replace('/','_'))</field>
+            <field name="binding_model_id" ref="model_helpdesk_ticket"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <template id="report_helpdesk_ticket_view">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <style>
+                                .page {
+                                font-size: 12px;
+                                font-family: sans-serif;
+                                }
+
+                                .box-title{
+                                border: 2px solid #3e423f;
+                                }
+
+                                .report-logo{
+                                max-height:70px;
+                                max-width:100px;
+                                }
+
+                                .custom-items {
+                                list-style-type: none;
+                                padding-left: 0px;
+                                }
+
+                                .custom-items .title {
+                                font-size: 15px;
+                                color: red;
+                                }
+
+                                .box-invoice {
+                                border: 1px solid black;
+                                background: #dedede;
+                                font-size: 11px;
+                                font-weight: bold;
+                                display: block;
+                                }
+
+                                .box-invoice .custom-items {
+                                font-size: 14px;
+                                display: block;
+                                }
+
+                                .invoice-type {
+                                font-weight: bolder;
+                                border: 2px solid black;
+                                border-radius: 7px;
+                                }
+
+                                .company-label {
+                                font-size: 12px;
+                                }
+
+                                .invoice-type {
+                                font-size: 18px;
+                                }
+
+                                .company-label .address {
+                                font-size: 9px;
+                                color: black;
+                                }
+
+                                .header-invoice {
+                                border: 1px solid black;
+                                border-radius: 7px;
+                                }
+
+
+                                .footer-divider {
+                                border-top: 1px solid black;
+                                }
+
+                                .footer-invoice td {
+                                font-size: 12px;
+                                border-collapse: collapse;
+                                }
+
+                                .detail-invoice th {
+                                border: 1px solid black;
+                                }
+
+                                .detail-invoice td {
+                                font-size: 11px;
+                                border: 1px solid black;
+                                border-collapse: collapse;
+                                }
+
+                                .detail-invoice-aux td {
+                                font-size: 10px;
+                                border: 1px solid black;
+                                border-bottom: 1px solid black;
+                                border-collapse: collapse;
+                                }
+
+
+                                table { page-break-after:auto }
+                                tr { page-break-inside:avoid; page-break-after:auto }
+                                td { page-break-inside:avoid; page-break-after:auto }
+                                thead { display: table-row-group; }
+                            </style>
+                            <h2 class="text-center text-bf">TICKET DE SOPORTE #<span
+                                    t-esc="doc.name_seq"/></h2>
+                            <br/>
+                            <div class="row">
+                                <div class="col-12">
+                                    <table class="table table-sm">
+                                        <tbody>
+                                            <tr>
+                                                <th class="text-bf"><h6><b><span
+                                                        t-esc="doc.name.upper()"/></b></h6></th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <table class="table table-sm">
+                                        <tbody>
+                                            <tr>
+                                                <th>Equipo</th>
+                                                <td>:
+                                                    <span t-field="doc.team_id.name"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Asignado a </th>
+                                                <td>:
+                                                    <span t-field="doc.user_id.name"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>Tipo de ticket</th>
+                                                <td>:
+                                                    <span t-field="doc.ticket_type_id.name"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>Vehículo</th>
+                                                <td>:
+                                                    <span t-field="doc.vehicle_id.name"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>Categorías</th>
+                                                <td>:
+                                                    <span t-esc="', '.join(map(str,doc.tag_ids.mapped('name')))"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>OT</th>
+                                                <td>:
+                                                    <span t-field="doc.mtm_request_id.name"/>
+                                                </td>
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div class="col-6">
+                                    <table class="table table-sm">
+                                        <tbody>
+                                            <tr>
+                                                <th>Cliente</th>
+                                                <td>:
+                                                    <span t-field="doc.partner_id.name"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Correo electrónico</th>
+                                                <td>:
+                                                    <span t-field="doc.partner_email"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>Nivel de fallo</th>
+                                                <td>:
+                                                    <span t-field="doc.failure_level_id.name"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>Niveles de soporte</th>
+                                                <td>:
+                                                    <span t-esc="', '.join(map(str,doc.support_level_ids.mapped('name')))"/>
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <th>Correo electrónico cc</th>
+                                                <td>:
+                                                    <span t-field="doc.email_cc"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>Fecha y hora</th>
+                                                <td>:
+                                                    <span t-field="doc.create_date"/>
+                                                </td>
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </t>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

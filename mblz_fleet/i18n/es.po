@@ -1,0 +1,420 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mblz_fleet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20220107\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-09 16:59+0000\n"
+"PO-Revision-Date: 2022-03-09 12:29-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: mblz_fleet
+#: code:addons/mblz_fleet/models/fuel_tank.py:0
+#, python-format
+msgid "%s (copy)"
+msgstr "%s (copia)"
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_res_config_settings_view_form
+msgid "<span class=\"o_form_label text-primary\">Limit odometer register</span>"
+msgstr ""
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_res_config_settings_view_form
+msgid "<span> that can be registered in the odometer of a bus per day.</span>"
+msgstr ""
+"<span> que se puede registrar en el cuentakilómetros de un autobús por día.</"
+"span>"
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_res_config_settings_view_form
+msgid "<span>Maximum limit </span>"
+msgstr "<span>Límite máximo </span>"
+
+#. module: mblz_fleet
+#: code:addons/mblz_fleet/models/fuel_tank.py:0
+#, python-format
+msgid "Add Liters"
+msgstr "Añadir litros"
+
+#. module: mblz_fleet
+#: model:ir.model,name:mblz_fleet.model_add_liters_wizard
+msgid "Add Liters Wizard"
+msgstr "Asistente para añadir litros"
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_fuel_tank_form_view
+msgid "Add fuel"
+msgstr "Añadir combustible"
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_vehicle_fuel_log_form_view
+msgid "Additional details"
+msgstr "Más información"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank__average_price
+msgid "Average price"
+msgstr "Precio promedio"
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_add_liters_wizard_form_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank__capacity
+msgid "Capacity"
+msgstr "Capacidad"
+
+#. module: mblz_fleet
+#: model:ir.model,name:mblz_fleet.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de configuración"
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_fuel_tank_form_view
+msgid "Consumption Details"
+msgstr "Detalles de consumo"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_add_liters_wizard__create_uid
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_filling_history__create_uid
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank__create_uid
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_add_liters_wizard__create_date
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_filling_history__create_date
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank__create_date
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log__date
+msgid "Date"
+msgstr "FECHA"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,help:mblz_fleet.field_fuel_tank__last_added_fuel_date
+msgid "Date of last fuel added"
+msgstr "Fecha de la última carga de combustible"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_filling_history__date
+msgid "Date time"
+msgstr "Fecha y hora"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_add_liters_wizard__display_name
+#: model:ir.model.fields,field_description:mblz_fleet.field_fleet_vehicle__display_name
+#: model:ir.model.fields,field_description:mblz_fleet.field_fleet_vehicle_odometer__display_name
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_filling_history__display_name
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank__display_name
+#: model:ir.model.fields,field_description:mblz_fleet.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log__employee_id
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log__flag_liters_process
+msgid "Flag Liters Process"
+msgstr ""
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_vehicle_custom_view_form
+msgid "Fuel"
+msgstr "Combustible"
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_fuel_tank_form_view
+msgid "Fuel Details"
+msgstr "Detalles del combustible"
+
+#. module: mblz_fleet
+#: model:ir.model,name:mblz_fleet.model_fuel_filling_history
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank__fuel_filling_history_ids
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_fuel_tank_form_view
+msgid "Fuel Filling History"
+msgstr "Historial de llenado de combustible"
+
+#. module: mblz_fleet
+#: model:ir.actions.act_window,name:mblz_fleet.mblz_fleet_fuel_tank_act_window
+#: model:ir.model,name:mblz_fleet.model_fuel_tank
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log__fuel_tank_id
+#: model:ir.ui.menu,name:mblz_fleet.mblz_fleet_fuel_tank_menu
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_fuel_tank_form_view
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_fuel_tank_tree_view
+msgid "Fuel Tank"
+msgstr "Depósitos de combustible"
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_vehicle_fuel_log_search_view
+msgid "Group By"
+msgstr "Grupo por"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_add_liters_wizard__id
+#: model:ir.model.fields,field_description:mblz_fleet.field_fleet_vehicle__id
+#: model:ir.model.fields,field_description:mblz_fleet.field_fleet_vehicle_odometer__id
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_filling_history__id
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank__id
+#: model:ir.model.fields,field_description:mblz_fleet.field_res_config_settings__id
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log__id
+msgid "ID"
+msgstr "Identificación"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log__invoice_reference
+msgid "Invoice reference"
+msgstr "Referencia factura"
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_vehicle_fuel_log_form_view
+msgid "Kilometer"
+msgstr "Kilómetros"
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_fuel_tank_form_view
+msgid "Last Filling Details"
+msgstr "Últimos datos de llenado"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_add_liters_wizard____last_update
+#: model:ir.model.fields,field_description:mblz_fleet.field_fleet_vehicle____last_update
+#: model:ir.model.fields,field_description:mblz_fleet.field_fleet_vehicle_odometer____last_update
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_filling_history____last_update
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank____last_update
+#: model:ir.model.fields,field_description:mblz_fleet.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_add_liters_wizard__write_uid
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_filling_history__write_uid
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank__write_uid
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_add_liters_wizard__write_date
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_filling_history__write_date
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank__write_date
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank__last_added_fuel_date
+msgid "Last added fuel date"
+msgstr "Fecha de actualización"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank__last_clean_date
+msgid "Last clean date"
+msgstr "Última fecha de limpieza"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank__last_filing_amount
+msgid "Last filing amount"
+msgstr "Último importe"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank__last_filing_date
+msgid "Last filing date"
+msgstr "Última fecha"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank__last_filing_price
+msgid "Last filing price"
+msgstr "Último precio"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_res_config_settings__limit_odometer
+msgid "Limit odoometer"
+msgstr "Odómetro de límite"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log__liter
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_fuel_tank_form_view
+msgid "Liter"
+msgstr "Litro"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_add_liters_wizard__liters
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_filling_history__liters
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank__liters
+msgid "Liters"
+msgstr "Litros"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank__location
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_vehicle_fuel_log_form_view
+msgid "Odometer Details"
+msgstr "Detalles del odómetro"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_fleet_vehicle_odometer__odometer_actual
+msgid "Odometer actual"
+msgstr ""
+
+#. module: mblz_fleet
+#: model:ir.model,name:mblz_fleet.model_fleet_vehicle_odometer
+msgid "Odometer log for a vehicle"
+msgstr "Registro del odómetro para un vehículo"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,help:mblz_fleet.field_fleet_vehicle_odometer__odometer_actual
+msgid "Odometer measure of the vehicle at the moment of this log"
+msgstr "Medida del odómetro del vehículo en el momento de este registro"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log__odometer_value
+msgid "Odometer value"
+msgstr "Valor del odómetro"
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_fuel_tank_form_view
+msgid "Per Liter"
+msgstr "Por litro"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log__previous_odometer_reading
+msgid "Previous odometer reading"
+msgstr "Lectura anterior del odómetro"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_add_liters_wizard__price_x_liter
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_filling_history__price_x_liter
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log__price_x_liter
+msgid "Price per liter"
+msgstr "Precio por litro"
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_vehicle_fuel_log_form_view
+msgid "Refueling Details"
+msgstr "Detalles de reabastecimiento"
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_add_liters_wizard_form_view
+msgid "Save"
+msgstr "Guardar"
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_fuel_tank_form_view
+msgid "Tank Details"
+msgstr "Detalles del tanque"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_filling_history__fuel_tank_id
+msgid "Task"
+msgstr "Tarea"
+
+#. module: mblz_fleet
+#: model_terms:ir.actions.act_window,help:mblz_fleet.mblz_fleet_fuel_tank_act_window
+msgid "There is no examples click here to add new Fuel Tank."
+msgstr ""
+"No hay ejemplos haga clic aquí para añadir un nuevo depósito de combustible."
+
+#. module: mblz_fleet
+#: model_terms:ir.actions.act_window,help:mblz_fleet.mblz_fleet_vehicle_fuel_log_act_window
+msgid "There is no examples click here to add new Vehicles Fuel Logs."
+msgstr ""
+"No hay ejemplos haga clic aquí para añadir nuevos registros de combustible de "
+"vehículos."
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_fuel_tank__total_filling_fuel
+msgid "Total filling fuel"
+msgstr "Llenado total"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log__total_price
+msgid "Total price"
+msgstr "Precio total"
+
+#. module: mblz_fleet
+#: code:addons/mblz_fleet/models/vehicle_fuel_log.py:0
+#, python-format
+msgid "Valor del odómetro atual debe ser mayor a anterior"
+msgstr ""
+
+#. module: mblz_fleet
+#: model:ir.model,name:mblz_fleet.model_fleet_vehicle
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log__vehicle_id
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_vehicle_fuel_log_search_view
+msgid "Vehicle"
+msgstr "VEHICULO"
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_vehicle_fuel_log_form_view
+msgid "Vehicle Details"
+msgstr "Detalles del vehículo"
+
+#. module: mblz_fleet
+#: model:ir.model,name:mblz_fleet.model_vehicle_fuel_log
+msgid "Vehicle fuel log"
+msgstr "Registro de combustible del vehículo"
+
+#. module: mblz_fleet
+#: model:ir.actions.act_window,name:mblz_fleet.mblz_fleet_vehicle_fuel_log2_act_window
+#: model:ir.actions.act_window,name:mblz_fleet.mblz_fleet_vehicle_fuel_log_act_window
+#: model:ir.ui.menu,name:mblz_fleet.mblz_fleet_vehicle_fuel_log_menu
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_vehicle_fuel_log_form_view
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_vehicle_fuel_log_search_view
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_vehicle_fuel_log_tree_view
+msgid "Vehicles Fuel Logs"
+msgstr "Registros de combustible"
+
+#. module: mblz_fleet
+#: model:ir.model.fields,field_description:mblz_fleet.field_vehicle_fuel_log__vendor_id
+msgid "Vendor"
+msgstr "Proveedor"
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_vehicle_fuel_log_form_view
+msgid "Write here any other information"
+msgstr "Escriba aquí cualquier otra información"
+
+#. module: mblz_fleet
+#: model_terms:ir.ui.view,arch_db:mblz_fleet.mblz_fleet_fuel_tank_form_view
+msgid "liters"
+msgstr "litros"

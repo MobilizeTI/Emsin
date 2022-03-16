@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="vehicle_rims_form_view" model="ir.ui.view">
+            <field name="name">vehicle_rims.form</field>
+            <field name="model">vehicle.rims</field>
+            <field name="arch" type="xml">
+                <form string="Rims">
+                    <sheet>
+
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="date_rec"/>
+                                <field name="vehicle_id"/>
+                                <field name="license_plate"/>
+                                <field name="rim_position"/>
+                                <field name="fire_number"/>
+                                <field name="product_id"/>
+                            </group>
+                            <group>
+                                <field name="brand_id"/>
+                                <field name="model_prod"/>
+                                <field name="default_code"/>
+                                <field name="brand_band_id"/>
+                                <field name="model_band"/>
+                                <field name="mm_rim"/>
+                                <field name="location_id"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="vehicle_rims_tree_view" model="ir.ui.view">
+            <field name="name">vehicle_rims.tree</field>
+            <field name="model">vehicle.rims</field>
+            <field name="arch" type="xml">
+                <tree string="Rims">
+                    <field name="name"/>
+                    <field name="date_rec"/>
+                    <field name="vehicle_id"/>
+                    <field name="license_plate"/>
+                    <field name="rim_position"/>
+                    <field name="fire_number"/>
+
+                    <field name="product_id"/>
+                    <field name="brand_id"/>
+                    <field name="model_prod"/>
+                    <field name="default_code"/>
+
+                    <field name="brand_band_id"/>
+                    <field name="model_band"/>
+                    <field name="mm_rim"/>
+                    <field name="location_id"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="vehicle_rims_search_view" model="ir.ui.view">
+            <field name="name">vehicle_rims.search</field>
+            <field name="model">vehicle.rims</field>
+            <field name="arch" type="xml">
+                <search string="Rims">
+                    <group expand="1" string="Group By">
+                        <filter string="Model" name="model" domain="[]"
+                                context="{'group_by':'name'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="vehicle_rims_act_window" model="ir.actions.act_window">
+            <field name="name">Rims</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">vehicle.rims</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    There is no examples click here to add new Rim.
+                </p>
+            </field>
+        </record>
+
+<!--        <menuitem name="Rims"-->
+<!--                  id="vehicle_rims_menu"-->
+<!--                  parent="fleet.fleet_vehicles"-->
+<!--                  action="vehicle_rims_act_window"-->
+<!--                  sequence="20"-->
+<!--        />-->
+
+    </data>
+</odoo>

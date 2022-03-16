@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="helpdesk_support_level_form_view" model="ir.ui.view">
+            <field name="name">helpdesk.support.level.form</field>
+            <field name="model">helpdesk.support.level</field>
+            <field name="arch" type="xml">
+                <form string="Support level">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" required="1"/>
+                            </h1>
+                        </div>
+
+                        <group>
+                            <group>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page name="activities" string="Activities">
+                                <field
+                                        name="support_activity_ids"
+                                        widget="section_and_note_one2many"
+                                        context="{'default_support_level_id' : id}"
+                                        mode="tree,form">
+
+                                    <tree string="Activities Lines"
+                                          delete="1"
+                                          editable="bottom">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="guideline_id" invisible="1"/>
+                                        <field name="support_level_id" invisible="1"/>
+                                        <field name="company_id" invisible="1"/>
+
+                                        <field name="activity_id"
+                                               options="{'no_create': True, 'no_create_edit': True, 'no_open': False}"
+                                               domain="[('specialty_tag_ids', '!=', False)]"/>
+
+                                        <field name="activity_url_video" invisible="1"/>
+                                        <button name="action_open_url_video"
+                                                attrs="{'invisible': [('activity_url_video', '=', False)]}"
+                                                icon="fa-link"
+                                                type="object"/>
+                                        <field name="activity_code" invisible="0"/>
+
+
+                                        <field
+                                                name="activity_speciality_ids"
+                                                widget="many2many_tags"
+                                                options="{'color_field': 'color'}"
+                                        />
+
+                                        <field name="system_class_id" class="text-primary"
+                                               options="{'no_open': True, 'no_create': True}"/>
+
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="activity_id"/>
+                                                <field name="activity_code"/>
+                                                <field name="system_class_id"
+                                                       options="{'no_open': True, 'no_create': True}"/>
+                                            </group>
+                                            <group>
+                                                <field name="activity_att_documents"
+                                                       attrs="{'invisible': [('activity_att_documents', '=', [])]}"
+                                                       widget="many2many_binary"/>
+                                                <field
+                                                        name="activity_speciality_ids"
+                                                        widget="many2many_tags"
+                                                        options="{'color_field': 'color'}"
+                                                />
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="helpdesk_support_level_tree_view" model="ir.ui.view">
+            <field name="name">helpdesk.support.level.tree</field>
+            <field name="model">helpdesk.support.level</field>
+            <field name="arch" type="xml">
+                <tree string="support Level">
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <field name="support_activity_ids"/>
+                    <!--                    context="{'not_show_name': True}"-->
+                </tree>
+
+            </field>
+        </record>
+
+        <record id="helpdesk_support_level_search_view" model="ir.ui.view">
+            <field name="name">helpdesk.support.level.search</field>
+            <field name="model">helpdesk.support.level</field>
+            <field name="arch" type="xml">
+                <search string="support Level">
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="helpdesk_support_level_act_window" model="ir.actions.act_window">
+            <field name="name">Support Level</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">helpdesk.support.level</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    There is no examples click here to add new support Level.
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Support Level"
+                  id="helpdesk_support_level_menu"
+                  parent="helpdesk.helpdesk_menu_config"
+                  action="helpdesk_support_level_act_window"
+                  sequence="30"
+        />
+
+    </data>
+</odoo>

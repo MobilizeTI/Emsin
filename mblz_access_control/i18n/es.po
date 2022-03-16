@@ -1,0 +1,185 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mblz_access_control
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20220107\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-07 16:33+0000\n"
+"PO-Revision-Date: 2022-03-07 11:34-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: mblz_access_control
+#: model:ir.model,name:mblz_access_control.model_res_groups
+msgid "Access Groups"
+msgstr "Grupos de acceso"
+
+#. module: mblz_access_control
+#: model:ir.model.fields,field_description:mblz_access_control.field_res_groups__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: mblz_access_control
+#: model:ir.actions.act_window,name:mblz_access_control.action_administrators
+#: model:ir.ui.menu,name:mblz_access_control.menu_action_administrators
+msgid "Administrators"
+msgstr "Administradores"
+
+#. module: mblz_access_control
+#: model_terms:ir.ui.view,arch_db:mblz_access_control.view_res_group_form
+msgid "Complete Access Controls"
+msgstr "Control de acceso completo"
+
+#. module: mblz_access_control
+#: model_terms:ir.ui.view,arch_db:mblz_access_control.view_user_profile_form
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: mblz_access_control
+#: model:ir.model.fields,field_description:mblz_access_control.field_ir_model__display_name
+#: model:ir.model.fields,field_description:mblz_access_control.field_ir_ui_menu__display_name
+#: model:ir.model.fields,field_description:mblz_access_control.field_res_groups__display_name
+#: model:ir.model.fields,field_description:mblz_access_control.field_res_users__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: mblz_access_control
+#: model:ir.model.fields,field_description:mblz_access_control.field_res_users__field_ids
+msgid "Fields to update"
+msgstr "Campos a actualizar"
+
+#. module: mblz_access_control
+#: model_terms:ir.ui.view,arch_db:mblz_access_control.view_user_profile_form
+msgid "Fields to update for linked users"
+msgstr "Campos a actualizar para los usuarios vinculados"
+
+#. module: mblz_access_control
+#: model:ir.model.fields,field_description:mblz_access_control.field_ir_model__id
+#: model:ir.model.fields,field_description:mblz_access_control.field_ir_ui_menu__id
+#: model:ir.model.fields,field_description:mblz_access_control.field_res_groups__id
+#: model:ir.model.fields,field_description:mblz_access_control.field_res_users__id
+msgid "ID"
+msgstr "Identificación"
+
+#. module: mblz_access_control
+#: model:ir.model.fields,help:mblz_access_control.field_res_users__is_update_users
+msgid ""
+"If non checked, users associated to this profile will not be updated after "
+"creation"
+msgstr ""
+"Si no se marca, los usuarios asociados a este perfil no se actualizarán "
+"después de la creación"
+
+#. module: mblz_access_control
+#: model:ir.model.fields,field_description:mblz_access_control.field_res_users__is_user_profile
+msgid "Is User Profile"
+msgstr "Es perfil de usuario"
+
+#. module: mblz_access_control
+#: model:ir.model.fields,field_description:mblz_access_control.field_res_users__is_mtto_supervisor
+msgid "Is mtto supervisor"
+msgstr "Es supervisor de MTTO"
+
+#. module: mblz_access_control
+#: model:ir.model.fields,field_description:mblz_access_control.field_ir_model____last_update
+#: model:ir.model.fields,field_description:mblz_access_control.field_ir_ui_menu____last_update
+#: model:ir.model.fields,field_description:mblz_access_control.field_res_groups____last_update
+#: model:ir.model.fields,field_description:mblz_access_control.field_res_users____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: mblz_access_control
+#: model:ir.model,name:mblz_access_control.model_ir_ui_menu
+msgid "Menu"
+msgstr "Menú"
+
+#. module: mblz_access_control
+#: model:ir.model,name:mblz_access_control.model_ir_model
+msgid "Models"
+msgstr "Modelos"
+
+#. module: mblz_access_control
+#: model_terms:ir.ui.view,arch_db:mblz_access_control.view_user_profile_form
+msgid "Options"
+msgstr "Opciones"
+
+#. module: mblz_access_control
+#: model_terms:ir.ui.view,arch_db:mblz_access_control.view_user_profile_form
+msgid "Profile ..."
+msgstr "Perfil ..."
+
+#. module: mblz_access_control
+#: model:ir.model.constraint,message:mblz_access_control.constraint_res_users_profile_without_profile_id
+msgid "Profile users cannot be linked to a profile!"
+msgstr "Los usuarios del perfil no pueden estar vinculados a un perfil."
+
+#. module: mblz_access_control
+#: model:res.groups,name:mblz_access_control.show_actions_button
+msgid "Show Action Button"
+msgstr "Mostrar botón de acción"
+
+#. module: mblz_access_control
+#: model:res.groups,name:mblz_access_control.show_print_button
+msgid "Show Print Button"
+msgstr "Mostrar botón de impresión"
+
+#. module: mblz_access_control
+#: model:ir.model.constraint,message:mblz_access_control.constraint_res_users_active_admin_check
+msgid "The user with id = 2 must always be active!"
+msgstr "¡El usuario con id = 2 debe estar siempre activo!"
+
+#. module: mblz_access_control
+#: model:ir.model.fields,field_description:mblz_access_control.field_res_users__is_update_users
+msgid "Update users after creation"
+msgstr "Actualizar los usuarios después de la creación"
+
+#. module: mblz_access_control
+#: model:ir.model.fields,field_description:mblz_access_control.field_res_users__user_profile_id
+msgid "User Profile"
+msgstr "Perfil del usuario"
+
+#. module: mblz_access_control
+#: model:ir.actions.act_window,name:mblz_access_control.action_res_user_profiles
+#: model:ir.ui.menu,name:mblz_access_control.menu_action_res_user_profiles
+msgid "User Profiles"
+msgstr "Perfiles de usuario"
+
+#. module: mblz_access_control
+#: model:ir.actions.act_window,name:mblz_access_control.action_res_users
+#: model:ir.model,name:mblz_access_control.model_res_users
+#: model:ir.model.fields,field_description:mblz_access_control.field_res_users__user_ids
+#: model_terms:ir.ui.view,arch_db:mblz_access_control.view_user_profile_form
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: mblz_access_control
+#: model:ir.model.fields,field_description:mblz_access_control.field_res_users__users_count
+msgid "Users Count"
+msgstr "Cantidad de usuarios"
+
+#. module: mblz_access_control
+#: code:addons/mblz_access_control/models/res_users.py:0
+#, python-format
+msgid "You can't use %s as user profile !"
+msgstr "¡No se puede utilizar %s como perfil de usuario !"
+
+#. module: mblz_access_control
+#: code:addons/mblz_access_control/models/res_users.py:0
+#, python-format
+msgid "_update_from_profile accepts only users linked to a same profile"
+msgstr ""
+"_update_from_profile sólo acepta usuarios vinculados a un mismo perfil"
+
+#. module: mblz_access_control
+#: code:addons/mblz_access_control/models/res_users.py:0
+#, python-format
+msgid "_update_from_profile doesn't manage fields.One2many"
+msgstr "_update_from_profile no gestiona los campos.One2many"

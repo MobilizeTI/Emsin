@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- equipment.stage : views -->
+        <record id="hr_equipment_stage_view_search" model="ir.ui.view">
+            <field name="name">equipment.stage.search</field>
+            <field name="model">maintenance.stage</field>
+            <field name="inherit_id" ref="maintenance.hr_equipment_stage_view_search"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <separator/>
+                    <filter string="Request Bill of Material" name="request_bom" domain="[('request_bom', '=', True)]"/>
+                    <filter string="Require Bill of Material" name="require_bom" domain="[('require_bom', '=', True)]"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="hr_equipment_stage_view_tree" model="ir.ui.view">
+            <field name="name">equipment.stage.tree</field>
+            <field name="model">maintenance.stage</field>
+            <field name="inherit_id" ref="maintenance.hr_equipment_stage_view_tree"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="request_bom" optional="show"/>
+                    <field name="require_bom" optional="show"/>
+                    <field name="require_employees" optional="show"/>
+                    <field name="require_valid_picking" optional="show"/>
+                    <field name="require_valid_tasks" optional="show"/>
+                </field>
+                <xpath expr="//field[@name='fold']" position="after">
+                    <field name="require_notify" optional="show"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

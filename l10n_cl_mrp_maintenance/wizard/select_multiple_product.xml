@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+
+        <record id="select_multiple_product_form" model="ir.ui.view">
+            <field name="name">Add Components</field>
+            <field name="model">select.multiple.product</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+
+                        <field name="products_multiple_ids"
+                               required="1"
+                               domain="[('type', '=', 'product')]"
+                               widget="many2many_tags" string="Select Multiple Products"
+                               options='{"no_open": True, "no_create":True,"no_create_edit": True}'
+                               context="{'tree_view_ref':'product.product_template_tree_view'}"/>
+
+                    </group>
+                    <group>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                    </group>
+                    <footer>
+                        <button name="action_add" string="Add"
+                                type="object" class="oe_highlight" icon="fa-plus-circle"/>
+                        o
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="select_multiple_product_wizard_act_window" model="ir.actions.act_window">
+            <field name="name">Add Components</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">select.multiple.product</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

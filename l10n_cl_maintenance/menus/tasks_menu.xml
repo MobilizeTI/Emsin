@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--Task requests-->
+
+        <!--creating menus-->
+        <menuitem id="maintenance_tasks_menu_root"
+                  name="Maintenance Tasks"
+                  sequence="1" web_icon="l10n_cl_maintenance,static/img/task.jpg"/>
+
+        <!-- This Menu Item Must have a parent -->
+        <menuitem id="my_tasks_menu" name="My Tasks"
+                  parent="maintenance_tasks_menu_root" sequence="10"/>
+
+            <!-- This Menu Item must have a parent and an action -->
+            <menuitem id="tasks_menu" name="Tasks"
+                      parent="my_tasks_menu"
+                      groups="group_admin_request_task"
+                      action="maintenance_request_task_action"
+                      sequence="10"/>
+            <menuitem id="tasks_user_menu" name="Tasks"
+                      parent="my_tasks_menu"
+                      action="maintenance_request_task_user_action"
+                      groups="group_user_request_task"
+                      sequence="15"/>
+
+        <!-- This Menu Item Must have a parent -->
+        <menuitem id="all_tasks_categ_menu" name="All tasks" parent="maintenance_tasks_menu_root" sequence="20"/>
+            <menuitem id="all_tasks_menu" name="Task Stages" parent="all_tasks_categ_menu"
+                      action="request_task_action_all"
+                      sequence="10"
+                      groups="l10n_cl_maintenance.group_admin_request_task"/>
+
+            <menuitem id="menu_all_tasks_schedule" name="To Schedule" parent="all_tasks_categ_menu"
+                      action="request_task_action_to_schedule"
+                      sequence="20"
+                      groups="l10n_cl_maintenance.group_admin_request_task"/>
+
+        <menuitem id="menu_planning_categ_menu"
+                  name="Planning" parent="maintenance_tasks_menu_root" sequence="30"
+                  groups="l10n_cl_maintenance.group_admin_request_task"/>
+
+            <menuitem id="request_task_menu_planning_by_user"
+                name="By User"
+                sequence="10"
+                action="request_task_action_planning_groupby_user"
+                parent="menu_planning_categ_menu"
+                groups="l10n_cl_maintenance.group_admin_request_task"/>
+
+            <menuitem id="request_task_menu_planning_by_request"
+                name="By Request"
+                sequence="15"
+                action="request_task_action_planning_groupby_request"
+                parent="menu_planning_categ_menu"
+                groups="l10n_cl_maintenance.group_admin_request_task"/>
+
+
+        <menuitem id="request_task_menu_reporting"
+                  name="Reporting"
+                  sequence="90"
+                  parent="maintenance_tasks_menu_root"
+                  groups="l10n_cl_maintenance.group_admin_request_task"/>
+
+            <menuitem id="request_menu_reporting_task_analysis"
+                name="Tasks Analysis"
+                sequence="10"
+                action="request_task_user_action_report"
+                parent="request_task_menu_reporting"
+                groups="l10n_cl_maintenance.group_admin_request_task"
+            />
+
+
+        <menuitem id="configuration_menu"
+                  name="Configuration"
+                  parent="maintenance_tasks_menu_root" sequence="100"
+                  groups="l10n_cl_maintenance.group_admin_request_task"/>
+            <menuitem id="task_stages_menu" name="Task Stages" parent="configuration_menu"
+                      action="maintenance_request_task_stage_act_window"
+                      sequence="10"
+                      groups="l10n_cl_maintenance.group_admin_request_task"/>
+
+           <menuitem id="product_menu" name="Products" parent="configuration_menu"
+                      action="product_action_request"
+                      sequence="20"
+                      groups="l10n_cl_maintenance.group_admin_request_task"/>
+    </data>
+</odoo>

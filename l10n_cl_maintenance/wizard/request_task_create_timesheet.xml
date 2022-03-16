@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="request_task_create_timesheet_view_form" model="ir.ui.view">
+        <field name="name">request.task.create.timesheet.wizard.form</field>
+        <field name="model">request.task.create.timesheet</field>
+        <field name="arch" type="xml">
+            <form string="Save time">
+                <group>
+                    <field name="task_request_id" invisible="1"/>
+<!--                    <field name="task_request_employees" widget="many2many_tags" invisible="1"/>-->
+<!--                    <field name="employee_id"-->
+<!--                           class="oe_inline"-->
+<!--                           domain="[('id', 'in', task_request_employees)]"-->
+<!--                           options="{'no_create': True, 'no_open': True}"-->
+<!--                    />-->
+                    <field name="time_spent"
+                           string="Duration" class="oe_inline" widget="float_time"
+                           required="True"
+                           groups="l10n_cl_maintenance.group_jefe_planificacion,l10n_cl_maintenance.group_jefe_soporte_mtto,l10n_cl_maintenance.group_analista,l10n_cl_maintenance.group_ing_llantas_config"
+                    />
+                    <field name="description" widget="text" placeholder="Describe your activity..." required="True"/>
+                </group>
+                <footer>
+                    <button string="Save" type="object" name="save_timesheet" class="btn btn-primary"/>
+                    <button string="Cancel" special="cancel" type="object" class="btn btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

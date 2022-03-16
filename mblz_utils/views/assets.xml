@@ -1,0 +1,51 @@
+<odoo>
+    <data>
+        <!-- JS assets -->
+
+        <template id="mblz_utils_assets_end" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+
+                <!--  many2many click-->
+                <script src="/mblz_utils/static/src/js/many_tags_link.js"
+                        type="text/javascript"/>
+
+                <!--  many2one lick-->
+                <link href="/mblz_utils/static/src/css/web_tree_many2one_clickable.scss"
+                      rel="stylesheet" type="text/scss"/>
+                <script src="/mblz_utils/static/src/js/web_tree_many2one_clickable.js"
+                        type="text/javascript"/>
+
+                <!--  color widget-->
+                <script src="/mblz_utils/static/src/js/field_color_widget.js" type="text/javascript"/>
+                <link href="/mblz_utils/static/src/scss/field_color_widget.scss" rel="stylesheet" type="text/scss"/>
+
+                <!--  list range select-->
+                <script
+                        type="text/javascript"
+                        src="/mblz_utils/static/src/js/web_listview_range_select.js"
+                />
+
+
+                <!--                color progressbar-->
+                <link rel="stylesheet" type="text/scss"
+                      href="/mblz_utils/static/src/css/progress_bar_color.css"/>
+                <script type="text/javascript"
+                        src="/mblz_utils/static/src/js/progress_bar_color.js"/>
+
+                <!--                color field-->
+                <script
+                        type="text/javascript"
+                        src="/mblz_utils/static/src/js/web_tree_dynamic_colored_field.js"
+                />
+
+                <!--                web domain  computed field-->
+                <script
+                        type="text/javascript"
+                        src="/mblz_utils/static/src/lib/js/pyeval.js"
+                />
+            </xpath>
+        </template>
+
+
+    </data>
+</odoo>

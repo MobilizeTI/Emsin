@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="mblz_hr_employee_view_form" model="ir.ui.view">
+            <field name="name">hr.employee (mblz custom)</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+
+                <!--                <xpath expr="//form[1]/sheet[1]/div[2]/h1[@class='d-flex'][1]" position="before">-->
+                <!--                    <field name="availability" widget="radio" class="oe_edit_only" options="{'horizontal': true}"/>-->
+<!--                                </xpath>-->
+                <xpath expr="//div[@name='button_box']" position="after">
+                    <field name="availability" widget="radio" class="oe_edit_only" options="{'horizontal': true}"/>
+                </xpath>
+                <xpath expr="//field[@name='coach_id']" position="after">
+                    <!-- Add your fields or attributes here -->
+                    <field
+                            name="speciality_ids"
+                            widget="many2many_tags"
+                            options="{'color_field': 'color'}"
+                    />
+                </xpath>
+
+            </field>
+        </record>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="mblz_hr_kanban_view_employees" model="ir.ui.view">
+            <field name="name">hr.employee.kanban (mblz)</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="before">
+                    <div t-if="record.availability.raw_value == 'available'"
+                         class="text-primary" style="font-size: 11px;">
+                        <field name="availability" widget="radio" options="{'horizontal': true}"/>
+                    </div>
+                    <div t-else=""
+                         class="text-danger" style="font-size: 11px;">
+                        <field name="availability" widget="radio" options="{'horizontal': true}"/>
+                    </div>
+                </xpath>
+
+                <xpath expr="//field[@name='name']" position="after">
+                    <!-- Add your fields or attributes here -->
+                    <div class="text-primary" style="font-size: 11px;">
+                        <field
+                                name="speciality_ids"
+                                widget="many2many_tags"
+                                options="{'color_field': 'color'}"
+                        />
+
+                    </div>
+
+                </xpath>
+
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,201 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="mblz_helpdesk_ticket_view_form" model="ir.ui.view">
+            <field name="name">mblz.helpdesk.ticket.form</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+            <field name="arch" type="xml">
+
+
+                <xpath expr="//button[@name='assign_ticket_to_self']" position="after">
+                    <button name="action_create_ot"
+                            type="object"
+                            class="oe_highlight"
+                            string="Create OT"
+                            icon="fa-plus-circle"
+                            attrs="{'invisible': [('mtm_request_id','!=', False)]}"
+                            groups="mblz_mueve.group_support_levels_tkt"/>
+                </xpath>
+
+                <xpath expr="//field[@name='kanban_state']" position="before">
+                    <field name="name_seq" string="Sequence" class="text-primary text-bf"/>
+
+                </xpath>
+
+                <xpath expr="//field[@name='ticket_type_id']" position="after">
+                    <field name="vehicle_id" widget="many2one"/>
+                    <field name="equipment_id"/>
+                    <field name="equipment_category_id"/>
+                </xpath>
+
+                <xpath expr="//field[@name='partner_email']" position="after">
+                    <field name="failure_level_id" widget="many2one"/>
+                    <field name="support_level_ids"
+                           widget="many2many_tags"
+                           options="{'no_create': True, 'no_create_edit': True, 'no_open': False}"
+                           groups="mblz_mueve.group_support_levels_tkt"/>
+                    <field name="place_of_care"/>
+
+                </xpath>
+
+                <xpath expr="//field[@name='tag_ids']" position="after">
+                    <field name="mtm_request_id"
+                           string="OT"
+                           attrs="{'invisible': [('mtm_request_id', '=', False)]}"
+                           readonly="1"/>
+                </xpath>
+
+                <!--                <xpath expr="//field[@name='description']" position="after">-->
+                <!--                    <notebook>-->
+                <!--                        <page name="page_activities" string="Activities"-->
+                <!--                              attrs="{'invisible': [('support_level_ids', '=', [])]}"-->
+                <!--                              groups="mblz_mueve.group_support_levels_tkt">-->
+                <!--                            <field-->
+                <!--                                    name="support_activity_ids"-->
+                <!--                                    widget="section_and_note_one2many"-->
+                <!--                                    readonly="1"-->
+                <!--                                    mode="tree,form">-->
+                <!--                                <tree string="Activities Lines">-->
+                <!--                                    <field name="sequence" widget="handle"/>-->
+                <!--                                    <field name="guideline_id" invisible="1"/>-->
+                <!--                                    <field name="company_id" invisible="1"/>-->
+
+                <!--                                    <field name="activity_id" domain="[('specialty_tag_ids', '!=', False)]"/>-->
+
+                <!--                                    <field name="activity_url_video" invisible="1"/>-->
+                <!--                                    <button name="action_open_url_video"-->
+                <!--                                            attrs="{'invisible': [('activity_url_video', '=', False)]}"-->
+                <!--                                            icon="fa-link"-->
+                <!--                                            type="object"/>-->
+                <!--                                    <field name="activity_code" invisible="0"/>-->
+
+
+                <!--                                    <field-->
+                <!--                                            name="activity_speciality_ids"-->
+                <!--                                            widget="many2many_tags"-->
+                <!--                                            options="{'color_field': 'color'}"-->
+                <!--                                    />-->
+
+                <!--                                    <field name="system_class_id" class="text-primary"-->
+                <!--                                           options="{'no_open': True, 'no_create': True}"/>-->
+                <!--                                </tree>-->
+                <!--                                <form>-->
+                <!--                                    <group>-->
+                <!--                                        <group>-->
+                <!--                                            <field name="activity_id"/>-->
+                <!--                                            <field name="activity_code"/>-->
+                <!--                                            <field name="system_class_id"-->
+                <!--                                                   options="{'no_open': True, 'no_create': True}"/>-->
+                <!--                                        </group>-->
+                <!--                                        <group>-->
+                <!--                                            <field name="activity_att_documents"-->
+                <!--                                                   attrs="{'invisible': [('activity_att_documents', '=', [])]}"-->
+                <!--                                                   widget="many2many_binary"/>-->
+                <!--                                            <field-->
+                <!--                                                    name="activity_speciality_ids"-->
+                <!--                                                    widget="many2many_tags"-->
+                <!--                                                    options="{'color_field': 'color'}"-->
+                <!--                                            />-->
+                <!--                                        </group>-->
+
+
+                <!--                                    </group>-->
+                <!--                                </form>-->
+                <!--                            </field>-->
+                <!--                        </page>-->
+                <!--                    </notebook>-->
+                <!--                </xpath>-->
+
+            </field>
+        </record>
+
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="mblz_helpdesk_ticket_view_form_inherit_helpdesk_timesheet" model="ir.ui.view">
+            <field name='name'>mblz_helpdesk.ticket.form.inherit.timesheet</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="helpdesk_timesheet.helpdesk_ticket_view_form_inherit_helpdesk_timesheet"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//page[@name='description']" position="after">
+                    <!-- Add your fields or attributes here -->
+                    <page name="page_activities" string="Activities"
+                          attrs="{'invisible': [('support_level_ids', '=', [])]}"
+                          groups="mblz_mueve.group_support_levels_tkt">
+                        <field
+                                name="support_activity_ids"
+                                widget="section_and_note_one2many"
+                                readonly="1"
+                                mode="tree,form">
+                            <tree string="Activities Lines">
+                                <field name="sequence" widget="handle"/>
+                                <field name="guideline_id" invisible="1"/>
+                                <field name="company_id" invisible="1"/>
+
+                                <field name="activity_id" domain="[('specialty_tag_ids', '!=', False)]"/>
+
+                                <field name="activity_url_video" invisible="1"/>
+                                <button name="action_open_url_video"
+                                        attrs="{'invisible': [('activity_url_video', '=', False)]}"
+                                        icon="fa-link"
+                                        type="object"/>
+                                <field name="activity_code" invisible="0"/>
+
+
+                                <field
+                                        name="activity_speciality_ids"
+                                        widget="many2many_tags"
+                                        options="{'color_field': 'color'}"
+                                />
+
+                                <field name="system_class_id" class="text-primary"
+                                       options="{'no_open': True, 'no_create': True}"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <group>
+                                        <field name="activity_id"/>
+                                        <field name="activity_code"/>
+                                        <field name="system_class_id"
+                                               options="{'no_open': True, 'no_create': True}"/>
+                                    </group>
+                                    <group>
+                                        <field name="activity_att_documents"
+                                               attrs="{'invisible': [('activity_att_documents', '=', [])]}"
+                                               widget="many2many_binary"/>
+                                        <field
+                                                name="activity_speciality_ids"
+                                                widget="many2many_tags"
+                                                options="{'color_field': 'color'}"
+                                        />
+                                    </group>
+
+
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+
+
+        <record id="mblz_helpdesk_tickets_view_tree" model="ir.ui.view">
+            <field name="name">mblz.helpdesk.ticket.tree</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="helpdesk.helpdesk_tickets_view_tree"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='display_name']" position="before">
+                    <field name="name_seq" string="Sequence"/>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

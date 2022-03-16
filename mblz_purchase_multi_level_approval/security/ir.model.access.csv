@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_document_approval,mblz_purchase_multi_level_approval.document_approval,model_document_approval,,1,1,1,1
+access_document_approval_line,mblz_purchase_multi_level_approval.document_approval_line,model_document_approval_line,,1,1,1,1
+access_purchase_approval_line,mblz_purchase_multi_level_approval.purchase_approval_line,model_purchase_approval_line,,1,1,1,1
+access_wz_approve,mblz_purchase_multi_level_approval.wz_approve,model_wz_approve,,1,1,1,1

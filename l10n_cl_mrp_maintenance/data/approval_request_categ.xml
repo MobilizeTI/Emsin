@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="approval_request_task" model="approval.category">
+            <field name="name">Materiales Adicionales (MTM)</field>
+            <field name="sequence">100</field>
+            <field name="requirer_document">optional</field>
+            <field name="has_partner">required</field>
+            <field name="has_date">required</field>
+            <field name="has_period">no</field>
+            <field name="has_quantity">no</field>
+            <field name="has_amount">optional</field>
+            <field name="has_reference">no</field>
+            <field name="has_payment_method">no</field>
+            <field name="has_location">no</field>
+            <field name="approval_minimum">1</field>
+            <field name="automated_sequence">True</field>
+            <field name="sequence_code">RMA</field>
+            <field name="is_manager_approver">True</field>
+            <field name="user_ids" eval="[(4, ref('base.user_admin'))]"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <!-- equipment guideline : views -->
+        <record id="maintenance_guideline_view_form" model="ir.ui.view">
+            <field name="name">maintenance.guideline.form</field>
+            <field name="model">maintenance.guideline</field>
+            <field name="inherit_id" ref="l10n_cl_maintenance.maintenance_guideline_view_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='guideline_type_id']" position="after">
+                    <field name="bom_id"/>
+                    <field name="flag_create_auto"/>
+
+                    <field name="type_auto_planning"
+                           attrs="{'required': [('flag_create_auto', '=', True)],
+                                               'invisible': [('flag_create_auto', '=', False)]
+                                       }"
+                           widget="radio" options="{'horizontal': True}"/>
+                    <field name="flag_execute_auto"
+                           string="Execution status"
+                           readonly="1"
+                           attrs="{'invisible': [('measurement', '=', 'frequently')]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

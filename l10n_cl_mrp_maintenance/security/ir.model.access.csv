@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_select_multiple_product_admin,access_select_multiple_product_admin,model_select_multiple_product,,1,1,1,1
+access_request_materials_additional_admin,access_request_materials_additional_admin,model_request_materials_additional,,1,1,1,1
+access_task_line_materials_admin,access_task_line_materials_admin,model_task_line_materials,,1,1,1,1
+access_maintenance_equipment_image_admin,access_maintenance_equipment_image_admin,model_maintenance_equipment_image,,1,1,1,1

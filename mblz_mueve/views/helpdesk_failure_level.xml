@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="helpdesk_failure_level_tree_view" model="ir.ui.view">
+            <field name="name">helpdesk.failure.level.tree</field>
+            <field name="model">helpdesk.failure.level</field>
+            <field name="arch" type="xml">
+                <tree string="Failure Level" editable="bottom">
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <field name="time_response" widget="float_time"/>
+                    <field name="time_solution" widget="float_time"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="helpdesk_failure_level_view_form" model="ir.ui.view">
+            <field name="name">helpdesk_failure_level_view_form</field>
+            <field name="model">helpdesk.failure.level</field>
+            <field name="arch" type="xml">
+                <form string="helpdesk_failure_level_form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="time_response" widget="float_time"/>
+                            <field name="time_solution" widget="float_time"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="helpdesk_failure_level_search_view" model="ir.ui.view">
+            <field name="name">helpdesk.failure.level.search</field>
+            <field name="model">helpdesk.failure.level</field>
+            <field name="arch" type="xml">
+                <search string="Failure Level">
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="helpdesk_failure_level_act_window" model="ir.actions.act_window">
+            <field name="name">Failure Level</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">helpdesk.failure.level</field>
+            <field name="view_mode">tree</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    There is no examples click here to add new Failure Level.
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Failure Level"
+                  id="helpdesk_failure_level_menu"
+                  parent="helpdesk.helpdesk_menu_config"
+                  action="helpdesk_failure_level_act_window"
+                  sequence="20"
+        />
+
+    </data>
+</odoo>

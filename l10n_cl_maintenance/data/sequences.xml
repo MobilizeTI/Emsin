@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="so_web_new_sequence" model="ir.sequence">
+            <field name="name">maintenance.guideline.request - SEQUENCE</field>
+            <field name="code">mtn.request.sequence</field>
+            <field name="prefix">RT/%(y)s/</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="True" name="use_date_range"/>
+            <field name="padding">5</field>
+            <field name="implementation">no_gap</field>
+        </record>
+
+        <record id="ot_sequence" model="ir.sequence">
+            <field name="name">maintenance.request - SEQUENCE</field>
+            <field name="code">mt.sequence</field>
+            <field name="prefix">OT/%(y)s/</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="True" name="use_date_range"/>
+            <field name="padding">5</field>
+            <field name="implementation">no_gap</field>
+        </record>
+
+        <record id="ot_master_sequence" model="ir.sequence">
+            <field name="name">maintenance.request.master - SEQUENCE</field>
+            <field name="code">ot.master.sequence</field>
+            <field name="prefix">OTM/%(y)s/</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="True" name="use_date_range"/>
+            <field name="padding">5</field>
+            <field name="implementation">no_gap</field>
+        </record>
+    </data>
+</odoo>

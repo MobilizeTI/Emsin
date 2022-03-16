@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- equipment.request : views -->
+    <record id="hr_equipment_request_view_search" model="ir.ui.view">
+        <field name="name">equipment.request.search</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search"/>
+        <field name="arch" type="xml">
+            <field name="maintenance_team_id" position="after">
+                <!--                <field string="Bill of Material" name="bom_id"/>-->
+                <field string="Warehouse" name="warehouse_id" groups="stock.group_stock_multi_warehouses"/>
+                <field string="Maintenance Location" name="maintenance_location_id"/>
+            </field>
+
+            <xpath expr="//filter[@name='done']" position="after">
+                <filter string="Done" name="done" domain="[('kanban_state', '=', 'done')]"/>
+            </xpath>
+
+            <xpath expr="//filter[@name='done']" position="attributes">
+                <attribute name="name">ready</attribute>
+                <attribute name="domain">[('picking_ids.state', '=', 'done')]</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Inherit Form View to Modify it -->
+    <record id="mblz_maintenance_request_view_form_inherit_mrp" model="ir.ui.view">
+        <field name="name">mblz: maintenance.request.view.form.inherit.mrp</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="mrp_maintenance.maintenance_request_view_form_inherit_mrp"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//div[hasclass('oe_chatter')]" position="after">
+                <!-- Add your fields or attributes here -->
+                <field name="production_id"
+                       options="{'no_create': True, 'no_open': True}"
+                       position="move"/>
+                <field name="workorder_id" attrs="{'invisible': [('production_id', '=', False)]}"
+                       options="{'no_create': True, 'no_open': True}" domain="[('production_id', '=', production_id)]"
+                       groups="mrp.group_mrp_routings"
+                       position="move"/>
+
+
+            </xpath>
+            <field name="equipment_id" position="attributes">
+                <attribute name="domain">['|', (not workorder_id and 1 or 0, '=', 1), '|',
+                                          ('workcenter_id', '=', False),
+                                          ('workcenter_id.order_ids', 'in', workorder_id),
+                                          ('vehicle_id', '!=', False)]</attribute>
+            </field>
+
+        </field>
+    </record>
+
+    <record id="hr_equipment_request_view_form" model="ir.ui.view">
+        <field name="name">equipment.request.form</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="l10n_cl_maintenance.maintenance_request_form_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+
+                <button type="object"
+                        name="action_view_delivery_bom"
+                        class="oe_stat_button"
+                        icon="fa-truck"
+                        attrs="{'invisible': [('picking_count', '=', 0)]}"
+                >
+                    <field name="picking_count" widget="statinfo" string="BoM Delivery"/>
+                </button>
+            </xpath>
+
+            <xpath expr="//field[@name='email_cc']" position="after">
+                <!--                <hr/>-->
+                <field name="picking_ids" invisible="1" widget="many2many_tags" class="text-danger"/>
+                <field name="picking_count" invisible="1" class="text-danger"/>
+            </xpath>
+
+            <field name="maintenance_guideline_ids" position="after">
+                <!--                <hr/>-->
+                <field name="bom_ids"
+                       string="Bills of Materials"
+                       widget="many2many_tags"
+                       attrs="{'invisible': [('maintenance_guideline_ids', '=', [])]}"
+                       context="{'default_company_id':company_id}"
+                       options="{'no_create': 1, 'no_edit': 1,}"
+                />
+                <field name="warehouse_id" options="{'no_create': True}"
+                       groups="stock.group_stock_multi_warehouses" force_save="1"
+                />
+                <field name="maintenance_location_id"
+                       context="{'default_company_id':company_id}"
+                       options="{'no_create': 1, 'no_edit': 1,}"
+                />
+            </field>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="mblz_approval_request_view_form" model="ir.ui.view">
+            <field name="name">mblz_approval_request_view_form</field>
+            <field name="model">approval.request</field>
+            <field name="inherit_id" ref="approvals.approval_request_view_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='amount']" position="after">
+                    <!-- Add your fields or attributes here -->
+                    <field name="request_task_id" attrs="{'invisible': [('request_task_id', '=', False)]}"/>
+                    <field name="wz_material_add_id" invisible="1"/>
+                </xpath>
+
+                <xpath expr="//page[@name='approvers']" position="after">
+                    <page name="materials_add" string="Additional Materials"
+                          attrs="{'invisible': [('request_task_id', '=', False)]}">
+                        <field name='product_line_task_ids'
+                               mode="tree"
+                               readonly="1"
+                               widget="one2many">
+                            <tree
+                                  string="Materials">
+                                <field name="product_id" readonly="1"/>
+                                <field name="product_qty"/>
+                                <field name="product_uom_id" readonly="1"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </tree>
+                        </field>
+                    </page>
+
+                </xpath>
+
+
+            </field>
+        </record>
+    </data>
+</odoo>

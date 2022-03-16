@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="layout_header_ot" t-name="layout_header_ot">
+            <style>
+                .border_div {
+                border: 1px solid #000;
+                }
+                .border_div_left {
+                border-left: 1px solid #000;
+                border-top: 1px solid #000;
+                border-bottom: 1px solid #000;
+                }
+
+                .border_div_right {
+                border-right: 1px solid #000;
+                border-top: 1px solid #000;
+                border-bottom: 1px solid #000;
+                }
+
+                .border_div_tb {
+                border-top: 1px solid #000;
+                border-bottom: 1px solid #000;
+                }
+
+                .div_cent {
+                display: inline-block;
+                }
+
+            </style>
+            <div class="container">
+                <p class="text-center ct_bold text-uppercase"><span t-esc="o.company_id.name"/></p>
+
+                <div class="row">
+
+                    <div class="col-2 border_div_left text-center p-2">
+                        <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)"
+                             style="max-height: 200px;"
+                             alt="Logo"/>
+
+                    </div>
+                    <div class="col-3 border_div_tb"/>
+                    <div class="col-7 border_div_right">
+                        <br/>
+                        <h5 class="ct_bold align-middle">ORDEN DE TRABAJO</h5>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+    </data>
+</odoo>

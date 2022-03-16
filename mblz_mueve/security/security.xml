@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="res.groups" id="group_support_levels_tkt">
+            <field name="name">Niveles de soporte (TKT)</field>
+            <field name="comment"> Grupo dirigido a profesionales de ITS</field>
+        </record>
+    </data>
+</odoo>

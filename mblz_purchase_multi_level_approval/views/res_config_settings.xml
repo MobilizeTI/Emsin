@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="mblz_res_config_settings_view_form_purchase" model="ir.ui.view">
+            <field name="name">mblz:res.config.settings.view.form.inherit.purchase</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="purchase.res_config_settings_view_form_purchase"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//div[@id='po_order_approval']" position="after">
+                    <!-- Add your fields or attributes here -->
+                    <div class="col-12 col-lg-6 o_setting_box" id="po_order_approval">
+                        <div class="o_setting_left_pane">
+                            <field name="po_multi_level_approval"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="po_multi_level_approval"/>
+                            <div class="text-muted">
+                                Select a multi-level approval configuration document
+                            </div>
+                            <div class="content-group" attrs="{'invisible': [('po_multi_level_approval', '=', False)]}">
+                                <div class="row mt16">
+                                    <label for="document_approval_id" class="col-lg-4 o_light_label"/>
+                                    <field name="document_approval_id"
+                                           options="{'no_create': True, 'no_create_edit': True, 'no_open': False}"
+                                           attrs="{'required': [('po_multi_level_approval', '=', True)]}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

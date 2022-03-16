@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+    <record id="stage_draft" model="maintenance.request.task.stage">
+        <field name="name">Draft</field>
+        <field name="code">ST001</field>
+        <field name="sequence" eval="1"/>
+    </record>
+
+    <record id="stage_done" model="maintenance.request.task.stage">
+        <field name="name">Done</field>
+        <field name="code">ST002</field>
+        <field name="require_valid_picking" eval="True"/>
+        <field name="sequence" eval="10"/>
+    </record>
+
+    <record id="stage_cancel" model="maintenance.request.task.stage">
+        <field name="name">Cancel</field>
+        <field name="code">ST003</field>
+        <field name="sequence" eval="20"/>
+        <field name="fold" eval="True"/>
+    </record>
+</odoo>

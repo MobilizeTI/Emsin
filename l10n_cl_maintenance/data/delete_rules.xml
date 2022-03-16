@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!--        Se elimina la regla -->
+        <delete id="maintenance.equipment_rule_user" model="ir.rule"/>
+        <delete id="fleet.fleet_rule_vehicle_visibility_user" model="ir.rule"/>
+        <delete id="fleet.fleet_rule_odometer_visibility_user" model="ir.rule"/>
+    </data>
+</odoo>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+
+        <template id="report_maintenance_request_view">
+            <t t-call="web.basic_layout">
+                <t t-foreach="docs" t-as="o">
+                    <!--                     <t t-set="o" t-value="o.with_context(lang=o.employee_id.user_id.lang)"/>-->
+                    <div class="page">
+
+                        <t t-call="mblz_mueve.layout_header_ot"/>
+                        <br/>
+                        <t t-call="mblz_mueve.layout_body_ot"/>
+                        <br/>
+
+                        <div class="footer text_body">
+                            <div class="row float-right ">
+                                <small><span>Página </span><span class="page"/> de <span class="topage"/></small>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+
+        <record id="paperformat_ot" model="report.paperformat">
+            <field name="name">OT Report</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">297</field>
+            <field name="page_width">210</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">5</field>
+            <field name="margin_bottom">5</field>
+            <field name="margin_left">5</field>
+            <field name="margin_right">5</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">20</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="report_maintenance_request" model="ir.actions.report">
+            <field name="name">Print OT (pdf)</field>
+            <field name="model">maintenance.request</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">mblz_mueve.report_maintenance_request_view</field>
+            <field name="report_file">mblz_mueve.report_maintenance_request</field>
+            <field name="attachment_use" eval="False"/>
+            <field name="print_report_name">'%s' % (object.name_seq.replace('/','_'))</field>
+            <field name="paperformat_id" ref="mblz_mueve.paperformat_ot"/>
+            <field name="binding_model_id" ref="model_maintenance_request"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <record id="action_report_maintenance_request_xlsx" model="ir.actions.report">
+            <field name="name">Print OT (xlsx)</field>
+            <field name="model">maintenance.request</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">mblz_mueve.report_maintenance_request_xlsx</field>
+            <field name="report_file">mblz_mueve.report_maintenance_request_xlsx</field>
+            <field name="attachment_use" eval="False"/>
+            <field name="print_report_name">'%s' % (object.name_seq.replace('/','_'))</field>
+            <field name="binding_model_id" ref="model_maintenance_request"/>
+            <field name="binding_type">report</field>
+        </record>
+
+
+    </data>
+</odoo>

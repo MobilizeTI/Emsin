@@ -1,0 +1,5 @@
+"id","sequence","name","time_response","time_solution"
+"__export__.helpdesk_failure_level_1_4f508cb5","10","Emergencia","0.08333333333333333","4.0"
+"__export__.helpdesk_failure_level_2_3e1ebd1a","11","Alto","0.08333333333333333","6.0"
+"__export__.helpdesk_failure_level_3_75291a11","10","Medio","0.25","24.0"
+"__export__.helpdesk_failure_level_4_b9a73272","10","Bajo","0.25","48.0"

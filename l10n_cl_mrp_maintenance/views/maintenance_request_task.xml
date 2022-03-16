@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="mrp_maintenance_request_task_view_form" model="ir.ui.view">
+            <field name="name">maintenance.request.task.inherit</field>
+            <field name="model">maintenance.request.task</field>
+            <field name="inherit_id" ref="l10n_cl_maintenance.maintenance_request_task_view_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='active']" position="before">
+                    <div class="oe_button_box" name="button_box">
+                        <button type="object"
+                                name="get_approvals"
+                                class="oe_stat_button"
+                                icon="fa-thumbs-up"
+                                attrs="{'invisible': [('approval_count', '=', 0)]}"
+                                groups="l10n_cl_maintenance.group_jefe_planificacion,l10n_cl_maintenance.group_jefe_soporte_mtto,l10n_cl_maintenance.group_ing_llantas_config">
+                            <field name="approval_count" widget="statinfo" string="Approval"/>
+                        </button>
+                        <button type="object"
+                                name="get_pickings"
+                                class="oe_stat_button"
+                                icon="fa-truck"
+                                attrs="{'invisible': [('picking_count', '=', 0)]}"
+                                groups="l10n_cl_maintenance.group_jefe_planificacion,l10n_cl_maintenance.group_tecnicos,l10n_cl_maintenance.group_ing_llantas_config,l10n_cl_maintenance.group_jefe_soporte_mtto"
+                        >
+                            <field name="picking_count" widget="statinfo" string="Delivery"/>
+                        </button>
+                    </div>
+                </xpath>
+
+                <xpath expr="//field[@name='request_id']" position="after">
+                    <field name="request_maintenance_location_id" invisible="1"/>
+                </xpath>
+
+                <xpath expr="//field[@name='stage_id']" position="after">
+                    <button name="button_create_approval_request"
+                            groups="l10n_cl_maintenance.group_jefe_planificacion,l10n_cl_maintenance.group_tecnicos,l10n_cl_maintenance.group_ing_llantas_config,l10n_cl_maintenance.group_jefe_soporte_mtto"
+                            help="request for additional materials"
+                            type="object" string="Request Materials"
+                    />
+                </xpath>
+
+                <xpath expr="//page[@name='timesheets']" position="after">
+
+                    <page name="approvals" string="Approval Requests" invisible="1">
+                        <field name='approval_ids'
+                               mode="tree"
+                               widget="one2many"
+                               readonly="1">
+                            <tree create="false" sample="1" default_order="date desc">
+                                <field name="date"/>
+                                <field name="name"/>
+                                <!--                                <field name="request_owner_id"/>-->
+                                <!--                                <field name="category_id"/>-->
+                                <field name="request_status"
+                                       widget="badge"
+                                       decoration-info="request_status in ('new', 'pending')"
+                                       decoration-success="request_status == 'approved'"
+                                       decoration-danger="request_status == 'refused'"
+                                />
+                            </tree>
+                        </field>
+                    </page>
+
+                    <page name="materials_add" string="Additional Materials"
+                          groups="l10n_cl_maintenance.group_jefe_planificacion,l10n_cl_maintenance.group_tecnicos,l10n_cl_maintenance.group_ing_llantas_config,l10n_cl_maintenance.group_jefe_soporte_mtto"
+                          attrs="{'invisible': [('product_line_ids', '=', [])]}">
+                        <field name='product_line_ids'
+                               mode="tree"
+                               widget="one2many"
+                               readonly="1"
+                               context="{'default_task_id': id}">
+                            <tree create="1"
+                                  default_order="create_date desc"
+                                  decoration-danger="flag_approval == True"
+                                  string="Materials">
+                                <field name="create_date" invisible="1"/>
+                                <field name="flag_approval" invisible="1"/>
+                                <field name="wz_material_add_id" invisible="1"/>
+                                <field name="product_id" context="{'default_type': 'product'}"/>
+                                <field name="product_qty"/>
+                                <field name="product_uom_id"/>
+                                <field name="system_class_id"
+                                       options="{'no_open': True, 'no_create': True}"/>
+                                <field name="request_status"
+                                       widget="badge"
+                                       decoration-info="request_status in ('new', 'pending')"
+                                       decoration-success="request_status == 'approved'"
+                                       decoration-danger="request_status == 'refused'"
+                                />
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <group>
+                                        <field name="product_id" context="{'default_type': 'product'}"/>
+                                        <field name="product_qty"/>
+                                        <field name="product_uom_id"/>
+                                    </group>
+                                    <group>
+                                        <field name="system_class_id"
+                                               options="{'no_open': True, 'no_create': True}"/>
+                                        <field name="request_status"
+                                               widget="badge"
+                                               decoration-info="request_status in ('new', 'pending')"
+                                               decoration-success="request_status == 'approved'"
+                                               decoration-danger="request_status == 'refused'"
+                                        />
+                                        <field name="company_id" groups="base.group_multi_company"/>
+                                    </group>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+
+
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

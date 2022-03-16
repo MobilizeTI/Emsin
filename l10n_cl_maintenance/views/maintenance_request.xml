@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="mblz_hr_equipment_request_view_search" model="ir.ui.view">
+            <field name="name">mblz.equipment.request.search</field>
+            <field name="model">maintenance.request</field>
+            <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//filter[@name='filter_close_date']" position="after">
+                    <separator/>
+                    <filter string="Cierre en los últimos 7 días" name="prev_week"
+                            domain="[('close_date','&gt;=', ((context_today()).strftime('%Y-%m-%d'))), ('close_date','&lt;', ((context_today()+datetime.timedelta(days=7)).strftime('%Y-%m-%d')))]"/>
+                    <filter string="Cierre en los últimos 15 días" name="prev_half_month"
+                            domain="[('close_date','&gt;=', ((context_today()).strftime('%Y-%m-%d'))), ('close_date','&lt;', ((context_today()+datetime.timedelta(days=15)).strftime('%Y-%m-%d')))]"/>
+                    <filter string="Cierre en los últimos 30 días" name="prev_month"
+                            domain="[('close_date','&gt;=',(context_today()-relativedelta(months=1)).strftime('%Y-%m-01')),('close_date','&lt;',time.strftime('%Y-%m-01'))]"/>
+                    <filter string="Cierre total" name="closing_all" domain="[('close_date', '!=', False)]"/>
+
+                </xpath>
+                <xpath expr="//field[@name='name']" position="before">
+                    <field name="name_seq" string="Sequence"/>
+                </xpath>
+
+                <xpath expr="//field[@name='maintenance_team_id']" position="after">
+                    <field name="flag_from_otm" string="Desde OT Maestra"/>
+                    <field name="flag_from_auto" string="Desde OT Automática"/>
+                    <field name="ot_master_id" string="OT Maestra"/>
+                    <field name="create_type"/>
+                </xpath>
+
+                <xpath expr="//filter[@name='inactive']" position="before">
+                    <filter string="Desde OT Maestra" name="from_otm" domain="[('flag_from_otm', '=', True)]"/>
+                    <filter string="Desde OT Automática" name="from_ota" domain="[('flag_from_auto', '=', True)]"/>
+                    <separator/>
+                </xpath>
+
+                <xpath expr="//filter[@name='assigned']" position="before">
+                    <filter string='Tipo de Creación'
+                            name="group_create_type"
+                            domain="[]" context="{'group_by': 'create_type'}"/>
+                    <filter string='OT Maestra'
+                            name="group_ot_master"
+                            domain="[]" context="{'group_by': 'ot_master_id'}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="maintenance_request_form_inherit" model="ir.ui.view">
+            <field name="name">l10n_cl_maintenance.maintenance_request.form</field>
+            <field name="model">maintenance.request</field>
+            <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <!--                    <field name="user_mtto_supervisor_domain" invisible="1"/>-->
+                    <field name="user_mtto_supervisor_id" widget="many2one_avatar_user"
+                           domain="[('is_mtto_supervisor', '=', True)]"
+                           options='{"no_open": False, "no_create":True,"no_create_edit": True}'/>
+                </xpath>
+
+                <xpath expr="//field[@name='category_id']" position="attributes">
+                    <attribute name="groups">l10n_cl_maintenance.group_jefe_planificacion</attribute>
+                </xpath>
+
+                <xpath expr="//button[@name='archive_equipment_request']" position="attributes">
+                    <attribute name="groups">l10n_cl_maintenance.group_jefe_planificacion</attribute>
+                </xpath>
+
+                <xpath expr="//button[@name='reset_equipment_request']" position="attributes">
+                    <attribute name="groups">l10n_cl_maintenance.group_jefe_planificacion</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='employee_id']" position="before">
+                    <field name="type_ot"
+                           attrs="{'readonly': [('flag_from_otm', '=', True)]}"
+                           widget="selection"/>
+                    <field name="flag_from_otm" widget="boolean" invisible="1"/>
+
+                </xpath>
+
+                <xpath expr="//field[@name='maintenance_team_id']" position="replace">
+                    <field name="maintenance_team_id"
+                           string="Group"
+                           options="{'no_create': True, 'no_open': True}"/>
+                </xpath>
+
+                <xpath expr="//div[hasclass('oe_title')]" position="replace">
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only" string="Title"/>
+                        <h1>
+                            <field name="name" placeholder="Maintenance Request"/>
+                        </h1>
+                        <h3>
+                            <field name="name_seq" class="text-primary"/>
+                        </h3>
+                    </div>
+
+                </xpath>
+
+                <xpath expr="//field[@name='schedule_date']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='category_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='maintenance_type']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='maintenance_type']" position="replace">
+                    <field name="maintenance_type"
+                           string="Nature"
+                           widget="badge" decoration-danger="maintenance_type == 'corrective'"
+                           decoration-primary="maintenance_type == 'preventive'"/>
+                </xpath>
+
+                <xpath expr="//field[@name='type_ot']" position="after">
+                    <field name="maintenance_type" position="move"/>
+                </xpath>
+
+                <!--                <xpath expr="//div[@class='oe_title']" position="after">-->
+                <xpath expr="//div[hasclass('oe_title')]" position="after">
+                    <div attrs="{'invisible': [('guideline_speciality_ids', '=', [])]}">
+                        <label for="guideline_speciality_ids" string="Specialities"/>
+                        <field
+                                name="guideline_speciality_ids"
+                                widget="many2many_tags"
+                                options="{'color_field': 'color'}"
+                                placeholder="e.g. Mechanic"
+                        />
+                    </div>
+                </xpath>
+
+
+                <xpath expr="//form/sheet/div[1]" position="replace"/>
+
+
+                <xpath expr="//field[@name='equipment_id']" position="attributes">
+                    <attribute name="attrs">
+                        {'readonly': ['|', ('stage_name', '=', 'En progreso'),
+                                      ('flag_from_otm', '=', True)]}
+                    </attribute>
+                    <attribute name="optional">{'no_create': True, 'no_create_edit': True, 'no_open': False}</attribute>
+                    <attribute name="required">1</attribute>
+                </xpath>
+
+                <!--                <field name="equipment_id" position="attributes">-->
+                <!--                    <attribute name="domain">[('vehicle_id', '!=', False)]</attribute>-->
+                <!--                </field>-->
+
+                <xpath expr="//field[@name='maintenance_type']" position="attributes">
+                    <attribute name="attrs">
+                        {'readonly': [('stage_name', '=', 'En progreso')]}
+                    </attribute>
+                    <attribute name="optional">{'horizontal': true}</attribute>
+                </xpath>
+
+                <field name="category_id" position="after">
+                    <field name="guide_line_ids" invisible="1"/>
+                    <field name="stage_name" invisible="1"/>
+                    <field name="maintenance_guideline_ids"
+                           attrs="{'invisible': ['|' ,('equipment_id', '=', False), ('maintenance_type', '=', 'corrective')],
+                                   'readonly': ['|' ,('stage_name', '=', 'En progreso'), ('flag_from_otm', '=', True)]
+                           }"
+                           domain="[('id', 'in', guide_line_ids)]"
+                           widget="many2many_tags"
+                           context="{'default_company_id':company_id}"
+                           options="{'no_create': 1, 'no_edit': 1,}"
+                    />
+                </field>
+
+
+                <xpath expr="//div[hasclass('oe_right')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//div[hasclass('oe_title')]" position="before">
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button"
+                                type="object"
+                                name="get_tasks"
+                                string="Tasks"
+                                icon="fa-list-ul"
+                        >
+                            <field name="task_count" widget="statinfo" string="Tasks"
+                                   options="{'reload_on_button': true}"/>
+                        </button>
+
+                    </div>
+
+                    <div attrs="{'invisible': [('archive', '=', False)]}">
+                        <field name="kanban_state" class="oe_inline float-right mr-3" widget="state_selection"/>
+                        <span class="badge badge-warning float-right">Canceled</span>
+                    </div>
+                    <div class="oe_right">
+                        <field name="kanban_state" class="oe_inline" widget="state_selection"/>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='email_cc']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='email_cc']" position="after">
+                    <field name="flag_validate_auto" widget="boolean_toggle"/>
+                    <field name="ot_master_id" readonly="1" attrs="{'invisible': [('ot_master_id', '=', False)]}"/>
+                    <br/>
+                    <field name="task_count" invisible="1"/>
+                    <field name="task_done_count" widget="gauge" nolabel="1"
+                           options="{'max_field': 'task_count',
+                            'label_field': 'definition_suffix',
+                             'style': 'width:120px; height: 80px;'}"/>
+
+                </xpath>
+
+                <xpath expr="//field[@name='schedule_date']" position="after">
+                    <field name="duration_compute" widget="float_time" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="hr_equipment_request_view_kanban" model="ir.ui.view">
+            <field name="name">hr_equipment_request_view_kanban</field>
+            <field name="model">maintenance.request</field>
+            <field name="inherit_id" ref="maintenance.hr_equipment_request_view_kanban"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='activity_state']" position="after">
+                    <field name="request_date"/>
+                </xpath>
+
+                <field name="name" position="after">
+                    <span>(<strong><field name="name_seq"/>)</strong></span> <br/>
+                </field>
+
+                <xpath expr="//field[@name='activity_state']" position="after">
+                    <!-- Add your fields or attributes here -->
+                    <field name="task_done_percent" invisible="1"/>
+                </xpath>
+
+                <xpath expr="//div[hasclass('oe_clear')]" position="before">
+                    <div>
+                        <field name="task_done_percent" widget="progressbar"/>
+                    </div>
+                </xpath>
+
+                <xpath expr="//field[@name='activity_state']" position="after">
+                    <field name="timesheet_total_hours"/>
+                    <field name="duration"/>
+                </xpath>
+
+                <xpath expr="//div[hasclass('o_kanban_record_body')]" position="inside">
+                    <br/>
+                    <span t-if="record.request_date.raw_value">Fecha de creación: <field name="request_date"/></span>
+                    <br/>
+                    <a class="o_project_kanban_box" name="get_tasks" type="object">
+                        <span t-if="record.count_task.raw_value"><b>Actividades: (<field name="count_task"/>)</b></span></a>
+                </xpath>
+
+                <xpath expr="//div[hasclass('oe_kanban_bottom_left')]" position="inside">
+                    <a
+                            class="o_project_kanban_box"
+                            name="get_tasks"
+                            type="object"
+                    >
+                        <t t-if="record.timesheet_total_hours.value > record.duration.value">
+                            <div class="text-danger">
+                                <span class="o_value">
+                                    <field
+                                            name="timesheet_total_hours"
+                                            class="oe_inline"
+
+                                            widget="timesheet_uom"
+                                    />
+                                    <!-- t t-esc="record.timesheet_total_hours.value"/-->
+                                </span>
+                                <span class="o_label">Hours</span>
+                            </div>
+                        </t>
+                        <t t-else="">
+                            <div>
+                                <span class="o_value">
+                                    <field
+                                            name="timesheet_total_hours"
+                                            class="oe_inline"
+
+                                            widget="timesheet_uom"
+                                    />
+                                    <!-- t t-esc="record.timesheet_total_hours.value"/-->
+                                </span>
+                                <span class="o_label">Hours</span>
+                            </div>
+                        </t>
+
+                    </a>
+                    <!--                    <span style="color: black;" class="ml-2"><b>(#<field name="count_task"/>)</b></span>-->
+                </xpath>
+
+            </field>
+        </record>
+
+
+        <record id="mblz_hr_equipment_request_view_tree" model="ir.ui.view">
+            <field name="name">mblz:equipment.request.tree</field>
+            <field name="model">maintenance.request</field>
+            <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='name']" position="before">
+                    <!-- Add new fields here -->
+                    <field name="name_seq" string="Secuencia"/>
+                </xpath>
+
+                <xpath expr="//field[@name='name']" position="replace">
+                    <field name="name" string="Nombre OT"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

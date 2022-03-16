@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="mblz_purchase_order_form" model="ir.ui.view">
+            <field name="name">mblz_purchase.order.form</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form//sheet" position="before">
+                    <div class="alert alert-warning text-bf" role="alert"
+                         attrs="{'invisible': ['|','|',('is_complete_approve', '=', True),
+                                    ('flag_approve_admin', '=', True),('id', '=', False)]}">
+
+                        <div colspan="2">
+                            <stromg>Order pending multiple approval
+                                <button
+                                        name="notify_user_approve"
+                                        string="⇒ Notify users"
+                                        type="object"
+                                        class="oe_link"
+                                        attrs="{'invisible': [('id', '=', False)]}"
+                                />
+                            </stromg>
+                        </div>
+                    </div>
+                </xpath>
+                <xpath expr="//button[@name='button_unlock']" position="after">
+                    <button name="action_approve_rfq"
+                            type="object"
+                            icon="fa-thumbs-up"
+                            class="text-primary"
+                            attrs="{'invisible': ['|','|',('flag_user_approval', '=', False),
+                            ('flag_user_approved', '=', True), ('state', 'not in', ('draft', 'sent'))]}"
+                            string="Approve RFQ"/>
+                    <button name="action_down_approve_rfq"
+                            type="object"
+                            icon="fa-thumbs-down"
+                            class="text-danger"
+                            attrs="{'invisible': ['|','|',('flag_user_approved', '=', False),
+                            ('flag_user_approved', '=', False), ('state', 'not in', ('draft', 'sent'))]}"
+                            string="No Approve RFQ"/>
+                </xpath>
+
+
+                <xpath expr="//field[@name='origin']" position="after">
+                    <!-- Add your fields or attributes here -->
+                    <field name="flag_user_approved" invisible="1"/>
+                    <field name="flag_approval_multi" invisible="1"/>
+                    <field name="flag_user_approval" invisible="1"/>
+                    <field name="is_complete_approve" invisible="1"/>
+                    <field name="flag_approve_admin" invisible="1"/>
+                    <field name="document_approval_id"
+                           attrs="{'invisible': ['|',('flag_approval_multi', '=', False),
+                                                     ('state', 'not in', ('draft', 'sent'))],
+                                    'required': [('flag_approval_multi', '=', True)]}"
+                           options="{'no_create': True, 'no_create_edit': True, 'no_open': False}"/>
+                    <field name="users_approvals" widget="many2many_tags" invisible="1"/>
+                    <field name="user_approve_percent"
+                           attrs="{'invisible': ['|','|',('document_approval_id', '=', False),
+                           ('state', 'not in', ('draft', 'sent')), ('flag_approval_multi', '=', False)]}"
+                           widget="progressbar"/>
+                </xpath>
+
+                <xpath expr="//page[@name='purchase_delivery_invoice']" position="after">
+                    <page name="page_multi_approvals" string="Approvals"
+                          attrs="{'invisible': [('approval_user_ids', '=', [])]}">
+                        <field name="approval_user_ids"
+                               widget="section_and_note_one2many" mode="tree, form">
+                            <tree string="Approvals Lines" create="0" edit="0" delete="0">
+                                <field name="sequence" widget="handle"/>
+                                <field name="user_id" widget="many2one_avatar_user"/>
+                                <field name="approve"/>
+                                <field name="approve_admin" optional="show"/>
+                                <field name="comment" optional="show"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <group>
+                                        <field name="user_id" widget="many2one_avatar_user"/>
+                                    </group>
+                                    <group>
+                                        <field name="approve"/>
+                                        <field name="comment"/>
+                                    </group>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="mblz_view_purchase_order_filter" model="ir.ui.view">
+            <field name="name">mblz_request.quotation.select</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.view_purchase_order_filter"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//filter[@name='my_purchases']" position="after">
+                    <!-- Add your fields or attributes here -->
+                    <filter name="my_purchases" string="My orders to approve"
+                            domain="[('users_approvals', 'in', [uid]), ('flag_approve_admin', '=', False), ('state', 'in', ('draft', 'sent'))]"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="mblz_purchase_order_kpis_tree" model="ir.ui.view">
+            <field name="name">mblz_purchase.order.inherit.purchase.order.tree</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_kpis_tree"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='state']" position="before">
+                    <!-- Add new fields here -->
+                    <field name="is_complete_approve" string="App-user" optional="show"/>
+                    <field name="flag_approve_admin" string="App-admin" optional="show"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="purchase_to_approve_action" model="ir.actions.act_window">
+            <field name="name">RFQ to approve</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">purchase.order</field>
+            <field name="view_mode">tree,kanban,form,pivot,graph,calendar,activity</field>
+            <field name="view_id" ref="purchase.purchase_order_kpis_tree"/>
+            <field name="domain">[('flag_approve_admin', '=', False), ('users_approvals', 'in', [uid]),
+                                  ('state', 'in', ('draft', 'sent'))]</field>
+            <field name="search_view_id" ref="purchase.purchase_order_view_search"/>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No purchase order for approval!
+                </p>
+            </field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="menu_purchase_to_approve_form_action"
+                  name="RFQ to approve"
+                  parent="purchase.menu_procurement_management"
+                  action="purchase_to_approve_action"
+                  sequence="100"/>
+
+
+    </data>
+</odoo>

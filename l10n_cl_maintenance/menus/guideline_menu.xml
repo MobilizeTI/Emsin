@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- This Menu Item Must have a parent -->
+        <menuitem id="guideline_menu_root" name="Actions" parent="maintenance.menu_maintenance_configuration"
+                  sequence="5"/>
+        <!-- Activities-->
+        <menuitem name="Activities" id="guideline_activity_menu" parent="guideline_menu_root"
+                  action="guideline_activity_act_window"
+                  sequence="10"
+        />
+
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="maintenance_guideline_menu"
+                  name="General guidelines"
+                  parent="guideline_menu_root"
+                  action="maintenance_guideline_action"
+                  sequence="20"/>
+    </data>
+</odoo>

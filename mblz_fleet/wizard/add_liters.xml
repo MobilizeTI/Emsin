@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="mblz_fleet_add_liters_wizard_form_view" model="ir.ui.view">
+            <field name="name">add.liters.wizard.form</field>
+            <field name="model">add.liters.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+
+                        <group>
+                            <group>
+                                <field name="liters"/>
+                            </group>
+                            <group>
+                                <field name="price_x_liter"/>
+                            </group>
+                        </group>
+
+                        <footer>
+                            <button name="action_create_history" string="Save"
+                                    type="object" class="oe_highlight" icon="fa-plus-circle"/>
+                            o
+                            <button string="Cancel" class="btn-secondary" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+
+
+    </data>
+</odoo>
