@@ -1,0 +1,4 @@
+[submodule "mblz_emsin"]
+	path = mblz_emsin
+	url = git@github.com:MobilizeDevTeam/mblz_emsin.git
+	branch = 14.0
