@@ -2,3 +2,11 @@
 	path = mblz_emsin
 	url = git@github.com:MobilizeDevTeam/mblz_emsin.git
 	branch = 14.0
+[submodule "mblz_hr_commissions"]
+	path = mblz_hr_commissions
+	url = git@github.com:MobilizeDevTeam/mblz_hr_commissions.git
+	branch = 14.0
+[submodule "l10n_cl_hr"]
+	path = l10n_cl_hr
+	url = git@github.com:MobilizeDevTeam/l10n_cl_hr.git
+	branch = 14.0
